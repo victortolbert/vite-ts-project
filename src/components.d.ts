@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppButton: typeof import('./components/AppButton.vue')['default']
     Assignment: typeof import('./components/Assignment.vue')['default']
+    AssignmentCreate: typeof import('./components/AssignmentCreate.vue')['default']
     AssignmentList: typeof import('./components/AssignmentList.vue')['default']
     Assignments: typeof import('./components/Assignments.vue')['default']
     ButtonPrimary: typeof import('./components/shared/ButtonPrimary.vue')['default']
