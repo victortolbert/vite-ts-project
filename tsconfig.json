@@ -13,9 +13,7 @@
     "jsx": "preserve",
     "lib": [
       "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
+      "dom"
     ],
     "module": "esnext",
     "moduleResolution": "node",

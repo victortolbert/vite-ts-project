@@ -22,6 +22,7 @@ declare module '@vue/runtime-core' {
     Navbar: typeof import('./components/Navbar.vue')['default']
     OutBuilding: typeof import('./components/OutBuilding.vue')['default']
     Outbuildings: typeof import('./components/Outbuildings.vue')['default']
+    OutBuildings: typeof import('./components/OutBuildings.vue')['default']
     ProjectInspectionForm: typeof import('./components/ProjectInspectionForm.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

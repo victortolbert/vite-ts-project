@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import Outbuildings from './Outbuildings.vue'
-import Counter from './Counter.vue'
+import { ref } from 'vue'
+import OutBuildings from './OutBuildings.vue'
+
+const outBuildings = ref([])
 </script>
 
 <script lang="ts">
@@ -10,8 +12,7 @@ export default {
 </script>
 
 <template>
-  <div class="card">
-    <Outbuildings />
-    <Counter />
-  </div>
+  <article>
+    <OutBuildings :out-buildings="outBuildings" />
+  </article>
 </template>

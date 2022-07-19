@@ -2,7 +2,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export class HelloWorld extends Vue {
+export default class HelloWorld extends Vue {
   hello = 'Hello'
   world = 'World'
 

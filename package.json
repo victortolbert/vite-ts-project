@@ -10,6 +10,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "build:clean": "rimraf dist",
     "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "lint:fix": "eslint \"**/*.{vue,ts,js}\" --fix",
     "lint:style": "stylelint \"./**/*.{css,sass,scss,htm,html,vue}\" --fix --cache-location ./node_modules/.vite/vite-plugin-stylelint  && prettier  \"./**/*.{css,sass,scss,htm,html,vue}\" -w -u"
@@ -54,8 +57,18 @@
     "vite": "^3.0.2",
     "vite-plugin-checker": "^0.4.9",
     "vite-plugin-windicss": "^1.8.7",
+    "vitepress": "^1.0.0-alpha.4",
     "vitest": "^0.18.1",
     "vue-template-compiler": "^2.7.7",
     "vue-tsc": "^0.38.8"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@types/react",
+        "react",
+        "react-dom"
+      ]
+    }
   }
 }
