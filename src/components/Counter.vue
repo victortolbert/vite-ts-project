@@ -1,11 +1,12 @@
 <script lang="ts">
-import Super from '@/super'
 import Component from 'vue-class-component'
+import Super from '@/super'
 
 // Define the component in class-style
 @Component
 export default class Counter extends Super {
   created() {
+    // eslint-disable-next-line no-console
     console.log(this.superValue) // -> Hello
   }
 
@@ -25,8 +26,12 @@ export default class Counter extends Super {
 
 <template>
   <div>
-    <button v-on:click="decrement">-</button>
+    <button @click="decrement">
+      -
+    </button>
     {{ count }}
-    <button v-on:click="increment">+</button>
+    <button @click="increment">
+      +
+    </button>
   </div>
 </template>

@@ -1,13 +1,9 @@
-<template>
-  <input ref="input">
-</template>
-
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component
-export default class InputFocus extends Vue {
+export default class InputFocusComponent extends Vue {
   // annotate refs type.
   // The symbol `!` (definite assignment assertion)
   // is needed to get rid of compilation error.
@@ -21,3 +17,7 @@ export default class InputFocus extends Vue {
   }
 }
 </script>
+
+<template>
+  <input ref="input">
+</template>

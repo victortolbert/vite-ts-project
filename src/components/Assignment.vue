@@ -1,7 +1,7 @@
 <script>
 export default {
   props: {
-    outBuilding: Object,
+    assignment: Object,
   },
 }
 </script>
@@ -10,9 +10,9 @@ export default {
   <!-- eslint-disable vue/no-mutating-props -->
   <li>
     <label>
-      {{ outBuilding.name }}
+      {{ assignment.name }}
 
-      <input v-model="outBuilding.isDamaged" type="checkbox">
+      <input v-model="assignment.complete" type="checkbox">
     </label>
   </li>
 </template>
