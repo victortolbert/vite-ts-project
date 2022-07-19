@@ -8,11 +8,11 @@ export default {
 
 <template>
   <!-- eslint-disable vue/no-mutating-props -->
-  <li>
-    <label>
-      {{ outBuilding.name }}
+  <li class="flex w-full8">
+    <div class="flex justify-between items-center w-full">
+      <label>{{ outBuilding.name }}</label>
 
       <input v-model="outBuilding.isDamaged" type="checkbox">
-    </label>
+    </div>
   </li>
 </template>

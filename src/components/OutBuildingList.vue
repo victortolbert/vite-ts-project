@@ -16,7 +16,7 @@ export default {
       {{ title }}
     </h2>
 
-    <ul>
+    <ul class="m-16">
       <OutBuilding
         v-for="outBuilding in outBuildings"
         :key="outBuilding.id"

@@ -7,17 +7,14 @@ export default {
   data() {
     return {
       outBuildings: [
-        { name: 'Shed', isDamaged: false, id: 1 },
-        { name: 'Barn', isDamaged: false, id: 2 },
-        { name: 'Detached Garage', isDamaged: false, id: 3 },
-        { name: 'Shop', isDamaged: false, id: 3 },
-        { name: 'Green House', isDamaged: false, id: 3 },
-        { name: 'Pool House', isDamaged: false, id: 3 },
-        { name: 'Other', isDamaged: false, id: 3 },
+        {
+          id: 1,
+          name: 'Name',
+          description: 'Description',
+        },
       ],
     }
   },
-
   computed: {
     filters() {
       return {
@@ -26,12 +23,21 @@ export default {
       }
     },
   },
+  mounted() {
+    // eslint-disable-next-line no-console
+    console.log('mounted')
+  },
+  methods: {
+    addAnother() {
+      this.outBuildings.push({})
+    },
+  },
 }
 </script>
 
 <template>
   <section class="space-y-6">
-    <OutBuildingList :out-buildings="filters.isNotDamaged" title="Not Damaged" />
-    <OutBuildingList :out-buildings="filters.isDamaged" title="Damaged" />
+    <OutBuildingList :out-buildings="outBuildings" title="Not Damaged" />
+    <button @click="addAnother()">Add Another?</button>
   </section>
 </template>
