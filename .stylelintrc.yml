@@ -1,6 +1,6 @@
 customSyntax: postcss-html
 extends:
-  - stylelint-config-html/vue
+  # - stylelint-config-html/vue
   - stylelint-config-recommended-scss
   - stylelint-config-recommended-vue/scss
 plugins:
