@@ -30,8 +30,8 @@ export default {
 
 <template>
   <form @submit.prevent="add">
-    <div class="border border-gray-600 text-black">
-      <input v-model="newAssignment" type="text" placeholder="New Assignment..." class="p-2">
+    <div class="border border-gray-600 text-black flex">
+      <input v-model="newAssignment" type="text" placeholder="New Assignment..." class="p-2 flex-1">
       <button type="submit" class="bg-white p-2 border-l">
         Add
       </button>

@@ -1,12 +1,14 @@
 <script setup lang="ts">
-// import ProjectInspectionForm from './components/ProjectInspectionForm.vue'
 import Assignments from './components/Assignments.vue'
+import ExampleOptionsComponent from './components/ExampleOptionsComponent.vue'
+import ExampleScriptSetupComponent from './components/ExampleScriptSetupComponent.vue'
 </script>
 
 <template>
   <main>
+    <ExampleScriptSetupComponent />
+    <ExampleOptionsComponent />
     <Assignments />
-    <!-- <ProjectInspectionForm msg="Vite + Vue" /> -->
   </main>
 </template>
 

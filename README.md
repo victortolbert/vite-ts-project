@@ -11,8 +11,6 @@ Out Buildings
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite 3.0](https://vitejs.dev/)
 - [Vue 2.7](https://blog.vuejs.org/posts/vue-2-7-naruto.html)
-
-
 - [Class][1] ([Vue Property Decorator][2]), [Options][3], and [Composition][4] ([Script Setup][5]) component APIs
 
 
