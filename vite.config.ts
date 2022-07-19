@@ -8,9 +8,10 @@ import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
 
 export default defineConfig({
+  base: "./",
   resolve: {
     alias: {
-      '@': `${path.resolve(__dirname, 'src')}`,
+      "@": `${path.resolve(__dirname, "src")}`,
     },
   },
 
@@ -24,17 +25,15 @@ export default defineConfig({
     Components({
       resolvers: [
         IconsResolver({
-          componentPrefix: '',
+          componentPrefix: "",
         }),
       ],
-      dts: 'src/components.d.ts',
+      dts: "src/components.d.ts",
     }),
     Icons(),
     AutoImport({
-      imports: [
-        '@vueuse/core',
-      ],
-      dts: 'src/auto-imports.d.ts',
+      imports: ["@vueuse/core"],
+      dts: "src/auto-imports.d.ts",
     }),
-  ]
-})
+  ],
+});

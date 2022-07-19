@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import ProjectInspectionForm from './components/ProjectInspectionForm.vue'
 </script>
 
 <template>
   <div>
-    <HelloWorld msg="Vite + Vue" />
+    <ProjectInspectionForm msg="Vite + Vue" />
   </div>
 </template>

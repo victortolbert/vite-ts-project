@@ -1,11 +1,12 @@
 <script lang="ts">
-import { Vue, PropSync } from 'vue-property-decorator'
+import { Vue, PropSync, Component } from 'vue-property-decorator'
 
+@Component({})
 export default class TestComponent extends Vue {
   @PropSync('name', { type: String }) syncedName!: string
 }
 </script>
 
 <template>
-  <b>Testing {{ name }}</b>
+  <div>Testing {{ syncedName }}</div>
 </template>
