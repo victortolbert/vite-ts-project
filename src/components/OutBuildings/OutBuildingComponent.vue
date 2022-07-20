@@ -1,7 +1,12 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Upload } from '@progress/kendo-vue-upload'
 
-@Component({})
+@Component({
+  components: {
+    Upload,
+  },
+})
 export default class OutBuildingComponent extends Vue {
   @Prop({
     type: Object,
@@ -43,18 +48,39 @@ export default class OutBuildingComponent extends Vue {
       <div v-if="outBuilding.damaged" class="p-4">
         <div class="flex justify-between">
           <label>Interior Damage Description</label>
-          <textarea v-model="outBuilding.interiorDamageDescription" class="flex-1" name="" cols="30" rows="3" />
-          <input type="file" name="interiorDamageAssets">
+          <textarea v-model="outBuilding.interiorDamageDescription" class="flex-1" name="" :cols="30" :rows="3" />
+          <upload
+            :default-files="[]"
+            :batch="false"
+            :multiple="true"
+            :with-credentials="false"
+            save-url="https://demos.telerik.com/kendo-ui/service-v4/upload/save"
+            remove-url="https://demos.telerik.com/kendo-ui/service-v4/upload/remove"
+          />
         </div>
         <div class="flex justify-between">
           <label>Elevation Damage Description</label>
-          <textarea v-model="outBuilding.elevationDamageDescription" class="flex-1" name="" cols="30" rows="3" />
-          <input type="file" name="elevationDamageAssets">
+          <textarea v-model="outBuilding.elevationDamageDescription" class="flex-1" name="" :cols="30" :rows="3" />
+          <upload
+            :default-files="[]"
+            :batch="false"
+            :multiple="true"
+            :with-credentials="false"
+            save-url="https://demos.telerik.com/kendo-ui/service-v4/upload/save"
+            remove-url="https://demos.telerik.com/kendo-ui/service-v4/upload/remove"
+          />
         </div>
         <div class="flex justify-between">
           <label>Roof Damage Description</label>
-          <textarea v-model="outBuilding.roofDamageDescription" class="flex-1" name="" cols="30" rows="3" />
-          <input type="file" name="roofDamageAssets">
+          <textarea v-model="outBuilding.roofDamageDescription" class="flex-1" name="" :cols="30" :rows="3" />
+          <upload
+            :default-files="[]"
+            :batch="false"
+            :multiple="true"
+            :with-credentials="false"
+            save-url="https://demos.telerik.com/kendo-ui/service-v4/upload/save"
+            remove-url="https://demos.telerik.com/kendo-ui/service-v4/upload/remove"
+          />
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
 <script>
 import vueFilePond from 'vue-filepond'
 import 'filepond/dist/filepond.min.css'
-import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css'
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type'
+import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css'
 
 // Create component
 const FilePond = vueFilePond(
-  FilePondPluginFileValidateType,
+  FilePondPluginImageExifOrientation,
   FilePondPluginImagePreview,
 )
 
@@ -17,28 +17,45 @@ export default {
     FilePond,
   },
   data() {
-    return { myFiles: ['cat.jpeg'] }
+    return {
+      // fake server to simulate loading a 'local' server file and processing a file
+      myServer: {
+        process: (fieldName, file, metadata, load) => {
+          // simulates uploading a file
+          setTimeout(() => {
+            load(Date.now())
+          }, 1500)
+        },
+        load: (source, load) => {
+          // simulates loading a file from the server
+          fetch(source).then(res => res.blob()).then(load)
+        },
+      },
+      myFiles: [{
+        source: '/assets/img/home.jpg',
+        options: {
+          type: 'local',
+        },
+      }],
+    }
   },
   methods: {
     handleFilePondInit() {
-      // eslint-disable-next-line no-console
-      console.log('FilePond has initialized')
-
       // FilePond instance methods are available on `this.$refs.pond`
+      console.log('FilePond has initialized')
     },
   },
 }
 </script>
 
 <template>
-  <div id="app">
+  <div id="component">
     <FilePond
       ref="pond"
       name="test"
       label-idle="Drop files here..."
-      :allow-multiple="true"
-      accepted-file-types="image/jpeg, image/png"
-      server="/api"
+      allow-multiple="true"
+      :server="myServer"
       :files="myFiles"
       @init="handleFilePondInit"
     />

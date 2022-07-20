@@ -59,6 +59,7 @@ specifiers:
   '@progress/kendo-vue-popup': latest
   '@progress/kendo-vue-progressbars': latest
   '@progress/kendo-vue-scheduler': latest
+  '@progress/kendo-vue-upload': latest
   '@supabase/supabase-js': ^1.35.4
   '@tailwindcss/aspect-ratio': ^0.4.0
   '@tailwindcss/forms': ^0.5.2
@@ -89,6 +90,7 @@ specifiers:
   eslint: ^8.20.0
   filepond: ^4.30.4
   filepond-plugin-file-validate-type: ^1.2.8
+  filepond-plugin-image-exif-orientation: 1.0.11
   filepond-plugin-image-preview: ^4.6.11
   gmap-vue: 3.5.2
   highcharts: 10.2.0
@@ -138,7 +140,7 @@ specifiers:
   vue: ^2.7.7
   vue-chartkick: ^0.6.1
   vue-class-component: ^7.2.6
-  vue-filepond: ^6.0.3
+  vue-filepond: 6.0.2
   vue-mapbox: 0.4.1
   vue-marquee-text-component: ^1.2.0
   vue-meta: 2.4.0
@@ -200,6 +202,7 @@ dependencies:
   '@progress/kendo-vue-popup': 3.4.3_f7m7pllegafkjhwyktmfrkott4
   '@progress/kendo-vue-progressbars': 3.4.3_uhumtpg4izo4v4f2djgkzlxzby
   '@progress/kendo-vue-scheduler': 3.4.3_pzfcgwrfx3bcs2bchbuobjozz4
+  '@progress/kendo-vue-upload': 3.4.3_f7m7pllegafkjhwyktmfrkott4
   '@supabase/supabase-js': 1.35.4
   '@vitest/ui': 0.18.1
   '@vueuse/core': 8.9.4_lrilshjfsqn45xjx6lrflh6iti
@@ -274,6 +277,7 @@ devDependencies:
   eslint: 8.20.0
   filepond: 4.30.4
   filepond-plugin-file-validate-type: 1.2.8_filepond@4.30.4
+  filepond-plugin-image-exif-orientation: 1.0.11_filepond@4.30.4
   filepond-plugin-image-preview: 4.6.11_filepond@4.30.4
   husky: 8.0.1
   inversify: 6.0.1
@@ -309,7 +313,7 @@ devDependencies:
   vite-plugin-checker: 0.4.9_vite@3.0.2
   vite-plugin-windicss: 1.8.7_vite@3.0.2
   vitest: 0.18.1_x7bjkqki3nci6prjtndxrcy4y4
-  vue-filepond: 6.0.3_filepond@4.30.4+vue@2.7.7
+  vue-filepond: 6.0.2_filepond@4.30.4+vue@2.7.7
   vue-template-compiler: 2.7.7
   vue-template-es2015-compiler: 1.9.1
   vue-tsc: 0.38.9_typescript@4.7.4
@@ -1457,6 +1461,21 @@ packages:
       vue: 2.7.7
     dev: false
 
+  /@progress/kendo-vue-upload/3.4.3_f7m7pllegafkjhwyktmfrkott4:
+    resolution: {integrity: sha512-2Nkn2S1ZHqWgAcuCDBswBTFvBTakpHjHH4FBWGZSlHWqI2BbAsJCOCu1b1laA8YsR3DU/KwL2NJ7hGhXqiWB9Q==}
+    peerDependencies:
+      '@progress/kendo-licensing': ^1.1.0
+      vue: ^2.6.12 || ^3.0.2
+    dependencies:
+      '@progress/kendo-licensing': 1.2.2
+      '@progress/kendo-vue-buttons': 3.4.3_f7m7pllegafkjhwyktmfrkott4
+      '@progress/kendo-vue-common': 3.4.3_f7m7pllegafkjhwyktmfrkott4
+      axios: 0.24.0
+      vue: 2.7.7
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /@progress/pako-esm/1.0.1:
     resolution: {integrity: sha512-O4A3b1EuE9Xe1pC3Xz9Tcn1M/CYrL71f4y/5TXeytOVTkmkzBgYW97fYP2f+54H0e0erWRaqV/kUUB/a8Uxfbw==}
     dev: false
@@ -1766,7 +1785,7 @@ packages:
     resolution: {integrity: sha512-6BAy1xXEmMuHeAJ4Fv4yXKwBDTGTOseExKE3OaHiNycdHdZw59KfYzrt0DkDluvwmik1HRt6QS7bImxUmpSy+w==}
     dependencies:
       '@types/node': 18.0.6
-      '@types/parse5': 6.0.3
+      '@types/parse5': 7.0.0
       '@types/tough-cookie': 4.0.2
     dev: true
 
@@ -1814,8 +1833,11 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
-  /@types/parse5/6.0.3:
-    resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
+  /@types/parse5/7.0.0:
+    resolution: {integrity: sha512-f2SeAxumolBmhuR62vNGTsSAvdz/Oj0k682xNrcKJ4dmRnTPODB74j6CPoNPzBPTHsu7Y7W7u93Mgp8Ovo8vWw==}
+    deprecated: This is a stub types definition. parse5 provides its own type definitions, so you do not need this installed.
+    dependencies:
+      parse5: 7.0.0
     dev: true
 
   /@types/phoenix/1.5.4:
@@ -2556,6 +2578,14 @@ packages:
   /aws4/1.11.0:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: true
+
+  /axios/0.24.0:
+    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+    dependencies:
+      follow-redirects: 1.15.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /axios/0.27.2:
     resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
@@ -4719,6 +4749,14 @@ packages:
       filepond: 4.30.4
     dev: true
 
+  /filepond-plugin-image-exif-orientation/1.0.11_filepond@4.30.4:
+    resolution: {integrity: sha512-hLBc12Fk6Zkj3L8mSAn+elugHOqT5rLUbgVXQQIQjMe0FsGjtpoxqeVR6jt4IWHGat2L9sFAgU2TGmd1mqosCg==}
+    peerDependencies:
+      filepond: '>=3.x <5.x'
+    dependencies:
+      filepond: 4.30.4
+    dev: true
+
   /filepond-plugin-image-preview/4.6.11_filepond@4.30.4:
     resolution: {integrity: sha512-0EmQ9HnOb/X0xc5rLcNRhhmdUbp7oiicRwQrcr90ZfVmPJOOZoX3ZGUEsEPj7luMI55huguhcVozdESxtqnuRw==}
     peerDependencies:
@@ -6500,8 +6538,8 @@ packages:
       minimist: 1.2.6
     dev: true
 
-  /mlly/0.5.4:
-    resolution: {integrity: sha512-gFlsLWCjVwu/LM/ZfYUkmnbBoz7eyBIMUwVQYDqhd8IvtNFDeZ95uwAyxHE2Xx7tQwePQaCo4fECZ9MWFEUTgQ==}
+  /mlly/0.5.5:
+    resolution: {integrity: sha512-2R4JT/SxRDPexomw4rmHYY/gWAGmL9Kkq1OR76Ua6w+P340a1aBDTWzKo2kAlxzrG82OdXs5VB9Lmcmyit0Obg==}
     dependencies:
       pathe: 0.3.2
       pkg-types: 0.3.3
@@ -7079,7 +7117,7 @@ packages:
     resolution: {integrity: sha512-6AJcCMnjUQPQv/Wk960w0TOmjhdjbeaQJoSKWRQv9N3rgkessCu6J0Ydsog/nw1MbpnxHuPzYbfOn2KmlZO1FA==}
     dependencies:
       jsonc-parser: 3.1.0
-      mlly: 0.5.4
+      mlly: 0.5.5
       pathe: 0.3.2
     dev: true
 
@@ -8574,7 +8612,7 @@ packages:
       fast-glob: 3.2.11
       local-pkg: 0.4.2
       magic-string: 0.26.2
-      mlly: 0.5.4
+      mlly: 0.5.5
       pathe: 0.3.2
       scule: 0.2.1
       strip-literal: 0.4.0
@@ -9078,8 +9116,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-filepond/6.0.3_filepond@4.30.4+vue@2.7.7:
-    resolution: {integrity: sha512-m0wArAdpgzOOs19bWA6zzYlHAb2aK+igPoKPZGrzpgKiiELPKW7XZ2OBDXzk7rhpFLkedujVrMqwjPyZfmQTTQ==}
+  /vue-filepond/6.0.2_filepond@4.30.4+vue@2.7.7:
+    resolution: {integrity: sha512-HE1TvV2LrKMU3pFeIBbR9Uf6cryNLVnnl35uSL+HLsZ6rfZ3C1alfre3UcaSoKTVuxNsn41Ce4IR528UwdxZfw==}
     peerDependencies:
       filepond: '>=4.7.4 < 5.x'
       vue: '>=2.6.0 < 3.x'
