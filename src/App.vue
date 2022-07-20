@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { SidebarMenu } from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
-import OutBuildingsComponent from './components/OutBuildings/OutBuildingsComponent.vue'
+import PropertyInspectionView from '@/components/PropertyInspectionView.vue'
 
 const menu = ref([
   {
@@ -57,9 +57,11 @@ onMounted(() => {
 
 <template>
   <main id="demo" class="w-full" :class="[{ collapsed }, { onmobile: isOnMobile }]">
+    <PropertyInspectionView class="p-8" />
+
     <SidebarMenu
       width="360px"
-      width-collapsed="50px"
+      width-collapsed="52px"
       :menu="menu"
       :collapsed="collapsed"
       :theme="selectedTheme"
@@ -67,7 +69,12 @@ onMounted(() => {
       @toggle-collapse="onToggleCollapse"
       @item-click="onItemClick"
     />
-    <OutBuildingsComponent />
+
+    <div
+      v-if="isOnMobile && !collapsed"
+      class="sidebar-overlay"
+      @click="collapsed = true"
+    />
   </main>
 </template>
 
@@ -77,11 +84,12 @@ onMounted(() => {
   transition: 0.3s ease;
 }
 #demo.collapsed {
-  padding-left: 50px;
+  padding-left: 52px;
 }
 #demo.onmobile {
-  padding-left: 50px;
+  padding-left: 52px;
 }
+
 .sidebar-overlay {
   position: fixed;
   width: 100%;
@@ -92,7 +100,8 @@ onMounted(() => {
   opacity: 0.5;
   z-index: 900;
 }
+
 .demo {
-  padding: 50px;
+  padding: 52px;
 }
 </style>

@@ -16,7 +16,7 @@ export default class OutBuildingListComponent extends Vue {
 
 <template>
   <Panel v-show="outBuildings.length">
-    <ul class="divide-y divide-gray-600 space-y-4">
+    <ul class="divide-y space-y-4">
       <OutBuildingComponent
         v-for="outBuilding in outBuildings"
         :key="outBuilding.id"

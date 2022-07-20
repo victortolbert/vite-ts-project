@@ -39,7 +39,7 @@ export default class OutBuildingsComponent extends Vue {
 <template>
   <section id="out-buildings" class="mx-auto w-full border-2 border-black p-4 rounded">
     <header class="flex justify-between">
-      <h3 class="font-bold text-2xl">
+      <h3 class="font-medium text-primary-500 text-2xl">
         Out Building(s) Present?
       </h3>
       <input v-model="outBuildingsPresent" type="checkbox">
