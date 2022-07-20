@@ -37,21 +37,50 @@ export default class OutBuildingsComponent extends Vue {
 </script>
 
 <template>
-  <section id="out-buildings" class="mx-auto w-full border-2 p-4 rounded">
+  <section
+    id="out-buildings"
+    class="
+      mx-auto
+      w-full
+      border-2
+      p-4
+      rounded
+    "
+  >
     <header class="flex justify-between">
-      <h3 class="font-medium text-primary-500 text-2xl">
+      <h3
+        class="
+          font-medium
+          text-primary-500
+          text-2xl
+        "
+      >
         Out Building(s) Present?
       </h3>
 
       <input
         v-model="outBuildingsPresent"
         type="checkbox"
-        class=" rounded border-gray-400 p-3 text-amber-300 shadow-sm focus:border-yellow-700 focus:ring focus:ring-offset-0 focus:ring-yellow-200 focus:ring-opacity-50 "
+        class="
+          rounded
+          border-gray-400
+          p-3
+          text-amber-300
+          shadow-sm
+          focus:border-yellow-700
+          focus:ring
+          focus:ring-offset-0
+          focus:ring-yellow-200
+          focus:ring-opacity-50
+        "
       >
     </header>
 
     <div v-show="outBuildingsPresent" class="mt-4">
-      <OutBuildingListComponent :out-buildings="outBuildings" title="Out Buildings">
+      <OutBuildingListComponent
+        title="Out Buildings"
+        :out-buildings="outBuildings"
+      >
         <OutBuildingCreateComponent
           v-if="outBuildings.length < outBuildingsLimit"
           @add="add"

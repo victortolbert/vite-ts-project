@@ -48,7 +48,13 @@ export default class OutBuildingComponent extends Vue {
       <div v-if="outBuilding.damaged" class="p-4">
         <div class="flex justify-between">
           <label>Interior Damage Description</label>
-          <textarea v-model="outBuilding.interiorDamageDescription" class="flex-1" name="" :cols="30" :rows="3" />
+          <textarea
+            v-model="outBuilding.interiorDamageDescription"
+            class="flex-1"
+            name=""
+            :cols="30"
+            :rows="3"
+          />
           <upload
             :default-files="[]"
             :batch="false"
@@ -60,7 +66,13 @@ export default class OutBuildingComponent extends Vue {
         </div>
         <div class="flex justify-between">
           <label>Elevation Damage Description</label>
-          <textarea v-model="outBuilding.elevationDamageDescription" class="flex-1" name="" :cols="30" :rows="3" />
+          <textarea
+            v-model="outBuilding.elevationDamageDescription"
+            class="flex-1"
+            name=""
+            :cols="30"
+            :rows="3"
+          />
           <upload
             :default-files="[]"
             :batch="false"
@@ -72,7 +84,13 @@ export default class OutBuildingComponent extends Vue {
         </div>
         <div class="flex justify-between">
           <label>Roof Damage Description</label>
-          <textarea v-model="outBuilding.roofDamageDescription" class="flex-1" name="" :cols="30" :rows="3" />
+          <textarea
+            v-model="outBuilding.roofDamageDescription"
+            class="flex-1"
+            name=""
+            :cols="30"
+            :rows="3"
+          />
           <upload
             :default-files="[]"
             :batch="false"

@@ -7,7 +7,7 @@ import PropertyInspectionView from '@/components/PropertyInspectionView.vue'
 const menu = ref([
   {
     header: true,
-    title: 'Main Navigation',
+    title: 'UI Patterns',
     hiddenOnCollapse: true,
   },
   {

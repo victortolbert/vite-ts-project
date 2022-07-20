@@ -54,16 +54,42 @@ export default defineComponent({
 </script>
 
 <template>
-  <section id="out-buildings" class="mx-auto w-full border-2 p-4 rounded">
+  <section
+    id="out-buildings"
+    class="
+      mx-auto
+      w-full
+      border-2
+      p-4
+      rounded
+    "
+  >
     <header class="flex justify-between">
       <h3 class="font-bold text-2xl">
         Out Building(s) Present?
       </h3>
+
       <input v-model="outBuildingsPresent" type="checkbox">
+
+      <o-field>
+        <o-switch
+          v-model="outBuildingsPresent"
+          :rounded="false"
+          position="left"
+          size="large"
+          true-value="Yes"
+          false-value="No"
+        >
+          {{ outBuildingsPresent }}
+        </o-switch>
+      </o-field>
     </header>
 
     <div v-show="outBuildingsPresent">
-      <OutBuildingList :out-buildings="outBuildings" title="Out Buildings">
+      <OutBuildingList
+        :out-buildings="outBuildings"
+        title="Out Buildings"
+      >
         <OutBuildingCreate
           v-if="outBuildings.length < outBuildingsLimit"
           @add="add"
