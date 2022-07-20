@@ -1,15 +1,14 @@
-import { reactive } from "vue";
+import { reactive } from 'vue'
 
-export let counter = reactive({
+export const counter = reactive({
   // state
   count: 0,
 
   // action
   increment() {
-    if (this.count >= 10) {
-      return;
-    }
+    if (this.count >= 10)
+      return
 
-    this.count++;
+    this.count++
   },
-});
+})

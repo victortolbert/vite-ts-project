@@ -1,11 +1,11 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore("counter", {
+export const useCounterStore = defineStore('counter', {
   // data
   state() {
     return {
       count: 5,
-    };
+    }
   },
 
   // methods
@@ -13,15 +13,15 @@ export const useCounterStore = defineStore("counter", {
     increment() {
       // eslint-disable-next-line curly
       if (this.count < 10) {
-        this.count++;
+        this.count++
       }
     },
   },
 
   // computed
   getters: {
-    remaining() {
-      return 10 - this.count;
+    remaining(): number {
+      return 10 - this.count
     },
   },
-});
+})

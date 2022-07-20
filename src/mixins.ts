@@ -1,12 +1,12 @@
-import Vue from "vue";
-import Component from "vue-class-component";
+import Vue from 'vue'
+import Component from 'vue-class-component'
 
 @Component
 export class Hello extends Vue {
-  hello = "Hello";
+  hello = 'Hello'
 }
 
 @Component
 export class World extends Vue {
-  world = "World";
+  world = 'World'
 }
