@@ -24,5 +24,15 @@
       "id": 4,
       "tag": "programming"
     }
+  ],
+  "outBuildings": [
+    {
+      "id": 1,
+      "name": "Shed",
+      "damaged": false,
+      "interiorDamageDescription": "",
+      "elevationDamageDescription": "",
+      "roofDamageDescription": ""
+    }
   ]
 }

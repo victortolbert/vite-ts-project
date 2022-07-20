@@ -1,7 +1,7 @@
 <script>
 export default {
   props: {
-    theme: { type: String, default: 'dark' },
+    theme: { type: String, default: 'light' },
   },
 }
 </script>
