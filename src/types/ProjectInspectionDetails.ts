@@ -1,0 +1,34 @@
+export class ProjectInspectionDetails {
+  public AdjusterAddress: string = null as any;
+  public AdjusterName: string = null as any;
+  public AdjusterPhone: string = null as any;
+  public City: string = null as any;
+  public ClaimNumber: string = null as any;
+  public CompanyName: string = null as any;
+  public Duration: number = 0;
+  public HasValidTime: boolean= true;
+  public InspectionAddress: string = null as any;
+  public InspectionDate: string = null as any;
+  public InspectionDateAndTime: string = null as any;
+  public InspectionEndTime: string = null as any;
+  public InspectionEndTimeWithBuffer: string = null as any;
+  public InspectionEndTimeWithBufferConverted: string = null as any;
+  public InspectionTime: string = null as any;
+  public IsException: boolean = false;
+  public IsHoverEnabled: boolean = false;
+  public ManuallyAssigned: boolean = false;
+  public OriginalFieldTechId: number = 0;
+  public OriginalFieldTechName: string = null as any;
+  public PostalCode: string = null as any;
+  public ProjectId: number = 0;
+  public ProjectInspectionId: number = 0;
+  public ProjectInspectionTechnicianCreatedOn: string = null as any;
+  public ProjectInspectionTechnicianId: number = 0;
+  public ProjectNumber: string = null as any;
+  public RemovedRoute: boolean = false;
+  public ServiceAreaId: number = 0;
+  public ServiceType: string = null as any;
+  public ShortName: string = null as any;
+  public State: string = null as any;
+  public TravelMinutesFromPrevious: number = 0;
+}

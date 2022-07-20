@@ -3,7 +3,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue2'
-import WindiCSS from 'vite-plugin-windicss'
+// import WindiCSS from 'vite-plugin-windicss'
 import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -24,19 +24,23 @@ export default defineConfig({
 
   plugins: [
     Vue(),
-    WindiCSS(),
+    // WindiCSS(),
     Components({
       resolvers: [
         IconsResolver({
-          componentPrefix: '',
+          prefix: 'i',
         }),
       ],
       dts: 'src/components.d.ts',
     }),
     Icons({
-      // experimental
-      autoInstall: true,
+      // compiler: null, // 'vue2', 'vue3', 'jsx'
       compiler: 'vue2',
+      scale: 1.2, // Scale of icons against 1em
+      defaultStyle: '', // Style apply to icons
+      defaultClass: '', // Class names apply to icons
+      jsx: 'react', // 'react' or 'preact'
+      autoInstall: true, // experimental
     }),
     AutoImport({
       imports: ['vue', '@vueuse/core'],

@@ -2,11 +2,16 @@ import 'vue-class-component/hooks'
 import './class-component-hooks'
 import Vue from 'vue'
 import { PiniaVuePlugin, createPinia } from 'pinia'
+
 import App from './App.vue'
 
-// import "windi.css";
+import '@/plugins'
+// import '@/plugins/global-directives'
+// import '@/plugins/global-filters'
+
+// import 'windi.css'
 // import './style.css'
-// import "./index.css";
+import './index.css'
 
 // import router from '@/router'
 
