@@ -5,7 +5,7 @@ import OutBuildings from './components/OutBuildings/OutBuildings.vue'
 </script>
 
 <template>
-  <main class="w-full">
+  <main class="w-full m-16">
     <!-- <Assignments /> -->
     <OutBuildings />
     <!-- <PropertyInspectionView /> -->

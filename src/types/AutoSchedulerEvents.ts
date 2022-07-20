@@ -4,5 +4,5 @@ export enum AutoSchedulerEvents {
   MoveInspection = 'move-inspection',
   InspectionMoved = 'inspection-moved',
   UnSelectDiv = 'unselect-div',
-  ShowTimeModal = 'show-time-modal'
+  ShowTimeModal = 'show-time-modal',
 }

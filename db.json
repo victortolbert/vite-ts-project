@@ -28,11 +28,11 @@
   "outBuildings": [
     {
       "id": 1,
-      "name": "Shed",
+      "name": null,
       "damaged": false,
-      "interiorDamageDescription": "",
-      "elevationDamageDescription": "",
-      "roofDamageDescription": ""
+      "interiorDamageDescription": null,
+      "elevationDamageDescription": null,
+      "roofDamageDescription": null
     }
   ]
 }

@@ -9,10 +9,17 @@ export default {
     return {
       outBuildings: [],
       outBuildingsPresent: false,
+      outBuildingsLimit: 6,
     }
   },
 
   computed: {
+    outBuildingInteriorAssets() {
+      return this.outBuildingsAssets.map((outBuilding) => {
+        // TODO: Collect the interior, elevation and roof assets as one bundle of OutBuilding assets
+        return outBuilding.interiorAssets
+      })
+    },
     filters() {
       return {
         damaged: this.outBuildings.filter(outBuilding => outBuilding.damaged),
@@ -20,6 +27,7 @@ export default {
       }
     },
   },
+
   created() {
     fetch('http://localhost:3001/outBuildings')
       .then(response => response.json())
@@ -44,13 +52,20 @@ export default {
 </script>
 
 <template>
-  <section class="">
-    Out Buildings Present?
-    <input v-model="outBuildingsPresent" type="checkbox">
+  <section id="out-buildings" class="mx-auto max-w-6xl border-2 border-black p-4 rounded">
+    <header class="flex justify-between">
+      <h3 class="font-bold text-2xl">
+        Out Building(s) Present?
+      </h3>
+      <input v-model="outBuildingsPresent" type="checkbox">
+    </header>
 
     <div v-show="outBuildingsPresent">
       <OutBuildingList :out-buildings="outBuildings" title="Out Buildings">
-        <OutBuildingCreate @add="add" />
+        <OutBuildingCreate
+          v-if="outBuildings.length < outBuildingsLimit"
+          @add="add"
+        />
       </OutBuildingList>
     </div>
   </section>

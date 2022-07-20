@@ -9,11 +9,11 @@ export default {
 <template>
   <!-- eslint-disable vue/no-mutating-props -->
   <li>
-    <div class="p-2">
-      <div class="flex">
+    <div>
+      <div class="mt-4 flex items-center">
         <select v-model="outBuilding.name">
-          <option disabled value="">
-            Please select one
+          <option :value="null" disabled>
+            Select Out Building...
           </option>
           <option>Barn</option>
           <option>Shed</option>
@@ -23,28 +23,34 @@ export default {
           <option>Other</option>
         </select>
 
-        <div class="flex items-center justify-between">
+        <div class="flex items-center">
           <label>Is Damaged?</label>
-          <input v-model="outBuilding.isDamaged" type="checkbox" class="ml-3">
+
+          <div>
+            <div class="flex items-center space-x-2">
+              <label>Yes</label>
+              <input v-model="outBuilding.damaged" type="checkbox" class="">
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="flex">
-        <label>Interior Damage Description</label>
-        <textarea id="" v-model="outBuilding.interiorDamageDescription" name="" cols="30" rows="3" />
-        <input type="file" name="interiorDamageAssets">
-      </div>
-
-      <div class="flex">
-        <label>Elevation Damage Description</label>
-        <textarea id="" v-model="outBuilding.elevationDamageDescription" name="" cols="30" rows="3" />
-        <input type="file" name="elevationDamageAssets">
-      </div>
-
-      <div class="flex">
-        <label>Roof Damage Description</label>
-        <textarea id="" v-model="outBuilding.roofDamageDescription" name="" cols="30" rows="3" />
-        <input type="file" name="roofDamageAssets">
+      <div class="p-4" v-if="outBuilding.damaged">
+        <div class="flex justify-between">
+          <label>Interior Damage Description</label>
+          <textarea class="flex-1" v-model="outBuilding.interiorDamageDescription" name="" cols="30" rows="3" />
+          <input type="file" name="interiorDamageAssets">
+        </div>
+        <div class="flex justify-between">
+          <label>Elevation Damage Description</label>
+          <textarea class="flex-1" v-model="outBuilding.elevationDamageDescription" name="" cols="30" rows="3" />
+          <input type="file" name="elevationDamageAssets">
+        </div>
+        <div class="flex justify-between">
+          <label>Roof Damage Description</label>
+          <textarea class="flex-1" v-model="outBuilding.roofDamageDescription" name="" cols="30" rows="3" />
+          <input type="file" name="roofDamageAssets">
+        </div>
       </div>
     </div>
   </li>

@@ -1,7 +1,4 @@
-import {
-  CollateralItem, InteriorItem,
-  NonStormDamageItem, RoofComponent
-} from '.'
+import type { CollateralItem, InteriorItem, NonStormDamageItem, RoofComponent } from '.'
 
 export interface BaseReport {
   AdditionalSummary: string

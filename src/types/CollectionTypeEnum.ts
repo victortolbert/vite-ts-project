@@ -1,4 +1,4 @@
 export enum CollectionTypeEnum {
   List,
-  Grid
+  Grid,
 }

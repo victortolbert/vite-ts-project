@@ -12,41 +12,12 @@ export default {
   },
 
   emits: ['toggle'],
-
-  data() {
-    return {
-      currentTag: 'all',
-    }
-  },
-
-  computed: {
-    filteredOutBuildings() {
-      if (this.currentTag === 'all')
-        return this.outBuildings
-
-      return this.outBuildings.filter(a => a.tag === this.currentTag)
-    },
-
-    tags() {
-      return ['all', ...new Set(this.outBuildings.map(a => a.tag))]
-    },
-  },
 }
 </script>
 
 <template>
   <Panel v-show="outBuildings.length" class="">
-    <div class=" ">
-      <h2 class="font-bold mb-2">
-        {{ title }}
-      </h2>
-
-      <button v-show="canToggle" @click="$emit('toggle')">
-        &times;
-      </button>
-    </div>
-
-    <ul class="">
+    <ul class="divide-y divide-gray-600 space-y-4">
       <OutBuilding
         v-for="outBuilding in outBuildings"
         :key="outBuilding.id"
