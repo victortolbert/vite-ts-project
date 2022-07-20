@@ -1,6 +1,7 @@
 import "vue-class-component/hooks";
 import "./class-component-hooks";
 import Vue from "vue";
+import { createHead } from '@vueuse/head'
 import { createPinia, PiniaVuePlugin } from "pinia";
 import ProjectInspectionForm from "./ProjectInspectionForm.vue";
 
@@ -9,10 +10,13 @@ import ProjectInspectionForm from "./ProjectInspectionForm.vue";
 // import "./index.css";
 
 // import router from '@/router'
+const head = createHead()
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
 Vue.use(PiniaVuePlugin);
+Vue.use(head);
+
 const pinia = createPinia();
 
 new Vue({

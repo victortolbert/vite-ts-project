@@ -36,4 +36,9 @@ export default defineConfig({
       dts: "src/auto-imports.d.ts",
     }),
   ],
+
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  },
 });
