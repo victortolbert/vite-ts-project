@@ -1,0 +1,13 @@
+@media print {
+  .reports {
+    color: red !important;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10pt;
+  }
+}
+.reports {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16pt;
+}
+
+/*# sourceMappingURL=print.css.map */
