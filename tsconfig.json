@@ -35,6 +35,7 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "types": [
+      "vitest/globals",
       "@vueuse/core",
       "vite/client",
       "unplugin-icons/types/vue",

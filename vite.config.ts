@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue2'
@@ -37,17 +39,20 @@ export default defineConfig({
       compiler: 'vue2',
     }),
     AutoImport({
-      imports: ['@vueuse/core'],
+      imports: ['vue', '@vueuse/core'],
+      dirs: ['./composables'],
       dts: 'src/auto-imports.d.ts',
     }),
   ],
 
   // https://github.com/vitest-dev/vitest
   test: {
+    globals: true,
     include: ['test/**/*.test.ts'],
     environment: 'jsdom',
     deps: {
       inline: ['@vue', '@vueuse', 'vue-demi'],
     },
+    setupFiles: ['./src/setup.ts'],
   },
 })

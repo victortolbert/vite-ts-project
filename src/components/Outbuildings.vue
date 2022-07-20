@@ -38,6 +38,8 @@ export default {
 <template>
   <section class="space-y-6">
     <OutBuildingList :out-buildings="outBuildings" title="Not Damaged" />
-    <button @click="addAnother()">Add Another?</button>
+    <button @click="addAnother()">
+      Add Another?
+    </button>
   </section>
 </template>
