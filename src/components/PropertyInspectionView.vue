@@ -4,10 +4,14 @@ import InspectionDirectionNorth from './PropertyInspection/InspectionDirectionNo
 import InspectionOutsideTemp from './PropertyInspection/InspectionOutsideTemp.vue'
 import InspectionAllPhotos from './PropertyInspection/InspectionAllPhotos.vue'
 import InspectionRoofMaterial from './PropertyInspection/InspectionRoofMaterial.vue'
+import InspectionElevation from './PropertyInspection/InspectionElevation.vue'
+import InspectionInterior from './PropertyInspection/InspectionInterior.vue'
+import InspectionRoof from './PropertyInspection/InspectionRoof.vue'
+// import InspectionForm from './PropertyInspection/InspectionForm.vue'
 </script>
 
 <template>
-  <article class="px-4 mt-4 max-w-screen-md">
+  <article class="px-4 mt-4">
     <div class="grid gap-4">
       <LossLocationComponent class="p-4 bg-white border-2 rounded-lg shadow" />
       <InspectionDirectionNorth class="p-4 bg-white border shadow" />
@@ -15,9 +19,9 @@ import InspectionRoofMaterial from './PropertyInspection/InspectionRoofMaterial.
       <InspectionAllPhotos class="p-4 bg-white border shadow" />
       <InspectionRoofMaterial class="p-4 bg-white border shadow" />
     </div>
-    <!-- <inspection-elevation /> -->
-    <!-- <inspection-interior /> -->
-    <!-- <inspection-roof /> -->
+    <InspectionElevation />
+    <InspectionInterior />
+    <InspectionRoof />
     <!-- <inspection-form /> -->
   </article>
 </template>

@@ -3,7 +3,7 @@ import PropertyInspectionView from './components/PropertyInspectionView.vue'
 </script>
 
 <template>
-  <main>
+  <main class="w-full">
     <PropertyInspectionView />
   </main>
 </template>
@@ -46,17 +46,9 @@ import PropertyInspectionView from './components/PropertyInspectionView.vue'
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
 }
 
@@ -71,73 +63,32 @@ import PropertyInspectionView from './components/PropertyInspectionView.vue'
 }
 
 .slotContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
     align-items: flex-end;
     max-width: 70%;
 }
 .slotRow {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
 }
 .cbContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
-    -webkit-box-align: middle;
-    -ms-flex-align: middle;
     align-items: middle;
     padding-right: 20px;
 }
 .boxLabel {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
-    -webkit-box-align: top;
-    -ms-flex-align: top;
     align-items: top;
 }
 
@@ -169,37 +120,17 @@ import PropertyInspectionView from './components/PropertyInspectionView.vue'
 }
 
 .flexRowSpaceBetweenNoWrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
 }
 .icon-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-right: 20px !important;
     padding: 0px !important;
