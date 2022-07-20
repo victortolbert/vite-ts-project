@@ -1,18 +1,21 @@
 <script lang="ts">
-import type { OutBuilding } from '@/types/OutBuilding'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
-export default {
-  props: {
-    outBuilding: Object as OutBuilding,
-  },
+@Component({})
+export default class OutBuildingComponent extends Vue {
+  @Prop({
+    type: Object,
+    default() {
+      return { name: '' }
+    },
+  }) readonly outBuilding: any
 }
 </script>
 
 <template>
-  <!-- eslint-disable vue/no-mutating-props -->
   <li>
     <div>
-      <div class="mt-4 flex items-center">
+      <div class="mt-4 flex items-center justify-between">
         <select v-model="outBuilding.name">
           <option :value="null" disabled>
             Select Out Building...

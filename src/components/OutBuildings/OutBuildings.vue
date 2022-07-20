@@ -1,13 +1,15 @@
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import OutBuildingList from './OutBuildingList.vue'
 import OutBuildingCreate from './OutBuildingCreate.vue'
+import type { OutBuilding } from '@/types/OutBuilding'
 
-export default {
+export default defineComponent({
   components: { OutBuildingCreate, OutBuildingList },
 
   data() {
     return {
-      outBuildings: [],
+      outBuildings: [] as OutBuilding[],
       outBuildingsPresent: false,
       outBuildingsLimit: 6,
     }
@@ -15,9 +17,9 @@ export default {
 
   computed: {
     outBuildingInteriorAssets() {
-      return this.outBuildingsAssets.map((outBuilding) => {
+      return this.outBuildings.map((outBuilding) => {
         // TODO: Collect the interior, elevation and roof assets as one bundle of OutBuilding assets
-        return outBuilding.interiorAssets
+        return outBuilding.interiorDamageDescription
       })
     },
     filters() {
@@ -48,7 +50,7 @@ export default {
       })
     },
   },
-}
+})
 </script>
 
 <template>
