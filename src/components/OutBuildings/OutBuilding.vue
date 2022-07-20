@@ -1,20 +1,25 @@
-<script lang="ts">
+<script setup lang="ts">
+import { computed } from 'vue'
 import type { OutBuilding } from '@/types/OutBuilding'
 
-export default {
-  props: {
-    outBuilding: Object as OutBuilding,
-  },
-}
+const props = defineProps<{
+  outBuilding: OutBuilding
+}>()
+
+const isAnotherType = computed(() => props.outBuilding.name === 'Other')
 </script>
 
 <template>
   <!-- eslint-disable vue/no-mutating-props -->
   <li>
     <div>
-      <div class="mt-4 flex items-center">
-        <select v-model="outBuilding.name">
-          <option :value="null" disabled>
+      <div class="mt-4 flex items-center justify-between">
+        <select
+          v-if="!isAnotherType"
+          v-model="outBuilding.name"
+          class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50"
+        >
+          <option value="" disabled>
             Select Out Building...
           </option>
           <option>Barn</option>
@@ -24,6 +29,8 @@ export default {
           <option>Detached Garage</option>
           <option>Other</option>
         </select>
+
+        <input v-if="isAnotherType" type="text" placeholder="Enter Other Building type" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50">
 
         <div class="flex items-center">
           <label>Is Damaged?</label>

@@ -54,7 +54,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section id="out-buildings" class="mx-auto max-w-6xl border-2 border-black p-4 rounded">
+  <section id="out-buildings" class="mx-auto w-full border-2 p-4 rounded">
     <header class="flex justify-between">
       <h3 class="font-bold text-2xl">
         Out Building(s) Present?

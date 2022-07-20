@@ -16,8 +16,8 @@ export default {
 </script>
 
 <template>
-  <Panel v-show="outBuildings.length" class="">
-    <ul class="divide-y divide-gray-600 space-y-4">
+  <Panel v-show="outBuildings.length">
+    <ul class="divide-y space-y-4">
       <OutBuilding
         v-for="outBuilding in outBuildings"
         :key="outBuilding.id"
