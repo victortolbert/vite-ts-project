@@ -1,10 +1,59 @@
 # Property Inspection Form Prototype
 
-Out Buildings
+## Out Buildings
+
+- Limit the Display to 6 (Configurable in the `OutBuildingsComponent`)
+- Will have to manually add records to the `MasterAssetField` Table
+
+## Tables
+
+### `MasterOutBuildingType`
+
+|Column                         |                                |
+|-------------------------------|--------------------------------|
+| `Id`                          | int Identity                   |
+| `Name`                        | varchar                        |
+| `OtherName`                   | varchar                        |
+
+### `OutBuildings`
+
+|Column                         |                                |
+|-------------------------------|--------------------------------|
+| `Id`                          | int Identity                   |
+| `MasterOutBuildingTypeId`     | FK (MasterOutBuildingType)     |
+| `Damaged`                     | bit                            |
+| `InteriorDamageDescription`   | varchar(8000) null             |
+| `ElevationDamageDescription`  | varchar(8000) null             |
+| `RoofDamageDescription`       | varchar(8000) null             |
+| `PropertyInspectionFormId`    | Int, FKPropertyInspectionForm) |
+
+### MasterAssetField Entries
+
+- `OutBuilding1Interior`
+- `OutBuilding1Eleveation`
+- `OutBuilding1Roof`
+- `OutBuilding2Interior`
+- `OutBuilding2Eleveation`
+- `OutBuilding2Roof`
+- `OutBuilding3Interior`
+- `OutBuilding3Eleveation`
+- `OutBuilding3Roof`
+- `OutBuilding4Interior`
+- `OutBuilding4Eleveation`
+- `OutBuilding4Roof`
+- `OutBuilding5Interior`
+- `OutBuilding5Eleveation`
+- `OutBuilding5Roof`
+- `OutBuilding6Interior`
+- `OutBuilding6Eleveation`
+- `OutBuilding6Roof`
 
 ## Components
 
--
+- OutBuildingComponent
+- OutBuildingsComponent
+- OutBuildingCreateComponent
+- OutBuildingListComponent
 
 ## Features
 
