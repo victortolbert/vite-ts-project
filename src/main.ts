@@ -1,26 +1,23 @@
-import "vue-class-component/hooks";
-import "./class-component-hooks";
-import Vue from "vue";
-import { createHead } from '@vueuse/head'
-import { createPinia, PiniaVuePlugin } from "pinia";
-import ProjectInspectionForm from "./ProjectInspectionForm.vue";
+import 'vue-class-component/hooks'
+import './class-component-hooks'
+import Vue from 'vue'
+import { PiniaVuePlugin, createPinia } from 'pinia'
+import App from './App.vue'
 
 // import "windi.css";
 // import './style.css'
 // import "./index.css";
 
 // import router from '@/router'
-const head = createHead()
 
-Vue.config.productionTip = false;
-Vue.config.devtools = true;
-Vue.use(PiniaVuePlugin);
-Vue.use(head);
+Vue.config.productionTip = false
+Vue.config.devtools = true
+Vue.use(PiniaVuePlugin)
 
-const pinia = createPinia();
+const pinia = createPinia()
 
 new Vue({
   // router,
   pinia,
-  render: (h) => h(ProjectInspectionForm),
-}).$mount("#app");
+  render: h => h(App),
+}).$mount('#app')

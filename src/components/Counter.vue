@@ -1,37 +1,19 @@
-<script lang="ts">
-import Component from 'vue-class-component'
-import Super from '@/super'
+<script setup lang="ts">
+const props = defineProps<{
+  initial: number
+}>()
 
-// Define the component in class-style
-@Component
-export default class Counter extends Super {
-  created() {
-    // eslint-disable-next-line no-console
-    console.log(this.superValue) // -> Hello
-  }
-
-  // Class properties will be component data
-  count = 0
-
-  // Methods will be component methods
-  increment() {
-    this.count++
-  }
-
-  decrement() {
-    this.count--
-  }
-}
+const { count, inc, dec } = useCounter(props.initial)
 </script>
 
 <template>
   <div>
-    <button @click="decrement">
-      -
-    </button>
     {{ count }}
-    <button @click="increment">
+    <button class="inc" @click="inc()">
       +
+    </button>
+    <button class="dec" @click="dec()">
+      -
     </button>
   </div>
 </template>

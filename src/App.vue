@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Assignments from './components/Assignments.vue'
 import ExampleOptionsComponent from './components/ExampleOptionsComponent.vue'
 import ExampleScriptSetupComponent from './components/ExampleScriptSetupComponent.vue'

@@ -1,18 +1,13 @@
 <script setup>
 import { ref } from 'vue'
-import { useHead } from '@vueuse/head'
 import TabbableTextarea from '@/components/TabbableTextarea.vue'
 import { state } from '@/stores/quizStore'
-// import { counter } from '@/stores/counterStoreBasic'
 import { useCounterStore } from '@/stores/CounterStore'
+import IconAccessibility from '~icons/carbon/accessibility'
+import IconAccountBox from '~icons/mdi/account-box'
 
 const counter = useCounterStore()
 const styles = ref('')
-
-useHead({
-  // Inject a style tag into the head
-  style: [{ children: styles }],
-})
 
 const injectStyles = () => {
   styles.value = 'button { background: red }'
@@ -27,15 +22,12 @@ function write() {
 
 <template>
   <main class="text-white">
+    <icon-accessibility />
+    <icon-account-box style="font-size: 2em; color: red" />
+
     <form @submit.prevent>
       <h5>{{ state.name }}</h5>
       <h1>{{ counter.count }}</h1>
-      <button @click="injectStyles">
-        Inject new styles
-      </button>
-      <!-- <button @click="counter.increment()">
-        Increment
-      </button> -->
 
       <button
         :disabled="!counter.remaining"

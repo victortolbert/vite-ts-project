@@ -8,15 +8,16 @@ import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
 
 export default defineConfig({
-  base: "./",
+  base: './',
   resolve: {
     alias: {
-      "@": `${path.resolve(__dirname, "src")}`,
+      '@': `${path.resolve(__dirname, 'src')}`,
     },
   },
 
   build: {
-    minify: true,
+    sourcemap: true,
+    minify: false,
   },
 
   plugins: [
@@ -25,20 +26,28 @@ export default defineConfig({
     Components({
       resolvers: [
         IconsResolver({
-          componentPrefix: "",
+          componentPrefix: '',
         }),
       ],
-      dts: "src/components.d.ts",
+      dts: 'src/components.d.ts',
     }),
-    Icons(),
+    Icons({
+      // experimental
+      autoInstall: true,
+      compiler: 'vue2',
+    }),
     AutoImport({
-      imports: ["@vueuse/core"],
-      dts: "src/auto-imports.d.ts",
+      imports: ['@vueuse/core'],
+      dts: 'src/auto-imports.d.ts',
     }),
   ],
 
+  // https://github.com/vitest-dev/vitest
   test: {
-    globals: true,
+    include: ['test/**/*.test.ts'],
     environment: 'jsdom',
+    deps: {
+      inline: ['@vue', '@vueuse', 'vue-demi'],
+    },
   },
-});
+})
