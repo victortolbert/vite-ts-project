@@ -70,6 +70,7 @@ declare module '@vue/runtime-core' {
     ExampleClickOutside: typeof import('./components/ExampleClickOutside.vue')['default']
     ExampleFileUpload: typeof import('./components/ExampleFileUpload.vue')['default']
     ExampleKendo: typeof import('./components/ExampleKendo.vue')['default']
+    ExampleListContainer: typeof import('./components/ExampleListContainer.vue')['default']
     ExampleLoader: typeof import('./components/ExampleLoader.vue')['default']
     ExampleOptionsComponent: typeof import('./components/ExampleOptionsComponent.vue')['default']
     ExampleScriptSetupComponent: typeof import('./components/ExampleScriptSetupComponent.vue')['default']

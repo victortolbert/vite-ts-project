@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { SidebarMenu } from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+import ExampleListContainer from './components/ExampleListContainer.vue'
 import PropertyInspectionView from '@/components/PropertyInspectionView.vue'
 
 const menu = ref([
@@ -57,6 +58,7 @@ onMounted(() => {
 
 <template>
   <main id="demo" class="w-full" :class="[{ collapsed }, { onmobile: isOnMobile }]">
+    <ExampleListContainer />
     <PropertyInspectionView class="px-8" />
 
     <SidebarMenu
