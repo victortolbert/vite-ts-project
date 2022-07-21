@@ -79,7 +79,7 @@ export default class OutbuildingsComponent extends Vue {
     <div v-show="outbuildingsPresent" class="mt-4">
       <OutbuildingListComponent
         title="Outbuildings"
-        :out-buildings="outbuildings"
+        :outbuildings="outbuildings"
       >
         <OutbuildingCreateComponent
           v-if="outbuildings.length < outbuildingsLimit"

@@ -55,7 +55,7 @@ export default defineComponent({
 
 <template>
   <section
-    id="out-buildings"
+    id="outbuildings"
     class="
       mx-auto
       w-full
@@ -66,29 +66,25 @@ export default defineComponent({
   >
     <header class="flex justify-between">
       <h3 class="font-bold text-2xl">
-        Out Building(s) Present?
+        Outbuilding(s) Present?
       </h3>
-
-      <input v-model="outbuildingsPresent" type="checkbox">
 
       <o-field>
         <o-switch
-          v-model="outbuildingsPresent"
-          :rounded="false"
+          v-model.sync="outbuildingsPresent"
+          :rounded="true"
+          variant="primary"
           position="left"
-          size="large"
-          true-value="Yes"
-          false-value="No"
         >
-          {{ outbuildingsPresent }}
+          Outbuilding(s) present?
         </o-switch>
       </o-field>
     </header>
 
     <div v-show="outbuildingsPresent">
       <OutbuildingList
-        :out-buildings="outbuildings"
-        title="Out Buildings"
+        :outbuildings="outbuildings"
+        title="Outbuildings"
       >
         <OutbuildingCreate
           v-if="outbuildings.length < outbuildingsLimit"

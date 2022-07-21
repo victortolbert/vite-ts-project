@@ -2,8 +2,6 @@
 import { onMounted, ref } from 'vue'
 import { SidebarMenu } from 'vue-sidebar-menu'
 import { orderBy } from '@progress/kendo-data-query'
-import InfoNavbar from './components/InfoNavbar.vue'
-import TheNavbar from './components/TheNavbar.vue'
 import PropertyInspectionView from '@/components/PropertyInspectionView.vue'
 import MenuDivider from '@/components/MenuDivider.vue'
 
@@ -133,18 +131,54 @@ onMounted(() => {
 })
 </script>
 
+<script>
+export default {
+  metaInfo() {
+    return {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      title: '',
+
+      titleTemplate: '%s | Prototype',
+
+      meta: [
+        { name: 'og:title', content: 'store.state.pageTitle' },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:url', content: window.location.href },
+        { name: 'og:image', content: 'store.state.pageImage' },
+        { name: 'og:description', content: 'store.state.pageDescription' },
+        { name: 'og:locale', content: 'store.state.locale' },
+        { name: 'author', content: window.location.href },
+        { name: 'publisher', content: window.location.href },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: 'store.state.twitter' },
+        { name: 'twitter:creator', content: 'store.state.twitter' },
+        { name: 'twitter:title', content: 'store.state.pageTitle' },
+        { name: 'twitter:description', content: 'store.state.pageDescription' },
+        { name: 'twitter:image', content: 'store.state.pageImage' },
+      ],
+
+      link: [
+        { rel: 'stylesheet', href: '/assets/css/debug.css' },
+        { rel: 'favicon', href: 'favicon.ico' },
+      ],
+    }
+  },
+}
+</script>
+
 <template>
   <main
-    id="demo"
+    id="app"
     class="w-full"
     :class="[{
       collapsed,
       onmobile: isOnMobile,
     }]"
   >
-    <InfoNavbar />
-    <TheNavbar />
     <PropertyInspectionView class="px-8" />
+
     <SidebarMenu
       width="360px"
       width-collapsed="52px"
@@ -231,14 +265,25 @@ $dropdown-bg: #e3e3e3;
 */
 
 @import "vue-sidebar-menu/src/scss/vue-sidebar-menu.scss";
-#demo {
+
+#app {
+  --oruga-variant-primary: theme(colors.primary.500);
+  --oruga-variant-info: theme(colors.info);
+  --oruga-variant-success: theme(colors.success);
+  --oruga-variant-warning: theme(colors.warning);
+  --oruga-variant-danger: theme(colors.danger);
+}
+
+#app {
   padding-left: 360px;
   transition: 0.3s ease;
 }
-#demo.collapsed {
+
+#app.collapsed {
   padding-left: 52px;
 }
-#demo.onmobile {
+
+#app.onmobile {
   padding-left: 52px;
 }
 
@@ -251,5 +296,24 @@ $dropdown-bg: #e3e3e3;
   background-color: #000;
   opacity: 0.5;
   z-index: 900;
+}
+
+// Modal
+.modal {
+  @apply fixed bottom-0 inset-x-0 px-4 pb-6;
+}
+
+.modal-panel {
+  @apply bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all;
+}
+
+@screen sm {
+  .modal {
+    @apply inset-0 p-0 flex items-center justify-center;
+  }
+
+  .modal-panel {
+    @apply max-w-3xl w-full p-6;
+  }
 }
 </style>

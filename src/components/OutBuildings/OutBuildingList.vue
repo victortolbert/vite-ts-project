@@ -1,12 +1,12 @@
 <script>
-import OutBuilding from './OutBuilding.vue'
+import Outbuilding from './Outbuilding.vue'
 import Panel from '@/components/Panel.vue'
 
 export default {
-  components: { OutBuilding, Panel },
+  components: { Outbuilding, Panel },
 
   props: {
-    outBuildings: Array,
+    outbuildings: Array,
     title: String,
     canToggle: { type: Boolean, default: false },
   },
@@ -16,12 +16,12 @@ export default {
 </script>
 
 <template>
-  <Panel v-show="outBuildings.length">
+  <Panel v-show="outbuildings.length">
     <ul class="divide-y space-y-4">
-      <OutBuilding
-        v-for="outBuilding in outBuildings"
-        :key="outBuilding.id"
-        :out-building="outBuilding"
+      <Outbuilding
+        v-for="outbuilding in outbuildings"
+        :key="outbuilding.id"
+        :outbuilding="outbuilding"
       />
     </ul>
 

@@ -47,8 +47,8 @@ Vue.use(Oruga, {
     checkClass: 'radio-check',
     checkedClass: 'radio-checked',
   },
-  switch: {
-    checkClass: 'switch',
-    labelClass: 'switch-label',
-  },
+  // switch: {
+  //   checkClass: 'switch',
+  //   labelClass: 'switch-label',
+  // },
 })

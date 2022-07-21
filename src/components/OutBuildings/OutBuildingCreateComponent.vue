@@ -1,14 +1,14 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import type { OutBuilding } from '@/types/OutBuilding'
+import type { Outbuilding } from '@/types/Outbuilding'
 
 @Component({})
-export default class OutBuildingCreateComponent extends Vue {
-  newOutBuilding: OutBuilding = {}
+export default class OutbuildingCreateComponent extends Vue {
+  newOutbuilding: Outbuilding = {}
 
   add() {
-    this.$emit('add', this.newOutBuilding)
-    this.newOutBuilding = {}
+    this.$emit('add', this.newOutbuilding)
+    this.newOutbuilding = {}
   }
 }
 </script>
@@ -16,7 +16,7 @@ export default class OutBuildingCreateComponent extends Vue {
 <template>
   <form @submit.prevent="add">
     <div class="">
-      <input v-model="newOutBuilding.name" type="hidden" class="block">
+      <input v-model="newOutbuilding.name" type="hidden" class="block">
 
       <button
         type="submit"
@@ -29,7 +29,7 @@ export default class OutBuildingCreateComponent extends Vue {
           bg-primary-200
           hover:bg-primary-300"
       >
-        Add Another Out Building?
+        Add Another Outbuilding?
       </button>
     </div>
   </form>

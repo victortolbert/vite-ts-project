@@ -14,12 +14,7 @@ const isAnotherType = computed(() => props.outbuilding.name === 'Other')
   <li>
     <div>
       <div class="mt-4 flex items-center justify-between">
-        <o-field
-          v-if="!isAnotherType"
-          label="Other Structure"
-          variant="danger"
-          message="Selected subject is wrong"
-        >
+        <div v-if="!isAnotherType">
           <o-select
             v-model="outbuilding.name"
             placeholder="Select structure"
@@ -34,33 +29,7 @@ const isAnotherType = computed(() => props.outbuilding.name === 'Other')
             <option>Detached Garage</option>
             <option>Other</option>
           </o-select>
-        </o-field>
-
-        <select
-          v-if="!isAnotherType"
-          v-model="outbuilding.name"
-          class="
-            block
-            w-full
-            mt-1
-            rounded-md
-            border-gray-300
-            shadow-sm
-            focus:border-primary-300
-            focus:ring
-            focus:ring-primary-200
-            focus:ring-opacity-50"
-        >
-          <option value="" disabled>
-            Select Out Building...
-          </option>
-          <option>Barn</option>
-          <option>Shed</option>
-          <option>Pool House</option>
-          <option>Green House</option>
-          <option>Detached Garage</option>
-          <option>Other</option>
-        </select>
+        </div>
 
         <input
           v-if="isAnotherType"
@@ -79,63 +48,38 @@ const isAnotherType = computed(() => props.outbuilding.name === 'Other')
             focus:ring-opacity-50"
         >
 
-        <o-switch v-model="isAnotherType" true-value="Yes" false-value="No">
-          {{ isAnotherType }}
-        </o-switch>
-
         <div class="flex items-center">
-          <label>Is Damaged?</label>
-
           <div>
             <div class="flex items-center space-x-2">
-              <label>Yes</label>
-
-              <input v-model="outbuilding.damaged" type="checkbox">
-
-              <o-switch v-model="outbuilding.damaged" true-value="Yes" false-value="No">
-                {{ outbuilding.damaged }}
+              <o-switch v-model.sync="outbuilding.damaged" position="left">
+                Is Damaged?
               </o-switch>
             </div>
           </div>
         </div>
       </div>
 
-      <div v-if="outbuilding.damaged" class="p-4">
-        <div class="flex justify-between">
-          <label>Interior Damage Description</label>
-          <textarea
-            v-model="outbuilding.interiorDamageDescription"
-            class="flex-1"
-            name=""
-            :cols="30"
-            :rows="3"
-          />
-          <input type="file" name="interiorDamageAssets">
-        </div>
-
-        <div class="flex justify-between">
-          <label>Elevation Damage Description</label>
-          <textarea
-            v-model="outbuilding.elevationDamageDescription"
-            class="flex-1"
-            name=""
-            :cols="30"
-            :rows="3"
-          />
-          <input type="file" name="elevationDamageAssets">
-        </div>
-
-        <div class="flex justify-between">
-          <label>Roof Damage Description</label>
-          <textarea
-            v-model="outbuilding.roofDamageDescription"
-            class="flex-1"
-            name=""
-            :cols="30"
-            :rows="3"
-          />
-          <input type="file" name="roofDamageAssets">
-        </div>
+      <div v-if="outbuilding.damaged">
+        <section>
+          <div v-for="n in 3" :key="n" class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-500">
+              Interior Damage Description
+            </dt>
+            <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              <div class="flex-grow">
+                <textarea
+                  class="flex-1 w-full"
+                  name=""
+                  :cols="30"
+                  :rows="3"
+                />
+              </div>
+              <span class="ml-4 flex-shrink-0">
+                <input type="file" name="roofDamageAssets">
+              </span>
+            </dd>
+          </div>
+        </section>
       </div>
     </div>
   </li>

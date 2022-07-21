@@ -20,7 +20,7 @@ export default class OutbuildingListComponent extends Vue {
       <OutbuildingComponent
         v-for="outbuilding in outbuildings"
         :key="outbuilding.id"
-        :out-building="outbuilding"
+        :outbuilding="outbuilding"
       />
     </ul>
 

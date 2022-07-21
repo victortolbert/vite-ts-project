@@ -32,6 +32,10 @@ module.exports = {
       },
       colors: {
         'gray': colors.stone,
+        'info': '#bfdbfe',
+        'success': '#15803d',
+        'warning': '#fcd34d',
+        'danger': '#dc2626',
         'brand': {
           DEFAULT: '#002894',
           50: '#f2f4fa',
@@ -73,6 +77,7 @@ module.exports = {
           800: '#1d2d43',
           900: '#182536',
         },
+        // 'secondary': #eaedf1,
         // blue-ribbon
         'secondary': {
           50: '#f2f7ff',
