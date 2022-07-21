@@ -1,4 +1,4 @@
-export interface OutBuilding {
+export interface Outbuilding {
   id?: number
   name?: string
   damaged?: boolean

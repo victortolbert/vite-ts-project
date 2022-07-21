@@ -1,51 +1,51 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import OutBuildingList from './OutBuildingList.vue'
-import OutBuildingCreate from './OutBuildingCreate.vue'
-import type { OutBuilding } from '@/types/OutBuilding'
+import OutbuildingList from './OutbuildingList.vue'
+import OutbuildingCreate from './OutbuildingCreate.vue'
+import type { Outbuilding } from '@/types/Outbuilding'
 
 export default defineComponent({
-  components: { OutBuildingCreate, OutBuildingList },
+  components: { OutbuildingCreate, OutbuildingList },
 
   data() {
     return {
-      outBuildings: [] as OutBuilding[],
-      outBuildingsPresent: false,
-      outBuildingsLimit: 6,
+      outbuildings: [] as Outbuilding[],
+      outbuildingsPresent: false,
+      outbuildingsLimit: 6,
     }
   },
 
   computed: {
-    outBuildingInteriorAssets() {
-      return this.outBuildings.map((outBuilding) => {
-        // TODO: Collect the interior, elevation and roof assets as one bundle of OutBuilding assets
-        return outBuilding.interiorDamageDescription
+    outbuildingInteriorAssets() {
+      return this.outbuildings.map((outbuilding) => {
+        // TODO: Collect the interior, elevation and roof assets as one bundle of Outbuilding assets
+        return outbuilding.interiorDamageDescription
       })
     },
     filters() {
       return {
-        damaged: this.outBuildings.filter(outBuilding => outBuilding.damaged),
-        notDamaged: this.outBuildings.filter(outBuilding => !outBuilding.damaged),
+        damaged: this.outbuildings.filter(outbuilding => outbuilding.damaged),
+        notDamaged: this.outbuildings.filter(outbuilding => !outbuilding.damaged),
       }
     },
   },
 
   created() {
-    fetch('http://localhost:3001/outBuildings')
+    fetch('http://localhost:3001/outbuildings')
       .then(response => response.json())
-      .then((outBuildings) => {
-        this.outBuildings = outBuildings
+      .then((outbuildings) => {
+        this.outbuildings = outbuildings
       })
   },
 
   methods: {
-    add(outBuilding) {
-      this.outBuildings.push({
-        id: this.outBuildings.length + 1,
-        name: outBuilding.name,
-        interiorDamageDescription: outBuilding.interiorDamageDescription,
-        elevationDamageDescription: outBuilding.elevationDamageDescription,
-        roofDamageDescription: outBuilding.roofDamageDescription,
+    add(outbuilding) {
+      this.outbuildings.push({
+        id: this.outbuildings.length + 1,
+        name: outbuilding.name,
+        interiorDamageDescription: outbuilding.interiorDamageDescription,
+        elevationDamageDescription: outbuilding.elevationDamageDescription,
+        roofDamageDescription: outbuilding.roofDamageDescription,
         damaged: false,
       })
     },
@@ -69,32 +69,32 @@ export default defineComponent({
         Out Building(s) Present?
       </h3>
 
-      <input v-model="outBuildingsPresent" type="checkbox">
+      <input v-model="outbuildingsPresent" type="checkbox">
 
       <o-field>
         <o-switch
-          v-model="outBuildingsPresent"
+          v-model="outbuildingsPresent"
           :rounded="false"
           position="left"
           size="large"
           true-value="Yes"
           false-value="No"
         >
-          {{ outBuildingsPresent }}
+          {{ outbuildingsPresent }}
         </o-switch>
       </o-field>
     </header>
 
-    <div v-show="outBuildingsPresent">
-      <OutBuildingList
-        :out-buildings="outBuildings"
+    <div v-show="outbuildingsPresent">
+      <OutbuildingList
+        :out-buildings="outbuildings"
         title="Out Buildings"
       >
-        <OutBuildingCreate
-          v-if="outBuildings.length < outBuildingsLimit"
+        <OutbuildingCreate
+          v-if="outbuildings.length < outbuildingsLimit"
           @add="add"
         />
-      </OutBuildingList>
+      </OutbuildingList>
     </div>
   </section>
 </template>

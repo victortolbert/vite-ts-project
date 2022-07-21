@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import OutBuildings from './OutBuildings.vue'
-const outBuildingsPresent = ref(true)
+import Outbuildings from './Outbuildings.vue'
+const outbuildingsPresent = ref(true)
 </script>
 
 <script lang="ts">
@@ -14,9 +14,9 @@ export default {
   <article class="border-2 border-red-500 p-6">
     <div class="mt-5 flex items-center justify-between">
       <h2>Out Building(s) Present?</h2>
-      <input v-model="outBuildingsPresent" type="checkbox">
+      <input v-model="outbuildingsPresent" type="checkbox">
     </div>
 
-    <OutBuildings v-if="outBuildingsPresent" />
+    <Outbuildings v-if="outbuildingsPresent" />
   </article>
 </template>

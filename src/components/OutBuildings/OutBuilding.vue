@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { OutBuilding } from '@/types/OutBuilding'
+import type { Outbuilding } from '@/types/Outbuilding'
 
 const props = defineProps<{
-  outBuilding: OutBuilding
+  outbuilding: Outbuilding
 }>()
 
-const isAnotherType = computed(() => props.outBuilding.name === 'Other')
+const isAnotherType = computed(() => props.outbuilding.name === 'Other')
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const isAnotherType = computed(() => props.outBuilding.name === 'Other')
           message="Selected subject is wrong"
         >
           <o-select
-            v-model="outBuilding.name"
+            v-model="outbuilding.name"
             placeholder="Select structure"
           >
             <option value="" disabled>
@@ -38,7 +38,7 @@ const isAnotherType = computed(() => props.outBuilding.name === 'Other')
 
         <select
           v-if="!isAnotherType"
-          v-model="outBuilding.name"
+          v-model="outbuilding.name"
           class="
             block
             w-full
@@ -90,21 +90,21 @@ const isAnotherType = computed(() => props.outBuilding.name === 'Other')
             <div class="flex items-center space-x-2">
               <label>Yes</label>
 
-              <input v-model="outBuilding.damaged" type="checkbox">
+              <input v-model="outbuilding.damaged" type="checkbox">
 
-              <o-switch v-model="outBuilding.damaged" true-value="Yes" false-value="No">
-                {{ outBuilding.damaged }}
+              <o-switch v-model="outbuilding.damaged" true-value="Yes" false-value="No">
+                {{ outbuilding.damaged }}
               </o-switch>
             </div>
           </div>
         </div>
       </div>
 
-      <div v-if="outBuilding.damaged" class="p-4">
+      <div v-if="outbuilding.damaged" class="p-4">
         <div class="flex justify-between">
           <label>Interior Damage Description</label>
           <textarea
-            v-model="outBuilding.interiorDamageDescription"
+            v-model="outbuilding.interiorDamageDescription"
             class="flex-1"
             name=""
             :cols="30"
@@ -116,7 +116,7 @@ const isAnotherType = computed(() => props.outBuilding.name === 'Other')
         <div class="flex justify-between">
           <label>Elevation Damage Description</label>
           <textarea
-            v-model="outBuilding.elevationDamageDescription"
+            v-model="outbuilding.elevationDamageDescription"
             class="flex-1"
             name=""
             :cols="30"
@@ -128,7 +128,7 @@ const isAnotherType = computed(() => props.outBuilding.name === 'Other')
         <div class="flex justify-between">
           <label>Roof Damage Description</label>
           <textarea
-            v-model="outBuilding.roofDamageDescription"
+            v-model="outbuilding.roofDamageDescription"
             class="flex-1"
             name=""
             :cols="30"

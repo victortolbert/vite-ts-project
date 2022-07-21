@@ -7,13 +7,13 @@ import { Upload } from '@progress/kendo-vue-upload'
     Upload,
   },
 })
-export default class OutBuildingComponent extends Vue {
+export default class OutbuildingComponent extends Vue {
   @Prop({
     type: Object,
     default() {
       return { name: '' }
     },
-  }) readonly outBuilding: any
+  }) readonly outbuilding: any
 }
 </script>
 
@@ -21,7 +21,7 @@ export default class OutBuildingComponent extends Vue {
   <li>
     <div>
       <div class="mt-4 flex items-center justify-between">
-        <select v-model="outBuilding.name">
+        <select v-model="outbuilding.name">
           <option :value="null" disabled>
             Select Out Building...
           </option>
@@ -39,17 +39,17 @@ export default class OutBuildingComponent extends Vue {
           <div>
             <div class="flex items-center space-x-2">
               <label>Yes</label>
-              <input v-model="outBuilding.damaged" type="checkbox" class="">
+              <input v-model="outbuilding.damaged" type="checkbox" class="">
             </div>
           </div>
         </div>
       </div>
 
-      <div v-if="outBuilding.damaged" class="p-4">
+      <div v-if="outbuilding.damaged" class="p-4">
         <div class="flex justify-between">
           <label>Interior Damage Description</label>
           <textarea
-            v-model="outBuilding.interiorDamageDescription"
+            v-model="outbuilding.interiorDamageDescription"
             class="flex-1"
             name=""
             :cols="30"
@@ -67,7 +67,7 @@ export default class OutBuildingComponent extends Vue {
         <div class="flex justify-between">
           <label>Elevation Damage Description</label>
           <textarea
-            v-model="outBuilding.elevationDamageDescription"
+            v-model="outbuilding.elevationDamageDescription"
             class="flex-1"
             name=""
             :cols="30"
@@ -85,7 +85,7 @@ export default class OutBuildingComponent extends Vue {
         <div class="flex justify-between">
           <label>Roof Damage Description</label>
           <textarea
-            v-model="outBuilding.roofDamageDescription"
+            v-model="outbuilding.roofDamageDescription"
             class="flex-1"
             name=""
             :cols="30"

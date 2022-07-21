@@ -11,14 +11,14 @@ Vue Solutions
 - Pinia - recommended
 
 
-## Out Buildings
+## Outbuildings
 
-- Limit the Display to 6 (Configurable in the `OutBuildingsComponent`)
+- Limit the Display to 6 (Configurable in the `OutbuildingsComponent`)
 - Will have to manually add records to the `MasterAssetField` Table
 
 ## Tables
 
-### `MasterOutBuildingType`
+### `MasterOutbuildingType`
 
 |Column                         |                                |
 |-------------------------------|--------------------------------|
@@ -26,12 +26,12 @@ Vue Solutions
 | `Name`                        | varchar                        |
 | `OtherName`                   | varchar                        |
 
-### `OutBuildings`
+### `Outbuildings`
 
 |Column                         |                                |
 |-------------------------------|--------------------------------|
 | `Id`                          | int Identity                   |
-| `MasterOutBuildingTypeId`     | FK (MasterOutBuildingType)     |
+| `MasterOutbuildingTypeId`     | FK (MasterOutbuildingType)     |
 | `Damaged`                     | bit                            |
 | `InteriorDamageDescription`   | varchar(8000) null             |
 | `ElevationDamageDescription`  | varchar(8000) null             |
@@ -40,31 +40,31 @@ Vue Solutions
 
 ### MasterAssetField Entries
 
-- `OutBuilding1Interior`
-- `OutBuilding1Eleveation`
-- `OutBuilding1Roof`
-- `OutBuilding2Interior`
-- `OutBuilding2Eleveation`
-- `OutBuilding2Roof`
-- `OutBuilding3Interior`
-- `OutBuilding3Eleveation`
-- `OutBuilding3Roof`
-- `OutBuilding4Interior`
-- `OutBuilding4Eleveation`
-- `OutBuilding4Roof`
-- `OutBuilding5Interior`
-- `OutBuilding5Eleveation`
-- `OutBuilding5Roof`
-- `OutBuilding6Interior`
-- `OutBuilding6Eleveation`
-- `OutBuilding6Roof`
+- `Outbuilding1Interior`
+- `Outbuilding1Eleveation`
+- `Outbuilding1Roof`
+- `Outbuilding2Interior`
+- `Outbuilding2Eleveation`
+- `Outbuilding2Roof`
+- `Outbuilding3Interior`
+- `Outbuilding3Eleveation`
+- `Outbuilding3Roof`
+- `Outbuilding4Interior`
+- `Outbuilding4Eleveation`
+- `Outbuilding4Roof`
+- `Outbuilding5Interior`
+- `Outbuilding5Eleveation`
+- `Outbuilding5Roof`
+- `Outbuilding6Interior`
+- `Outbuilding6Eleveation`
+- `Outbuilding6Roof`
 
 ## Components
 
-- OutBuildingComponent
-- OutBuildingsComponent
-- OutBuildingCreateComponent
-- OutBuildingListComponent
+- OutbuildingComponent
+- OutbuildingsComponent
+- OutbuildingCreateComponent
+- OutbuildingListComponent
 
 ## Features
 

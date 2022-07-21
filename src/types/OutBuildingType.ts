@@ -1,1 +1,1 @@
-export type OutBuildingType = 'shed' | 'work' | 'miscellaneous'
+export type OutbuildingType = 'shed' | 'work' | 'miscellaneous'

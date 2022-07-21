@@ -6,23 +6,23 @@ export default {
 
   data() {
     return {
-      newOutBuilding: {},
+      newOutbuilding: {},
     }
   },
 
   computed: {
     filters() {
       return {
-        notDamaged: this.outBuildings.filter(outBuilding => !outBuilding.damaged),
-        damaged: this.outBuildings.filter(outBuilding => outBuilding.damaged),
+        notDamaged: this.outbuildings.filter(outbuilding => !outbuilding.damaged),
+        damaged: this.outbuildings.filter(outbuilding => outbuilding.damaged),
       }
     },
   },
 
   methods: {
     add() {
-      this.$emit('add', this.newOutBuilding)
-      this.newOutBuilding = {}
+      this.$emit('add', this.newOutbuilding)
+      this.newOutbuilding = {}
     },
   },
 }
@@ -31,7 +31,7 @@ export default {
 <template>
   <form @submit.prevent="add">
     <div class="">
-      <input v-model="newOutBuilding.name" type="hidden" class="block">
+      <input v-model="newOutbuilding.name" type="hidden" class="block">
 
       <button
         type="submit"
@@ -44,7 +44,7 @@ export default {
           bg-primary-200
           hover:bg-primary-300"
       >
-        Add Another Out Building?
+        Add Another Outbuilding?
       </button>
     </div>
   </form>

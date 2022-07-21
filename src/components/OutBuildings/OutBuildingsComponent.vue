@@ -1,35 +1,35 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import OutBuildingListComponent from './OutBuildingListComponent.vue'
-import OutBuildingCreateComponent from './OutBuildingCreateComponent.vue'
-import type { OutBuilding } from '@/types/OutBuilding'
+import OutbuildingListComponent from './OutbuildingListComponent.vue'
+import OutbuildingCreateComponent from './OutbuildingCreateComponent.vue'
+import type { Outbuilding } from '@/types/Outbuilding'
 
 @Component({
   components: {
-    OutBuildingListComponent,
-    OutBuildingCreateComponent,
+    OutbuildingListComponent,
+    OutbuildingCreateComponent,
   },
 })
-export default class OutBuildingsComponent extends Vue {
-  outBuildings: OutBuilding[] = []
-  outBuildingsPresent = false
-  outBuildingsLimit = 6
+export default class OutbuildingsComponent extends Vue {
+  outbuildings: Outbuilding[] = []
+  outbuildingsPresent = false
+  outbuildingsLimit = 6
 
   created() {
-    fetch('http://localhost:3001/outBuildings')
+    fetch('http://localhost:3001/outbuildings')
       .then(response => response.json())
-      .then((outBuildings) => {
-        this.outBuildings = outBuildings
+      .then((outbuildings) => {
+        this.outbuildings = outbuildings
       })
   }
 
-  add(outBuilding) {
-    this.outBuildings.push({
-      id: this.outBuildings.length + 1,
-      name: outBuilding.name,
-      interiorDamageDescription: outBuilding.interiorDamageDescription,
-      elevationDamageDescription: outBuilding.elevationDamageDescription,
-      roofDamageDescription: outBuilding.roofDamageDescription,
+  add(outbuilding) {
+    this.outbuildings.push({
+      id: this.outbuildings.length + 1,
+      name: outbuilding.name,
+      interiorDamageDescription: outbuilding.interiorDamageDescription,
+      elevationDamageDescription: outbuilding.elevationDamageDescription,
+      roofDamageDescription: outbuilding.roofDamageDescription,
       damaged: false,
     })
   }
@@ -38,7 +38,7 @@ export default class OutBuildingsComponent extends Vue {
 
 <template>
   <section
-    id="out-buildings"
+    id="outbuildings"
     class="
       mx-auto
       w-full
@@ -55,11 +55,11 @@ export default class OutBuildingsComponent extends Vue {
           text-2xl
         "
       >
-        Out Building(s) Present?
+        Outbuilding(s) Present?
       </h3>
 
       <input
-        v-model="outBuildingsPresent"
+        v-model="outbuildingsPresent"
         type="checkbox"
         class="
           rounded
@@ -76,16 +76,16 @@ export default class OutBuildingsComponent extends Vue {
       >
     </header>
 
-    <div v-show="outBuildingsPresent" class="mt-4">
-      <OutBuildingListComponent
-        title="Out Buildings"
-        :out-buildings="outBuildings"
+    <div v-show="outbuildingsPresent" class="mt-4">
+      <OutbuildingListComponent
+        title="Outbuildings"
+        :out-buildings="outbuildings"
       >
-        <OutBuildingCreateComponent
-          v-if="outBuildings.length < outBuildingsLimit"
+        <OutbuildingCreateComponent
+          v-if="outbuildings.length < outbuildingsLimit"
           @add="add"
         />
-      </OutBuildingListComponent>
+      </OutbuildingListComponent>
     </div>
   </section>
 </template>

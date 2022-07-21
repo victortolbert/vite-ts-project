@@ -7,14 +7,14 @@
 // import InspectionElevation from './PropertyInspection/InspectionElevation.vue'
 // import InspectionInterior from './PropertyInspection/InspectionInterior.vue'
 // import InspectionRoof from './PropertyInspection/InspectionRoof.vue'
-import OutBuildings from './OutBuildings/OutBuildings.vue'
+import Outbuildings from './Outbuildings/Outbuildings.vue'
 // import InspectionForm from './PropertyInspection/InspectionForm.vue'
 </script>
 
 <template>
   <article class="px-4 mt-4">
     <div class="grid gap-4">
-      <OutBuildings />
+      <Outbuildings />
       <!-- <LossLocationComponent class="p-4 bg-white border-2 rounded-lg shadow" /> -->
       <!-- <InspectionDirectionNorth class="p-4 bg-white border shadow" /> -->
       <!-- <InspectionOutsideTemp class="p-4 bg-white border shadow" /> -->

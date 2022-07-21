@@ -1,4 +1,4 @@
-export enum MasterOutBuildingType {
+export enum MasterOutbuildingType {
   Shed,
   PoolHouse,
   GreenHouse,
