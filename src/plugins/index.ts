@@ -1,7 +1,7 @@
 import './fontawesome'
 import './gmap-vue'
 import './oruga'
-// import './portal-vue'
+import './portal-vue'
 import './smart-table'
 import './v-calendar'
 import './vue-chartkick'

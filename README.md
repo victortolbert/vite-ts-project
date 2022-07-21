@@ -1,4 +1,15 @@
-# Property Inspection Form Prototype
+# UI Patterns and Component Factory
+
+State Management
+Local
+Provide / Inject Examples
+Global Event Bus
+
+Vue Solutions
+
+- Vuex
+- Pinia - recommended
+
 
 ## Out Buildings
 

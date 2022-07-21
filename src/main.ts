@@ -2,6 +2,7 @@ import 'vue-class-component/hooks'
 import './class-component-hooks'
 import Vue from 'vue'
 import { PiniaVuePlugin, createPinia } from 'pinia'
+import VueSignaturePad from 'vue-signature-pad'
 
 import App from './App.vue'
 
@@ -18,6 +19,7 @@ import './index.css'
 Vue.config.productionTip = false
 Vue.config.devtools = true
 Vue.use(PiniaVuePlugin)
+Vue.use(VueSignaturePad)
 
 const pinia = createPinia()
 
