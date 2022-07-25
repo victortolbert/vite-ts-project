@@ -14,10 +14,12 @@ const isAnotherType = computed(() => props.outbuilding.name === 'Other')
   <li>
     <div>
       <div class="mt-4 flex items-center justify-between">
-        <div v-if="!isAnotherType">
+        <div class="w-full max-w-lg">
           <o-select
+            v-if="!isAnotherType"
             v-model="outbuilding.name"
             placeholder="Select structure"
+            class="w-full"
           >
             <option value="" disabled>
               Select Out Building...
@@ -29,13 +31,12 @@ const isAnotherType = computed(() => props.outbuilding.name === 'Other')
             <option>Detached Garage</option>
             <option>Other</option>
           </o-select>
-        </div>
 
-        <input
-          v-if="isAnotherType"
-          type="text"
-          placeholder="Enter Other Building type"
-          class="
+          <input
+            v-if="isAnotherType"
+            type="text"
+            placeholder="Enter Other Building type"
+            class="
             mt-1
             block
             w-full
@@ -46,7 +47,8 @@ const isAnotherType = computed(() => props.outbuilding.name === 'Other')
             focus:ring
             focus:ring-primary-200
             focus:ring-opacity-50"
-        >
+          >
+        </div>
 
         <div class="flex items-center">
           <div>

@@ -8,7 +8,7 @@ export default {
 
 <template>
   <div
-    class="p-4 border rounded-lg" :class="{
+    class="p-4" :class="{
       'bg-white border-gray-300 text-black': theme === 'light',
       'bg-gray-700 border-gray-600 text-white': theme === 'dark',
     }"

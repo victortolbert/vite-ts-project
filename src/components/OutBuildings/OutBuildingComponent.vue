@@ -1,6 +1,9 @@
 <script lang="ts">
+import { filter} from 'lodash'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { Upload } from '@progress/kendo-vue-upload'
+import { AssetType, AssetUploadModel, FieldAsset } from "@/types";
+
 
 @Component({
   components: {
@@ -14,6 +17,33 @@ export default class OutbuildingComponent extends Vue {
       return { name: '' }
     },
   }) readonly outbuilding: any
+
+  get isAnotherType() {
+    return this.outbuilding.name === 'Other'
+  }
+
+  ReturnAssetModel(AssetFieldId: number, assetName: string = ""): AssetUploadModel {
+    let assetUploadModel = new AssetUploadModel()
+
+    assetUploadModel.AssetFieldId = AssetFieldId;
+    assetUploadModel.AssetTypeId = AssetType.FieldAsset;
+    assetUploadModel.CompanyId = this.companyId;
+    assetUploadModel.ProjectId = this.projectId;
+    assetUploadModel.AssetName = assetName;
+    assetUploadModel.PropertyInspectionFormId = this.propertyInspectionFormId;
+
+    return assetUploadModel;
+  }
+
+  ReturnFieldAssets(AssetFieldId: number): Array<FieldAsset> {
+    let fieldAssets = <Array<FieldAsset>>filter(this.fieldAssets, { AssetFieldId: AssetFieldId });
+
+    if (!fieldAssets) {
+      return new Array<FieldAsset>();
+    }
+
+    return <Array<FieldAsset>>filter(this.fieldAssets, { AssetFieldId: AssetFieldId });
+  }
 }
 </script>
 
