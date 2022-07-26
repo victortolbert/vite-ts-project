@@ -52,6 +52,7 @@ export * from './RoofComponent'
 export * from './RoofComponentSection'
 export * from './RoofObservationSection'
 export * from './RoofSummarySection'
+export * from './SectionBase'
 export * from './SectionType'
 export * from './ServiceRegionIds'
 export * from './StormInfoSection'
@@ -60,12 +61,12 @@ export * from './ToastrHelper'
 export * from './User'
 export * from './UserType'
 
-export type Account = {
+export interface Account {
   email: string
   displayName: string
 }
 
-export type AccountModify = {
+export interface AccountModify {
   email: string
   displayName: string
 }
@@ -85,7 +86,7 @@ export interface EventItem {
   text: string
 }
 
-export type InspectionDetail = {
+export interface InspectionDetail {
   ShortName: string
   ServiceType: string
   ClaimNumber: string
@@ -151,14 +152,14 @@ export enum BillingStatus {
   XactimateError = 94,
 }
 export default class Recipe {
-  title: string = ''
-  author: string = ''
-  time: number = 0
-  difficulty: string = ''
-  servings: number = 0
-  procedure: string = ''
-  image: string = ''
-  isFeatured: boolean = false
+  title = ''
+  author = ''
+  time = 0
+  difficulty = ''
+  servings = 0
+  procedure = ''
+  image = ''
+  isFeatured = false
 }
 
 export enum OrderStatus {
@@ -303,31 +304,6 @@ export enum ProjectStatus {
   Pending = 13,
 }
 
-export enum ResponseType {
-  Error,
-  Success,
-  FailedValidation,
-  NoRecords,
-  BadRequest,
-  Unauthorized,
-}
-
-export enum Roles {
-  Administrator = 1,
-  Scheduler = 2,
-  AdminSupport = 3,
-  Bookkeeper = 4,
-  ServiceTech = 5,
-  ServiceTech2 = 6,
-  ServiceManager = 7,
-  InsuranceAdjuster = 8,
-  BillingContact = 9,
-  AdjusterDirector = 10,
-  AdjusterManager = 11,
-  ServiceDirector = 12,
-  Eagleview = 13,
-}
-
 export enum ServiceRegionManagerMappingType {
   WithRegionList,
   WithUserList,
@@ -390,13 +366,6 @@ export enum ToasterPosition {
   bottomLeft = 'toast-bottom-left',
   centerCenter = 'toast-center-center',
 }
-
-export enum ToastMessageType {
-  Error,
-  Success,
-  Warning,
-}
-
 
 export enum XactimateStatus {
   NonXactimateProject = 0,

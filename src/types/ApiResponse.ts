@@ -1,13 +1,13 @@
 import { ResponseType } from '@/types'
 
 export class ApiResponse {
-  public resultText: string
-  public result: ResponseType
-  public showMore: boolean
-  public totalCount: number
+  public resultText!: string
+  public result!: ResponseType
+  public showMore!: boolean
+  public totalCount!: number
   public model: any
-  static errorMessage =
-    'Were sorry! An error has occurred and has been sent to our I.T. team. If problem persists, please notify us by clicking the Report Bug link.'
+  static errorMessage
+    = 'Were sorry! An error has occurred and has been sent to our I.T. team. If problem persists, please notify us by clicking the Report Bug link.'
 
   public static Parse(data: any, status: number): ApiResponse {
     const apiResponse: ApiResponse = new ApiResponse()
@@ -49,8 +49,8 @@ export class ApiResponse {
     }
     apiResponse.result = result
     apiResponse.resultText = resultText
-    apiResponse.model = data ? data : null
-    console.log('apiResponse: ' + JSON.stringify(apiResponse))
+    apiResponse.model = data || null
+    console.log(`apiResponse: ${JSON.stringify(apiResponse)}`)
     return apiResponse
   }
 }

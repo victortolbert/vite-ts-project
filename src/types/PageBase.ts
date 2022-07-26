@@ -1,4 +1,4 @@
-import { isEqual, cloneDeep } from 'lodash'
+import { cloneDeep, isEqual } from 'lodash'
 import { Component, Vue } from 'vue-property-decorator'
 
 import {
@@ -25,8 +25,8 @@ export class PageBase<T> extends Vue {
   className = ''
   deleteSuccessCallBack: any
   deleteService: DeleteService = new DeleteService()
-  deleteServiceInstance: IDeleteService<T>
-  deleteBatchServiceInstance: IDeleteBatchService<T>
+  deleteServiceInstance!: IDeleteService<T>
+  deleteBatchServiceInstance!: IDeleteBatchService<T>
   error = false
   errorMessage = 'An error has occurred and has been sent to our I.T. team. If problem persists, please notifiy us. We are sorry for the inconvenience.'
   homeRoute = '/Authorization/Logout'
@@ -57,7 +57,7 @@ export class PageBase<T> extends Vue {
 
   ConfirmBatchDelete(model: T, apiClient: string, deleteSuccessCallback: any, deleteErrorCallback: any = null) {
     this.deleteBatchServiceInstance.routes = new Array<string>()
-    this.deleteBatchServiceInstance.init(model, deleteSuccessCallback, deleteErrorCallback ? deleteErrorCallback : this.DeleteErrorCallback, apiClient)
+    this.deleteBatchServiceInstance.init(model, deleteSuccessCallback, deleteErrorCallback || this.DeleteErrorCallback, apiClient)
     this.deleteService.ConfirmDelete(this.deleteBatchServiceInstance.prompt, this.deleteBatchServiceInstance.model)
   }
 
@@ -67,7 +67,7 @@ export class PageBase<T> extends Vue {
   }
 
   ConfirmDelete(model: T, deleteSuccessCallback: any, deleteErrorCallback: any = null) {
-    this.deleteServiceInstance.init(model, deleteSuccessCallback, deleteErrorCallback ? deleteErrorCallback : this.DeleteErrorCallback, this.exemplarApiUrl)
+    this.deleteServiceInstance.init(model, deleteSuccessCallback, deleteErrorCallback || this.DeleteErrorCallback, this.exemplarApiUrl)
     this.deleteService.ConfirmDelete(this.deleteServiceInstance.prompt, this.deleteServiceInstance.model)
   }
 
@@ -89,29 +89,26 @@ export class PageBase<T> extends Vue {
 
   ValidateViewState() {
     this.missingViewStateValues = []
-    if (!this.roleName) {
+    if (!this.roleName)
       this.missingViewStateValues.push('RoleName')
-    }
 
-    if (this.roleId == 0) {
+    if (this.roleId === 0)
       this.missingViewStateValues.push('RoleId')
-    }
 
-    if (this.currentUserId == 0) {
+    if (this.currentUserId === 0)
       this.missingViewStateValues.push('UserId')
-    }
-    if (!this.exemplarApiUrl) {
+
+    if (!this.exemplarApiUrl)
       this.missingViewStateValues.push('ExemplarApiUrl')
-    }
-    if (!this.exemplarCoreUrl) {
+
+    if (!this.exemplarCoreUrl)
       this.missingViewStateValues.push('ExemplarCoreUrl')
-    }
-    if (!this.accessToken) {
+
+    if (!this.accessToken)
       this.missingViewStateValues.push('AccessToken')
-    }
-    if (this.missingViewStateValues.length == 0) {
+
+    if (this.missingViewStateValues.length === 0)
       this.viewStatePresent = true
-    }
   }
 
   LogIn() {
@@ -144,17 +141,17 @@ export class PageBase<T> extends Vue {
     }
   }
 
-  async Insert(route: string, model: any, successCallback: any = false, errorCallback: any = false, toastMessage: string = '') {
-
-    var apiResult: ApiResponse = await ApiClient.Post(route, model, this.accessToken)
+  async Insert(route: string, model: any, successCallback: any = false, errorCallback: any = false, toastMessage = '') {
+    const apiResult: ApiResponse = await ApiClient.Post(route, model, this.accessToken)
     switch (apiResult.result) {
       case ResponseType.Success:
         if (apiResult.model.Result != null && !apiResult.model.Result) {
           ToastrHelper.DisplayToastError(apiResult.model.ResultText, 'Error Encountered')
-        } else {
-          if (toastMessage.length > 0) {
+        }
+        else {
+          if (toastMessage.length > 0)
             ToastrHelper.DisplayToastSuccess(toastMessage, 'Success!')
-          }
+
           this.originalModel = cloneDeep(apiResult.model)
           successCallback(apiResult.model)
         }
@@ -163,17 +160,17 @@ export class PageBase<T> extends Vue {
         ToastrHelper.DisplayToastError(apiResult.resultText, 'Bad Request')
         break
       case ResponseType.Unauthorized:
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback(apiResult.model)
-        }
+
         ToastrHelper.DisplayToastError('You will be redirected to log back in now..', 'You are not Authorized.')
         window.location.href = this.homeRoute
         break
       case ResponseType.Error:
         ToastrHelper.DisplayToastError(this.errorMessage, 'Error Encountered')
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback()
-        }
+
         break
     }
   }
@@ -182,37 +179,37 @@ export class PageBase<T> extends Vue {
     return text.split('').sort().join('')
   }
 
-  hasChanges(currentModel: T, showToast: boolean = true): boolean {
-    console.log('this.originalModel: ' + JSON.stringify(this.originalModel))
-    console.log('this.currentModel: ' + JSON.stringify(currentModel))
+  hasChanges(currentModel: T, _showToast = true): boolean {
+    console.log(`this.originalModel: ${JSON.stringify(this.originalModel)}`)
+    console.log(`this.currentModel: ${JSON.stringify(currentModel)}`)
 
     if (isEqual(this.sortString(JSON.stringify(currentModel)), this.sortString(JSON.stringify(this.originalModel)))) {
       console.log('No Changes')
       return false
-    } else {
+    }
+    else {
       console.log('Changes Detected')
       return true
     }
   }
 
-  async Update(route: string, model: any, successCallback: any, errorCallback: any, toastMessage: string = '') {
-
-    var apiResult = await ApiClient.Put(route, model, this.accessToken)
+  async Update(route: string, model: any, successCallback: any, errorCallback: any, toastMessage = '') {
+    const apiResult = await ApiClient.Put(route, model, this.accessToken)
     switch (apiResult.result) {
       case ResponseType.Success:
         this.originalModel = cloneDeep(model)
 
-        if (toastMessage.length > 0) {
+        if (toastMessage.length > 0)
           ToastrHelper.DisplayToastSuccess(toastMessage, 'Success!')
-        }
-        if (successCallback) {
+
+        if (successCallback)
           successCallback(model)
-        }
+
         break
       case ResponseType.Unauthorized:
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback(apiResult.model)
-        }
+
         ToastrHelper.DisplayToastError('You will be redirected to log back in now..', 'You are not Authorized.')
         window.location.href = this.homeRoute
         break
@@ -220,61 +217,58 @@ export class PageBase<T> extends Vue {
         ToastrHelper.DisplayToastError(this.badRequest, 'Bad Request')
         break
       case ResponseType.FailedValidation:
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback(apiResult.model)
-        }
+
         break
       case ResponseType.Error:
         ToastrHelper.DisplayToastError(this.errorMessage, 'Database Error')
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback()
-        }
+
         break
     }
   }
 
-  async Patch(route: string, model: any, successCallback: any, errorCallback: any, toastMessage: string = '') {
-
-
-    var apiResult = await ApiClient.Patch(route, model, this.accessToken)
+  async Patch(route: string, model: any, successCallback: any, errorCallback: any, toastMessage = '') {
+    const apiResult = await ApiClient.Patch(route, model, this.accessToken)
 
     switch (apiResult.result) {
       case ResponseType.Success:
         this.originalModel = cloneDeep(model)
 
-        if (toastMessage.length > 0) {
+        if (toastMessage.length > 0)
           ToastrHelper.DisplayToastSuccess(toastMessage, 'Success!')
-        }
-        if (successCallback) {
+
+        if (successCallback)
           successCallback(model)
-        }
+
         break
       case ResponseType.BadRequest:
         ToastrHelper.DisplayToastError(this.badRequest, 'Bad Request')
         break
       case ResponseType.Error:
         ToastrHelper.DisplayToastError(this.errorMessage, 'Database Error')
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback()
-        }
+
         break
     }
   }
 
   ValidateEmail(mail: string): boolean {
-    let regexp = new RegExp(/^(([^<>()\[\]\\.,:\s@']+(\.[^<>()\[\]\\.,:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+    // eslint-disable-next-line prefer-regex-literals
+    const regexp = new RegExp(/^(([^<>()\[\]\\.,:\s@']+(\.[^<>()\[\]\\.,:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
     return regexp.test(mail)
   }
 
   async GetModel(route: string, successCallback: any, errorCallback: any = null) {
-
     this.showLoader = true
 
     await this.dataAccess.GetAsync(route, (model: T) => {
       this.originalModel = cloneDeep(model)
-      if (successCallback) {
+      if (successCallback)
         successCallback(model)
-      }
     }, errorCallback)
 
     this.showLoader = false

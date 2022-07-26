@@ -1,4 +1,4 @@
-export default interface ISortQuery {
+export interface ISortQuery {
   field: string
   direction: 'asc' | 'desc'
 }
