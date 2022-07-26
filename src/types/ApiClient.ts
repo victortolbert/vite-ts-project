@@ -1,34 +1,34 @@
 import axios from 'axios'
-import { ApiResponse } from '@/types'
 import * as qs from 'qs'
+import { ApiResponse } from '@/types'
 
 export class ApiClient {
   static Get = async (url: string, accessToken = '') => {
-    console.log('Getting Data with Url: ' + url)
+    console.log(`Getting Data with Url: ${url}`)
     let error = false
     const config = {
       headers: {
-        Authorization: 'Bearer ' + accessToken,
+        Authorization: `Bearer ${accessToken}`,
       },
     }
     let apiErrorResponse: ApiResponse = new ApiResponse()
     const axiosResponse: any = await axios
       .get(url, config)
       //  let axiosResponse: any = await axios.get(url)
-      .catch(x => {
+      .catch((x) => {
         error = true
         apiErrorResponse = ApiResponse.Parse(x.response.data, x.response.status)
       })
 
-    if (error) {
+    if (error)
       return apiErrorResponse
-    } else {
+    else
       return ApiResponse.Parse(axiosResponse.data, axiosResponse.status)
-    }
   }
 
   static DeleteBatch = async (url: string, successCallback: any, accessToken = '') => {
     console.log('Deleting Data with Url: ' + url)
+
     const options = {
       method: 'Delete',
       headers: { Authorization: 'Bearer ' + accessToken },
@@ -45,19 +45,19 @@ export class ApiClient {
       method: 'Post',
       headers: {
         'content-type': 'application/json charset=utf-8',
-        Authorization: 'Bearer ' + accessToken,
+        'Authorization': `Bearer ${accessToken}`,
       },
       data: JSON.stringify(data),
       url,
     }
     const axiosResponse: any = await axios(options).catch(x => {
       error = true
-      console.log('headers: ' + JSON.stringify(x.response))
+      console.log(`headers: ${JSON.stringify(x.response)}`)
       apiErrorResponse = ApiResponse.Parse(x.response.data, x.response.status)
     })
 
     if (error) {
-      console.log('apiErrorResponse: ' + +JSON.stringify(apiErrorResponse))
+      console.log(`apiErrorResponse: ${JSON.stringify(apiErrorResponse)}`)
       return apiErrorResponse
     } else {
       return ApiResponse.Parse(axiosResponse.data, axiosResponse.status)
@@ -72,7 +72,7 @@ export class ApiClient {
       method: 'Put',
       headers: {
         'content-type': 'application/json charset=utf-8',
-        Authorization: 'Bearer ' + accessToken,
+        'Authorization': `Bearer ${accessToken}`,
       },
       data: JSON.stringify(data),
       url,

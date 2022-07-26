@@ -1,52 +1,51 @@
 export class Asset {
+  public Id = 0
 
-    public  Id: number = 0
+  public AssetFieldId: number | null = null
 
-    public AssetFieldId: number | null = null
+  public AssetTypeId = 0
 
-    public AssetTypeId: number = 0
+  public AssetName = ''
 
-    public AssetName: string = ''
+  public CreatedBy = 0
 
-    public CreatedBy: number = 0
+  public UpdatedBy = 0
 
-    public UpdatedBy: number = 0
+  public CreatedByUser = ''
 
-    public CreatedByUser: string = ''
+  public CreatedOn = ''
 
-    public CreatedOn: string = ''
+  public Description = ''
 
-    public Description: string = ''
+  public FileName = ''
 
-    public FileName: string = ''
+  public FullPath = ''
 
-    public FullPath: string = ''
+  public HasMetaData = false
 
-    public HasMetaData: boolean
+  public ImageHeightPixels = 0
 
-    public ImageHeightPixels: number
+  public ImageWidthPixels = 0
 
-    public ImageWidthPixels: number
+  public Make = ''
 
-    public Make: string = ''
+  public Model = ''
 
-    public Model: string = ''
+  public OriginalFileTypeExtension = ''
 
-    public OriginalFileTypeExtension: string = ''
+  public Xresolution = ''
 
-    public Xresolution: string = ''
+  public Yresolution = ''
 
-    public Yresolution: string = ''
+  public SoftwareVersion = ''
 
-    public SoftwareVersion: string = ''
+  public IsDeleted = false
 
-    public IsDeleted: boolean = false
+  public IsSelected = false
 
-    public IsSelected: boolean = false
+  public Order = 0
 
-    public Order: number = 0
+  public ProjectId = 0
 
-    public ProjectId: number
-
-    public PropertyInspectionFormId: number
+  public PropertyInspectionFormId = 0
 }

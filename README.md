@@ -1,5 +1,100 @@
 # UI Patterns and Component Factory
 
+## Outbuildings
+
+```sql
+USE [ExemplarCore]
+
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+CREATE TABLE [dbo].[Outbuilding](
+  [Id] [int] IDENTITY(1,1) NOT NULL,
+  [Damaged] [bit] NULL,
+  [InteriorDamageDescription] [varchar](8000) NULL,
+  [ElevationDamageDescription] [varchar](8000) NULL,
+  [RoofDamageDescription] [varchar](8000) NULL,
+  [PropertyInspectionFormId] [int] NOT NULL,
+  [OutbuildingTypeId] [int] NOT NULL,
+  CONSTRAINT [PK_Outbuilding] PRIMARY KEY CLUSTERED
+(
+  [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+ALTER TABLE [dbo].[Outbuilding]
+WITH CHECK ADD CONSTRAINT [FK_Outbuilding_PropertyInspectionForm_PropertyInspectionFormId] FOREIGN KEY([PropertyInspectionFormId])
+REFERENCES [dbo].[PropertyInspectionForm] ([Id])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[Outbuilding] CHECK CONSTRAINT [FK_Outbuilding_PropertyInspectionForm_PropertyInspectionFormId]
+GO
+
+
+ALTER TABLE [dbo].[Outbuilding] WITH CHECK ADD CONSTRAINT [FK_Outbuilding_OutbuildingType_OutbuildingTypeId] FOREIGN KEY([OutbuildingTypeId])
+REFERENCES [dbo].[OutbuildingType] ([Id])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[Outbuilding] CHECK CONSTRAINT [FK_Outbuilding_OutbuildingType_OutbuildingTypeId]
+GO
+
+INSERT INTO MasterAssetField (AssetFieldName, PifOrder) VALUES ('OutbuildingInterior', 2200)
+INSERT INTO MasterAssetField (AssetFieldName, PifOrder) VALUES ('OutbuildingElevation', 2210)
+INSERT INTO MasterAssetField (AssetFieldName, PifOrder) VALUES ('OutbuildingRoof', 2220)
+
+INSERT INTO OutbuildingType (TypeName) VALUES ('Detached Garage')
+INSERT INTO OutbuildingType (TypeName) VALUES ('Shed')
+INSERT INTO OutbuildingType (TypeName) VALUES ('Barn')
+INSERT INTO OutbuildingType (TypeName) VALUES ('Shop')
+INSERT INTO OutbuildingType (TypeName) VALUES ('Pool House')
+INSERT INTO OutbuildingType (TypeName) VALUES ('Green House')
+INSERT INTO OutbuildingType (TypeName) VALUES ('Other')
+
+
+SELECT * FROM OutbuildingType
+Select * from MasterAssetType
+Select * from MasterAssetField
+
+--- Shingle Gauge (8)
+--- OutbuildingInterior (231)
+--- OutbuildingElevation (232)
+--- OutbuildingRoof (233)
+
+select AssetFieldId, AssetTypeId, assetName, CreatedBy, CreatedOn, Description, [Order], ProjectId, PropertyInspectionFormId from Asset
+Where AssetFieldId=231
+```
+
+```html
+<boolean-camera-wrapper-component
+    id="OutBuildingDmg"
+    :disable-camera="fieldAssets.length >= 100"
+    :field-assets="ReturnFieldAssets(assetFieldEnum.OutBuildingInterior)"
+    :asset-upload-model="ReturnAssetModel(assetFieldEnum.OutbuildingInterior)"
+    :validate="validate"
+    :current-value="model.OutBuildingsPresent"
+    v-on:onChanged="model.OutBuildingsPresent = $event"
+    v-bind:choices="['Yes', 'No']"
+    label="Outbuildings Present?"
+></boolean-camera-wrapper-component>
+
+<boolean-camera-wrapper-component
+    id="OutBuildingDmg"
+    :disable-camera="fieldAssets.length >= 100"
+    :field-assets="ReturnFieldAssets(assetFieldEnum.OutBuildingInterior)"
+    :asset-upload-model="ReturnAssetModel(assetFieldEnum.OutbuildingInterior)"
+    :validate="validate"
+    :current-value="model.OutBuildingsPresent"
+    v-on:onChanged="model.OutBuildingsPresent = $event"
+    v-bind:choices="['Yes', 'No']"
+    label="Outbuildings Present?"
+></boolean-camera-wrapper-component>
+```
+
 State Management
 Local
 Provide / Inject Examples

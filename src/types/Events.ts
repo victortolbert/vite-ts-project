@@ -1,0 +1,45 @@
+import Vue from 'Vue'
+
+// Used to pass events between components rather than raising global events.
+// See https://alligator.io/vuejs/global-event-bus/
+export const EventBus = new Vue()
+
+export enum PifEvents {
+  AssetsReceived = 'assets-received',
+  CallingAssets = 'calling-assets',
+  CloseAssetModal = 'close-asset-modal',
+  CloseForm = 'close-form',
+  CreateElevation = 'create-elevation',
+  CreateInterior = 'create-interior',
+  CreateRoof = 'create-roof',
+  CreateDamagedItem = 'create-roof',
+  Destroy = 'destroy',
+  DetermineReportType = 'determine-report-type',
+  NonFieldAssetUploaded = 'non-field-asset-uploaded',
+  EditPif = 'edit-pif',
+  FailedVaidation = 'failed-pif',
+  FieldAssetDeleted = 'form-asset-deleted',
+  FieldAssetReordered = 'form-asset-reordered',
+  FieldAssetUploaded = 'form-asset-uploaded',
+  InitializeFormMenu = 'initialize-form-menu',
+  InitializeUploader = 'initialize-uploader',
+  LoadElevation = 'load-elevation',
+  LoadInterior = 'load-interior',
+  LoadRoof = 'load-roof',
+  OpenAssetViewer = 'open-asset-viewer',
+  PifCreated = 'pif-created',
+  ReportTypeSet = 'report-type-set',
+  ReportCreated = 'report-created',
+  RequestReportData = 'request-report-data',
+  RemoveElevation = 'remove-elevation',
+  RemoveInterior = 'remove-interior',
+  RemoveRoof = 'remove-roof',
+  SavePif = 'save-pif',
+  SearchAssets = 'search-assets',
+  SearchPif = 'search-pif',
+  SearchPifComplete = 'search-pif-complete',
+  SendReportData = 'send-report-data',
+  ShowPifForm = 'show-pif-form',
+  ShowAssets = 'show-assets',
+  ValidatePif = 'validate-pif',
+}

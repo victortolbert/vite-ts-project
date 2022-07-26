@@ -1,11 +1,12 @@
 export * from './ApiClient'
 export * from './ApiResponse'
 export * from './Asset'
+export * from './AssetDetails'
 export * from './AssetField'
 export * from './AssetType'
+export * from './AssetUpload'
 export * from './AssetUploadModel'
 export * from './Attendee'
-export * from './AutoSchedulerBase'
 export * from './AutoSchedulerBase'
 export * from './AutoSchedulerEvents'
 export * from './BaseReport'
@@ -17,6 +18,8 @@ export * from './DeckSection'
 export * from './DeleteService'
 export * from './DropdownListValues'
 export * from './Event'
+export * from './Events'
+export * from './ExemplarMessage'
 export * from './FenceSection'
 export * from './FieldAsset'
 export * from './GlobalEvents'
@@ -101,24 +104,6 @@ export enum AssetExportStatus {
   Pending = 2,
   Completed = 3,
   Exception = 4,
-}
-
-export enum AssetType {
-  EagleView = 1,
-  Email = 2,
-  FieldAsset = 3,
-  Invoice = 4,
-  PhotoForm = 5,
-  Report = 6,
-  Unknown = 7,
-  UserAsset = 8,
-  GeomniEssentialsReport = 9,
-  GeomniReport = 10,
-  HoverMeasurements = 11,
-  Diagram = 12,
-  HoverEsx = 13,
-  HoverInvoice = 14,
-  HoverXml = 15,
 }
 
 export enum AssessmentType {

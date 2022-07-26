@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "preact/*": ["./stub/empty.d.ts"]
     },
     "allowJs": true,
     "declaration": true,

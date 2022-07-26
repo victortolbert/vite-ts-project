@@ -1,4 +1,4 @@
-import { ReportType } from '.'
+import type { ReportType } from '.'
 
 export interface DamageOverviewSection {
   BrittlenessTestPerformed: string

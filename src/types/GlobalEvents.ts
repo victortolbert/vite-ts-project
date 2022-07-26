@@ -3,5 +3,5 @@ export enum GlobalEvents {
   CloseEditForm = 'close-edit-form',
   CloseAuditLog = 'close-audit-log',
   Unauthorized = 'unauthorized',
-  Validated = 'validated'
+  Validated = 'validated',
 }

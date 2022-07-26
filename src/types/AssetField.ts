@@ -230,7 +230,8 @@ export enum AssetField {
   SolarPanelPresent = 228,
   FlatRoofScupperDrainPresent = 229,
   DripEdgeEaveQtyDamaged = 230,
+
   OutbuildingInterior = 231,
   OutbuildingExterior = 232,
-  OutbuildingRoof = 233
+  OutbuildingRoof = 233,
 }

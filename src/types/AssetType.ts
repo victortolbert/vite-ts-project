@@ -14,5 +14,5 @@ export enum AssetType {
   HoverEsx,
   HoverInvoice,
   HoverXml,
-  EagleViewFull
+  EagleViewFull,
 }

@@ -11,5 +11,5 @@ export enum ReportType {
   DirectInspectionWood,
   DirectInspectionCAStateAutoAssociation,
   DirectInspectionNoTestSquares,
-  HIC
+  HIC,
 }

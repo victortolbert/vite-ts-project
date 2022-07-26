@@ -1,15 +1,13 @@
 export class AssetDownload {
+  public AssetName = ''
 
-    public AssetName: string = "";
+  public FileName = ''
 
-    public FileName: string = "";
+  public FullPath = ''
 
-    public FullPath: string = "";
-
-
-    constructor(assetName: string, fileName: string, fullPath:string) {
-        this.AssetName = assetName;
-        this.FileName = fileName;
-        this.FullPath = fullPath;
-    }
+  constructor(assetName: string, fileName: string, fullPath: string) {
+    this.AssetName = assetName
+    this.FileName = fileName
+    this.FullPath = fullPath
+  }
 }
