@@ -1,15 +1,10 @@
-import Vue from 'Vue'
-
-// Used to pass events between components rather than raising global events.
-// See https://alligator.io/vuejs/global-event-bus/
-export const EventBus = new Vue()
-
 export enum PifEvents {
   AssetsReceived = 'assets-received',
   CallingAssets = 'calling-assets',
   CloseAssetModal = 'close-asset-modal',
   CloseForm = 'close-form',
   CreateElevation = 'create-elevation',
+  CreateOutbuildings = 'create-outbuildings',
   CreateInterior = 'create-interior',
   CreateRoof = 'create-roof',
   CreateDamagedItem = 'create-roof',
@@ -24,6 +19,7 @@ export enum PifEvents {
   InitializeFormMenu = 'initialize-form-menu',
   InitializeUploader = 'initialize-uploader',
   LoadElevation = 'load-elevation',
+  LoadOutbuildings = 'load-outbuildings',
   LoadInterior = 'load-interior',
   LoadRoof = 'load-roof',
   OpenAssetViewer = 'open-asset-viewer',
@@ -33,6 +29,7 @@ export enum PifEvents {
   RequestReportData = 'request-report-data',
   RemoveElevation = 'remove-elevation',
   RemoveInterior = 'remove-interior',
+  RemoveOutbuildings = 'remove-outbuildings',
   RemoveRoof = 'remove-roof',
   SavePif = 'save-pif',
   SearchAssets = 'search-assets',

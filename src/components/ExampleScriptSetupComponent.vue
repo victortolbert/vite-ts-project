@@ -22,8 +22,8 @@ function write() {
 
 <template>
   <main class="text-white">
-    <icon-accessibility />
-    <icon-account-box style="font-size: 2em; color: red" />
+    <IconAccessibility />
+    <IconAccountBox style="font-size: 2em; color: red" />
 
     <form @submit.prevent>
       <h5>{{ state.name }}</h5>

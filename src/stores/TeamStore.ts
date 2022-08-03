@@ -1,10 +1,16 @@
 import { defineStore } from 'pinia'
+interface Member {
+  id: string
+  name: string
+  email: string
+  status: string
+}
 
 export const useTeamStore = defineStore('team', {
   state: () => ({
     name: '',
     spots: 0,
-    members: [],
+    members: [] as Member[],
   }),
 
   actions: {

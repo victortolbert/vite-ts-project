@@ -1,117 +1,28 @@
-<script setup>
+<script lang="ts" setup>
 import { onMounted, ref } from 'vue'
-import { SidebarMenu } from 'vue-sidebar-menu'
 import { orderBy } from '@progress/kendo-data-query'
-import PropertyInspectionView from '@/components/PropertyInspectionView.vue'
-import MenuDivider from '@/components/MenuDivider.vue'
+import { SidebarMenu } from 'vue-sidebar-menu'
+import { EventBus } from '@/event-bus'
+import type { Theme } from '@/types'
 
-const data = [
-  { name: 'Pork', category: 'Food', subcategory: 'Meat' },
-  { name: 'Pepper', category: 'Food', subcategory: 'Vegetables' },
-  { name: 'Beef', category: 'Food', subcategory: 'Meat' },
-]
-
-const result = orderBy(data, [{ field: 'name', dir: 'asc' }])
-
-console.log(result)
-
-/* output
-[
-  { "name": "Beef", "category": "Food", "subcategory": "Meat" },
-  { "name": "Pepper", "category": "Food", "subcategory": "Vegetables" },
-  { "name": "Pork", "category": "Food", "subcategory": "Meat" }
-]
-*/
-// #1e3050 dark:section-bg
-// #071b3e dark:section-container-bg
-// #f0f1f3 dark:section-text-color
-// #61697b dark:section-subtitle-color
-
-const menu = ref([
-  // item
-  {
-    header: true,
-    title: 'UI Patterns and Component Factory',
-    hiddenOnCollapse: true,
-    // hidden: false
-    // class: ''
-    // attributes: {}
-  },
-  {
-    component: MenuDivider,
-  },
-  {
-    href: '/',
-    /* with vue-router you can use :to prop
-    href: { path: '/' }
-    you can mark link as external
-    // external: true
-    */
-
-    title: 'Property Inspection',
-
-    // icon class
-    // icon: 'fa fa-user',
-    // or custom icon
-    icon: {
-      element: 'i',
-      class: 'fa fa-user',
-      attributes: {},
-      text: '',
-    },
-    badge: {
-      text: 'new',
-      class: 'vsm--badge_default',
-      // attributes: {}
-      // element: 'span'
-    },
-    // child: []
-    // disabled: true
-    // class: ''
-    // attributes: {}
-    // exactPath: true // match path only (ignore query and hash)
-    // alias: '/path' // or array of paths (for advanced matching patterns see: https://github.com/pillarjs/path-to-regexp/tree/v1.7.0#parameters)
-    // hidden: false
-    // hiddenOnCollapse: true
-  },
-  {
-    component: MenuDivider,
-  },
-  {
-    href: '/disabled',
-    title: 'Disabled page',
-    icon: 'fa fa-lock',
-    disabled: true,
-    hidden: true,
-  },
-  // component item
-  {
-    // component: componentName
-    // props: componentProps
-    // hidden: false
-    // hiddenOnCollapse: true
-  },
-])
+// Menu Component
+import { menu } from '@/app.config'
 const collapsed = ref(true)
 const isOnMobile = ref(false)
-const selectedTheme = ref('')
-const themes = ref ([
-  {
-    name: 'Default theme',
-    input: '',
-  },
-  {
-    name: 'White theme',
-    input: 'white-theme',
-  },
-])
-
+onMounted(() => {
+  onResize()
+  window.addEventListener('resize', onResize)
+})
 const onToggleCollapse = () => {
   collapsed.value = !collapsed.value
 }
-
-const onItemClick = (event, item, node) => {
+const onItemClick = (event: any, item: any, node: any) => {
   console.log('onItemClick')
+  console.log('onItemClick', {
+    event,
+    item,
+    node,
+  })
 }
 
 const onResize = () => {
@@ -125,13 +36,37 @@ const onResize = () => {
   }
 }
 
-onMounted(() => {
-  onResize()
-  window.addEventListener('resize', onResize)
-})
+const selectedTheme = ref('')
+const themes: Theme[] = [
+  {
+    name: 'Default theme',
+    input: '',
+  },
+  {
+    name: 'White theme',
+    input: 'white-theme',
+  },
+]
+console.log({ themes })
+
+const data = [
+  { name: 'Pork', category: 'Food', subcategory: 'Meat' },
+  { name: 'Pepper', category: 'Food', subcategory: 'Vegetables' },
+  { name: 'Beef', category: 'Food', subcategory: 'Meat' },
+]
+const result = orderBy(data, [{ field: 'name', dir: 'asc' }])
+console.log({ result })
+
+const clickHandler = function (clickCount) {
+  console.log(`The button has been clicked ${clickCount} times!`)
+}
+
+// EventBus.$once('clicked', clickHandler)
+EventBus.$on('clicked', clickHandler)
+// EventBus.$off('clicked', clickHandler)
 </script>
 
-<script>
+<script lang="ts">
 export default {
   metaInfo() {
     return {
@@ -169,16 +104,7 @@ export default {
 </script>
 
 <template>
-  <main
-    id="app"
-    class="w-full"
-    :class="[{
-      collapsed,
-      onmobile: isOnMobile,
-    }]"
-  >
-    <PropertyInspectionView class="px-8" />
-
+  <main id="app" class="w-full" :class="[{ collapsed, onmobile: isOnMobile }]">
     <SidebarMenu
       width="360px"
       width-collapsed="52px"
@@ -207,11 +133,8 @@ export default {
         dropdown-icon
       </template>
     </SidebarMenu>
-    <div
-      v-if="isOnMobile && !collapsed"
-      class="sidebar-overlay"
-      @click="collapsed = true"
-    />
+
+    <div v-if="isOnMobile && !collapsed" class="sidebar-overlay" @click="collapsed = true" />
     <portal-target class="z-10" name="overlays" />
   </main>
 </template>

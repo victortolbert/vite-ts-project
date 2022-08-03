@@ -4,7 +4,9 @@ import Vue from 'vue'
 import { PiniaVuePlugin, createPinia } from 'pinia'
 import VueSignaturePad from 'vue-signature-pad'
 
-import App from './App.vue'
+// import App from './App.vue'
+// import App from '@/views/TeamView.vue'
+import App from '@/views/PropertyInspectionView.vue'
 
 import '@/plugins'
 // import '@/plugins/global-directives'

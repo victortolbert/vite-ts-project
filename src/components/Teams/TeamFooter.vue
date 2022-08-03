@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { useTeamStore } from '@/stores/TeamStore'
 const team = useTeamStore()
 </script>
