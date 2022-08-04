@@ -1,5 +1,5 @@
-import MenuDivider from '@/components/MenuDivider.vue'
 import { ref } from 'vue'
+import MenuDivider from '@/components/MenuDivider.vue'
 
 export const title = 'My App'
 
@@ -7,7 +7,7 @@ export const menu = ref([
   // item
   {
     header: true,
-    title: 'UI Patterns and Component Factory',
+    title: 'Menu Header',
     hiddenOnCollapse: true,
     // hidden: false
     // class: ''
@@ -24,14 +24,14 @@ export const menu = ref([
     // external: true
     */
 
-    title: 'Property Inspection',
+    title: 'Dashboard',
 
     // icon class
     // icon: 'fa fa-user',
     // or custom icon
     icon: {
       element: 'i',
-      class: 'fa fa-user',
+      class: 'fa fa-columns',
       attributes: {},
       text: '',
     },

@@ -99,4 +99,4 @@ const showAnnouncement = ref(true)
   </div>
 </template>
 
-<style src="./ExampleView.css" scoped />
+<style src="@/assets/css/app.css" />

@@ -9,12 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Flow+Circular&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Bungee&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.119/styles/kendo.common.min.css"/>
-      <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.119/styles/kendo.default.min.css"/>
-      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.119/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.119/styles/kendo.default.min.css" />
+    <!-- <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" /> -->
     <!-- <link rel="stylesheet" href="/assets/css/exemplar-print.css" media="print" /> -->
     <!-- <link rel="stylesheet" href="/assets/css/print.css" media="print" /> -->
@@ -30,6 +40,16 @@
     </script>
   </head>
   <body class="font-sans h-full dark:bg-gray-800 dark:text-white">
+    <!--
+      // imgToken: string = <string>$('#imgToken').val()
+      // imgPath: string = <string>$('#imgPath').val()
+      // assetVaultPath: string = <string>$('#assetVaultPath').val()
+      // userId: number = <number>$('#userId').val()
+    -->
+    <input id="imgToken" type="hidden" value="IMAGE_TOKEN" />
+    <input id="imgPath" type="hidden" value="/img" />
+    <input id="assetVaultPath" type="hidden" value="/vault" />
+    <input id="userId" type="hidden" value="1" />
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

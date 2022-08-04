@@ -1,12 +1,11 @@
 export class PropertyInspectionForm {
-
-    public Id: number = 0;
-    public CreatedBy: number = 0;
-    public CreatedOn: string = "";
-    public LastModifiedOn: string = "";
-    public CreatedByUser: string = "";
-    public FormName: string = "";
-    public IsDeleted: boolean = false;
-    public PreMigration: boolean = false;
-    public ProjectId: number = 0;
+  public Id = 0
+  public CreatedBy = 0
+  public CreatedOn = ''
+  public LastModifiedOn = ''
+  public CreatedByUser = ''
+  public FormName = ''
+  public IsDeleted = false
+  public PreMigration = false
+  public ProjectId = 0
 }

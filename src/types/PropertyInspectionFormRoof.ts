@@ -1,453 +1,453 @@
 export class PropertyInspectionFormRoof {
+  public Id = 0
 
-    public Id: number = 0;
+  public AdditionalSummary = ''
 
-    public AdditionalSummary: string = "";
+  public AllPhotosPitch: boolean | null = null
 
-    public AllPhotosPitch: boolean | null = null;
+  public AllPhotosShingle: boolean | null = null
 
-    public AllPhotosShingle: boolean | null = null;
+  public BlisterDamage: boolean | null = false
 
-    public BlisterDamage: boolean | null = false;
+  public BlistersNorth = ''
 
-    public BlistersNorth: string = "";
+  public BlistersEast = ''
 
-    public BlistersEast: string = "";
+  public BlistersSouth = ''
 
-    public BlistersSouth: string = "";
+  public BlistersWest = ''
 
-    public BlistersWest: string = "";
+  public BrittlenessTestConducted: boolean | null = null
 
-    public BrittlenessTestConducted: boolean | null = null;
+  public BrittlenessTestEast: boolean | null = null
 
-    public BrittlenessTestEast: boolean | null = null;
+  public BrittlenessTestEastPass = ''
 
-    public BrittlenessTestEastPass: string = "";
+  public BrittlenessTestNorth: boolean | null = null
 
-    public BrittlenessTestNorth: boolean | null = null;
+  public BrittlenessTestNorthPass = ''
 
-    public BrittlenessTestNorthPass: string = "";
+  public BrittlenessTestRequested: boolean | null = null
 
-    public BrittlenessTestRequested: boolean | null = null;
+  public BrittlenessTestSouth: boolean | null = null
 
-    public BrittlenessTestSouth: boolean | null = null;
+  public BrittlenessTestSouthPass = ''
 
-    public BrittlenessTestSouthPass: string = "";
+  public BrittlenessTestWest: boolean | null = null
 
-    public BrittlenessTestWest: boolean | null = null;
+  public BrittlenessTestWestPass = ''
 
-    public BrittlenessTestWestPass: string = "";
+  public CloggedGutterDamage: boolean | null = false
 
-    public CloggedGutterDamage: boolean | null = false;
+  public CloggedGuttersNorth = ''
 
-    public CloggedGuttersNorth: string = "";
+  public CloggedGuttersEast = ''
 
-    public CloggedGuttersEast: string = "";
+  public CloggedGuttersSouth = ''
 
-    public CloggedGuttersSouth: string = "";
+  public CloggedGuttersWest = ''
 
-    public CloggedGuttersWest: string = "";
+  public CreatedOn!: Date
 
-    public CreatedOn: Date;
+  public CuppedDamage: boolean | null = false
 
-    public CuppedDamage: boolean | null = false;
+  public CuppedEast = ''
 
-    public CuppedEast: string = "";
+  public CuppedNorth = ''
 
-    public CuppedNorth: string = "";
+  public CuppedSouth = ''
 
-    public CuppedSouth: string = "";
+  public CuppedWest = ''
 
-    public CuppedWest: string = "";
+  public DeckingRottedDamage: boolean | null = false
 
-    public DeckingRottedDamage: boolean | null = false;
+  public DeckingRottedNorth = ''
 
-    public DeckingRottedNorth: string = "";
+  public DeckingRottedEast = ''
 
-    public DeckingRottedEast: string = "";
+  public DeckingRottedSouth = ''
 
-    public DeckingRottedSouth: string = "";
+  public DeckingRottedWest = ''
 
-    public DeckingRottedWest: string = "";
+  public DripEdge: boolean | null = null
 
-    public DripEdge: boolean | null = null;
+  public DripEdgeLf: number | null = null
 
-    public DripEdgeLf: number | null = null;
+  public DripEdgeEavePainted: boolean | null = null
 
-    public DripEdgeEavePainted: boolean | null = null;
+  public DripEdgeEavePresent: boolean | null = false
 
-    public DripEdgeEavePresent: boolean | null = false;
+  public DripEdgeEaveQty: number | null = null
 
-    public DripEdgeEaveQty: number | null = null;
+  public DripEdgeEaveQtyDamaged: number | null = null
 
-    public DripEdgeEaveQtyDamaged: number | null = null;
+  public DripEdgeRakePainted: boolean | null = null
 
-    public DripEdgeRakePainted: boolean | null = null;
+  public DripEdgeRakePresent: boolean | null = false
 
-    public DripEdgeRakePresent: boolean | null = false;
+  public DripEdgeRakeQty: number | null = null
 
-    public DripEdgeRakeQty: number | null = null;
+  public DripEdgeRakeQtyDamaged: number | null = null
 
-    public DripEdgeRakeQtyDamaged: number | null = null;
+  public EaveStarter: boolean | null = null
 
-    public EaveStarter: boolean | null = null;
+  public ExposedFasteners: boolean | null = false
 
-    public ExposedFasteners: boolean | null = false;
+  public ExcessiveWeathering: boolean | null = false
 
-    public ExcessiveWeathering: boolean | null = false;
+  public FasciaDamaged = ''
 
-    public FasciaDamaged: string = "";
+  public FasciaEastDamaged = ''
 
-    public FasciaEastDamaged: string = "";
+  public FasciaEastLf: number | null = null
 
-    public FasciaEastLf: number | null = null;
+  public FasciaNorthDamaged = ''
 
-    public FasciaNorthDamaged: string = "";
+  public FasciaNorthLf: number | null = null
 
-    public FasciaNorthLf: number | null = null;
+  public FasciaSouthDamaged = ''
 
-    public FasciaSouthDamaged: string = "";
+  public FasciaSouthLf: number | null = null
 
-    public FasciaSouthLf: number | null = null;
+  public FasciaWestDamaged = ''
 
-    public FasciaWestDamaged: string = "";
+  public FasciaWestLf: number | null = null
 
-    public FasciaWestLf: number | null = null;
+  public FasciaMaterial = ''
 
-    public FasciaMaterial: string = "";
+  public FasciaMaterialOther = ''
 
-    public FasciaMaterialOther: string = "";
+  public FasciaSize: number | null = null
 
-    public FasciaSize: number | null = null;
+  public FasciaSizeOther: number | null = null
 
-    public FasciaSizeOther: number | null = null;
+  public Felt: boolean | null = null
 
-    public Felt: boolean | null = null;
+  public FeltDescription = ''
 
-    public FeltDescription: string = "";
+  public FlashingNotSealedDamage: boolean | null = false
 
-    public FlashingNotSealedDamage: boolean | null = false;
+  public FlashingNotSealedEast = ''
 
-    public FlashingNotSealedEast: string = "";
+  public FlashingNotSealedNorth = ''
 
-    public FlashingNotSealedNorth: string = "";
+  public FlashingNotSealedSouth = ''
 
-    public FlashingNotSealedSouth: string = "";
+  public FlashingNotSealedWest = ''
 
-    public FlashingNotSealedWest: string = "";
+  public FlashingNotSealedNotes = ''
 
-    public FlashingNotSealedNotes: string = "";
+  public FreeForm = ''
 
-    public FreeForm: string = "";
+  public GranuleLossDamage: boolean | null = false
 
-    public GranuleLossDamage: boolean | null = false;
+  public GranuleLossNorth = ''
 
-    public GranuleLossNorth: string = "";
+  public GranuleLossEast = ''
 
-    public GranuleLossEast: string = "";
+  public GranuleLossSouth = ''
 
-    public GranuleLossSouth: string = "";
+  public GranuleLossWest = ''
 
-    public GranuleLossWest: string = "";
+  public GutterPresent: boolean | null = null
 
-    public GutterPresent: boolean | null = null;
+  public GuttersDamage = ''
 
-    public GuttersDamage: string = "";
+  public GutterDescription = ''
 
-    public GutterDescription: string = "";
+  public GutterMaterial = ''
 
-    public GutterMaterial: string = "";
+  public GutterMaterialOther = ''
 
-    public GutterMaterialOther: string = "";
+  public GutterPainted: boolean | null = null
 
-    public GutterPainted: boolean | null = null;
+  public GutterSize = ''
 
-    public GutterSize: string = "";
+  public GutterSizeOther = ''
 
-    public GutterSizeOther: string = "";
+  public GutterNorthDamaged: boolean | null = null
 
-    public GutterNorthDamaged: boolean | null = null;
+  public GutterNorthLf: number | null = null
 
-    public GutterNorthLf: number | null = null;
+  public GutterEastDamaged: boolean | null = null
 
-    public GutterEastDamaged: boolean | null = null;
+  public GutterEastLf: number | null = null
 
-    public GutterEastLf: number | null = null;
+  public GutterSouthDamaged: boolean | null = null
 
-    public GutterSouthDamaged: boolean | null = null;
+  public GutterSouthLf: number | null = null
 
-    public GutterSouthLf: number | null = null;
+  public GutterWestDamaged: boolean | null = null
 
-    public GutterWestDamaged: boolean | null = null;
+  public GutterWestLf: number | null = null
 
-    public GutterWestLf: number | null = null;
+  public HailDamageNorthSf: number | null = null
 
-    public HailDamageNorthSf: number | null = null;
+  public HailDamageSouthSf: number | null = null
 
-    public HailDamageSouthSf: number | null = null;
+  public HailDamageEastSf: number | null = null
 
-    public HailDamageEastSf: number | null = null;
+  public HailDamageWestSf: number | null = null
 
-    public HailDamageWestSf: number | null = null;
+  public HailTestSizeNorth: number | null = 100
 
-    public HailTestSizeNorth: number | null = 100;
+  public HailTestSizeEast: number | null = 100
 
-    public HailTestSizeEast: number | null = 100;
+  public HailTestSizeSouth: number | null = 100
 
-    public HailTestSizeSouth: number | null = 100;
+  public HailTestSizeWest: number | null = 100
 
-    public HailTestSizeWest: number | null = 100;
+  public HancockDisagreesHailDamage: boolean | null = null
 
-    public HancockDisagreesHailDamage: boolean | null = null;
+  public OtherDamageNorth: number | null = 0
 
-    public OtherDamageNorth: number | null = 0;
+  public OtherDamageSouth: number | null = 0
 
-    public OtherDamageSouth: number | null = 0;
+  public OtherDamageEast: number | null = 0
 
-    public OtherDamageEast: number | null = 0;
+  public OtherDamageWest: number | null = 0
 
-    public OtherDamageWest: number | null = 0;
+  public HailDamageDisagreeEast: number | null = null
 
-    public HailDamageDisagreeEast: number | null = null;
+  public HailDamageDisagreeNorth: number | null = null
 
-    public HailDamageDisagreeNorth: number | null = null;
+  public HailDamageDisagreeSouth: number | null = null
 
-    public HailDamageDisagreeSouth: number | null = null;
+  public HailDamageDisagreeWest: number | null = null
 
-    public HailDamageDisagreeWest: number | null = null;
+  public IceWaterShield: boolean | null = null
 
-    public IceWaterShield: boolean | null = null;
+  public IceWaterShieldLf: number | null = null
 
-    public IceWaterShieldLf: number | null = null;
+  public InstallationError: boolean | null = false
 
-    public InstallationError: boolean | null = false;
+  public InstallationErrorDescription = ''
 
-    public InstallationErrorDescription: string = "";
+  public InstallationErrorDescriptionOther = ''
 
-    public InstallationErrorDescriptionOther: string = "";
+  public LastModifiedOn!: Date
 
-    public LastModifiedOn: Date;
+  public LayerQty: number | null = null
 
-    public LayerQty: number | null = null;
+  public LayerType = ''
 
-    public LayerType: string = "";
+  public LayerTypeOther = ''
 
-    public LayerTypeOther: string = "";
+  public ManufacturedDamage: boolean | null = false
 
-    public ManufacturedDamage: boolean | null = false;
+  public ManufacturedMarkDamage: boolean | null = false
 
-    public ManufacturedMarkDamage: boolean | null = false;
+  public ManufacturedMarksEast = ''
 
-    public ManufacturedMarksEast: string = "";
+  public ManufacturedMarksNorth = ''
 
-    public ManufacturedMarksNorth: string = "";
+  public ManufacturedMarksSouth = ''
 
-    public ManufacturedMarksSouth: string = "";
+  public ManufacturedMarksWest = ''
 
-    public ManufacturedMarksWest: string = "";
+  public MechanicalDamage: boolean | null = false
 
-    public MechanicalDamage: boolean | null = false;
+  public MechanicalMarkDamage: boolean | null = false
 
-    public MechanicalMarkDamage: boolean | null = false;
+  public MechanicalMarksEast = ''
 
-    public MechanicalMarksEast: string = "";
+  public MechanicalMarksNorth = ''
 
-    public MechanicalMarksNorth: string = "";
+  public MechanicalMarksSouth = ''
 
-    public MechanicalMarksSouth: string = "";
+  public MechanicalMarksWest = ''
 
-    public MechanicalMarksWest: string = "";
+  public OaInitialsRequired: boolean | null = null
 
-    public OaInitialsRequired: boolean | null = null;
+  public OaReview: boolean | null = null
 
-    public OaReview: boolean | null = null;
+  public OaInitialsCaptured: boolean | null = null
 
-    public OaInitialsCaptured: boolean | null = null;
+  public OtherConditions: boolean | null = false
 
-    public OtherConditions: boolean | null = false;
+  public OtherConditionsDescription = ''
 
-    public OtherConditionsDescription: string = "";
+  public OtherConditionsEast = ''
 
-    public OtherConditionsEast: string = "";
+  public OtherConditionsName = ''
 
-    public OtherConditionsName: string = "";
+  public OtherConditionsNorth = ''
 
-    public OtherConditionsNorth: string = "";
+  public OtherConditionsSouth = ''
 
-    public OtherConditionsSouth: string = "";
+  public OtherConditionsWest = ''
 
-    public OtherConditionsWest: string = "";
+  public OutbuildingsPresent: boolean | null = null
 
-    public OutBuildingDamage: boolean | null = null;
+  public OutBuildingDamage: boolean | null = null
 
-    public OutBuildingNotes: string = "";
+  public OutBuildingNotes = ''
 
-    public NailPopDamaged: boolean | null = false;
+  public NailPopDamaged: boolean | null = false
 
-    public NailPopsNorth: string = "";
+  public NailPopsNorth = ''
 
-    public NailPopsSouth: string = "";
+  public NailPopsSouth = ''
 
-    public NailPopsEast: string = "";
+  public NailPopsEast = ''
 
-    public NailPopsWest: string = "";
+  public NailPopsWest = ''
 
-    public PitchEast: string = "";
+  public PitchEast = ''
 
-    public PitchEastOther: string = "";
+  public PitchEastOther = ''
 
-    public PitchNorth: string = "";
+  public PitchNorth = ''
 
-    public PitchNorthOther: string = "";
+  public PitchNorthOther = ''
 
-    public PitchSouth: string = "";
+  public PitchSouth = ''
 
-    public PitchSouthOther: string = "";
+  public PitchSouthOther = ''
 
-    public PitchWest: string = "";
+  public PitchWest = ''
 
-    public PitchWestOther: string = "";
+  public PitchWestOther = ''
 
-    public PriorRepairs: string = "";
+  public PriorRepairs = ''
 
-    public PriorRepairsEast: string = "";
+  public PriorRepairsEast = ''
 
-    public PriorRepairsNorth: string = "";
+  public PriorRepairsNorth = ''
 
-    public PriorRepairsSouth: string = "";
+  public PriorRepairsSouth = ''
 
-    public PriorRepairsWest: string = "";
+  public PriorRepairsWest = ''
 
-    public PropertyInspectionFormId: number | null = null;
+  public PropertyInspectionFormId: number | null = null
 
-    public RakeStarter: boolean | null = null;
+  public RakeStarter: boolean | null = null
 
-    public RodentDamage: boolean | null = false;
+  public RodentDamage: boolean | null = false
 
-    public RoofAgeYears: string = "";
+  public RoofAgeYears = ''
 
-    public RoofAgeMonths: string = "";
+  public RoofAgeMonths = ''
 
-    public RoofDebrisDamaged: boolean | null = false;
+  public RoofDebrisDamaged: boolean | null = false
 
-    public RoofDebrisEast: string = "";
+  public RoofDebrisEast = ''
 
-    public RoofDebrisNorth: string = "";
+  public RoofDebrisNorth = ''
 
-    public RoofDebrisSouth: string = "";
+  public RoofDebrisSouth = ''
 
-    public RoofDebrisWest: string = "";
+  public RoofDebrisWest = ''
 
-    public RoofDiagramed: boolean | null = null;
+  public RoofDiagramed: boolean | null = null
 
-    public RoofMaterial: string = "";
+  public RoofMaterial = ''
 
-    public RoofMaterialOther: string = "";
+  public RoofMaterialOther = ''
 
-    public RoofMeasured: boolean | null = null;
+  public RoofMeasured: boolean | null = null
 
-    public RoofObservations: string = "";
+  public RoofObservations = ''
 
-    public RoofPitchSevenSqft: number | null = null;
+  public RoofPitchSevenSqft: number | null = null
 
-    public RoofPitchTenSqft: number | null = null;
+  public RoofPitchTenSqft: number | null = null
 
-    public RoofPitchZeroSqft: number | null = null;
+  public RoofPitchZeroSqft: number | null = null
 
-    public RoofRotted: boolean | null = null;
+  public RoofRotted: boolean | null = null
 
-    public RoofStoryOneSqft: number | null = null;
+  public RoofStoryOneSqft: number | null = null
 
-    public RoofStoryTwoSqft: number | null = null;
+  public RoofStoryTwoSqft: number | null = null
 
-    public RoofType: string = "";
+  public RoofType = ''
 
-    public RoofTypeOther: string = "";
+  public RoofTypeOther = ''
 
-    public ShingleExposureSf: boolean | null = false;
+  public ShingleExposureSf: boolean | null = false
 
-    public ShingleType: string = "";
+  public ShingleType = ''
 
-    public ShingleWidthSf: number | null = null;
+  public ShingleWidthSf: number | null = null
 
-    public SoffitDepthLf: number | null = null;
+  public SoffitDepthLf: number | null = null
 
-    public SpatterMarks: boolean | null = false;
+  public SpatterMarks: boolean | null = false
 
-    public Stories: number | null = null;
+  public Stories: number | null = null
 
-    public StoriesOther: number | null = null;
+  public StoriesOther: number | null = null
 
-    public StormDamage: boolean | null = null;
+  public StormDamage: boolean | null = null
 
-    public StormDirection: string = "";
+  public StormDirection = ''
 
-    public StormDamageType: string = "";
+  public StormDamageType = ''
 
-    public StormDamageTypeOther: string = "";
+  public StormDamageTypeOther = ''
 
-    public TarpReset: boolean | null = null;
+  public TarpReset: boolean | null = null
 
-    public ThermalCrackingDamage: boolean | null = false;
+  public ThermalCrackingDamage: boolean | null = false
 
-    public ThermalCrackingEast: string = "";
+  public ThermalCrackingEast = ''
 
-    public ThermalCrackingNorth: string = "";
+  public ThermalCrackingNorth = ''
 
-    public ThermalCrackingSouth: string = "";
+  public ThermalCrackingSouth = ''
 
-    public ThermalCrackingWest: string = "";
+  public ThermalCrackingWest = ''
 
-    public ValleyMetalMaterial: string = "";
+  public ValleyMetalMaterial = ''
 
-    public ValleyMetalPainted: boolean | null = null;
+  public ValleyMetalPainted: boolean | null = null
 
-    public ValleyMetalPresent: boolean | null = false;
+  public ValleyMetalPresent: boolean | null = false
 
-    public ValleyMetalQty: number | null = null;
+  public ValleyMetalQty: number | null = null
 
-    public ValleyMetalQtyDamaged: number | null = null;
+  public ValleyMetalQtyDamaged: number | null = null
 
-    public ValleyType: string = "";
+  public ValleyType = ''
 
-    public WindDamageNorthOneSqft: number | null = 0;
+  public WindDamageNorthOneSqft: number | null = 0
 
-    public WindDamageSouthOneSqft: number | null = 0;
+  public WindDamageSouthOneSqft: number | null = 0
 
-    public WindDamageEastOneSqft: number | null = 0;
+  public WindDamageEastOneSqft: number | null = 0
 
-    public WindDamageWestOneSqft: number | null = 0;
+  public WindDamageWestOneSqft: number | null = 0
 
-    public WindDamageNorthTwoSqft: number | null = 0;
+  public WindDamageNorthTwoSqft: number | null = 0
 
-    public WindDamageSouthTwoSqft: number | null = 0;
+  public WindDamageSouthTwoSqft: number | null = 0
 
-    public WindDamageEastTwoSqft: number | null = 0;
+  public WindDamageEastTwoSqft: number | null = 0
 
-    public WindDamageWestTwoSqft: number | null = 0;
+  public WindDamageWestTwoSqft: number | null = 0
 
-    public WindDamageNorthThreeSqft: number | null = 0;
+  public WindDamageNorthThreeSqft: number | null = 0
 
-    public WindDamageSouthThreeSqft: number | null = 0;
+  public WindDamageSouthThreeSqft: number | null = 0
 
-    public WindDamageEastThreeSqft: number | null = 0;
+  public WindDamageEastThreeSqft: number | null = 0
 
-    public WindDamageWestThreeSqft: number | null = 0;
+  public WindDamageWestThreeSqft: number | null = 0
 
-    public WindDamageNorthFourSqft: number | null = 0;
+  public WindDamageNorthFourSqft: number | null = 0
 
-    public WindDamageSouthFourSqft: number | null = 0;
+  public WindDamageSouthFourSqft: number | null = 0
 
-    public WindDamageEastFourSqft: number | null = 0;
+  public WindDamageEastFourSqft: number | null = 0
 
-    public WindDamageWestFourSqft: number | null = 0;
+  public WindDamageWestFourSqft: number | null = 0
 
-    public WindDamageNorthFiveSqft: number | null = 0;
+  public WindDamageNorthFiveSqft: number | null = 0
 
-    public WindDamageSouthFiveSqft: number | null = 0;
+  public WindDamageSouthFiveSqft: number | null = 0
 
-    public WindDamageEastFiveSqft: number | null = 0;
+  public WindDamageEastFiveSqft: number | null = 0
 
-    public WindDamageWestFiveSqft: number | null = 0;
-
+  public WindDamageWestFiveSqft: number | null = 0
 }

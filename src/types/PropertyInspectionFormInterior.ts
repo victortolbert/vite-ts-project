@@ -1,217 +1,215 @@
 export class PropertyInspectionFormInterior {
+  public Id = 0
 
-    public Id: number = 0;
+  public AdditionalOneArea = ''
 
-    public AdditionalOneArea: string = "";
+  public AdditionalOneDamaged = ''
 
-    public  AdditionalOneDamaged: string = "";
+  public AdditionalOneDescription = ''
 
-    public  AdditionalOneDescription: string = "";
+  public AdditionalOneSf: number | null = null
 
-    public  AdditionalOneSf : number | null = null;
+  public AdditionalTwoArea = ''
 
-    public AdditionalTwoArea: string = "";
+  public AdditionalTwoDamaged = ''
 
-    public  AdditionalTwoDamaged: string = "";
+  public AdditionalTwoDescription = ''
 
-    public  AdditionalTwoDescription: string = "";
+  public AdditionalTwoSf: number | null = null
 
-    public  AdditionalTwoSf : number | null = null;
+  public AdditionalThreeArea = ''
 
-    public AdditionalThreeArea: string = "";
+  public AdditionalThreeDamaged = ''
 
-    public  AdditionalThreeDamaged: string = "";
+  public AdditionalThreeDescription = ''
 
-    public  AdditionalThreeDescription: string = "";
+  public AdditionalThreeSf: number | null = null
 
-    public  AdditionalThreeSf : number | null = null;
+  public AdditionalFourArea = ''
 
-    public  AdditionalFourArea: string = "";
+  public AdditionalFourDamaged = ''
 
-    public  AdditionalFourDamaged: string = "";
+  public AdditionalFourDescription = ''
 
-    public  AdditionalFourDescription: string = "";
+  public AdditionalFourSf: number | null = null
 
-    public  AdditionalFourSf : number | null = null;
+  public AdditionalFiveArea = ''
 
-    public  AdditionalFiveArea: string = "";
+  public AdditionalFiveDamaged = ''
 
-    public  AdditionalFiveDamaged: string = "";
+  public AdditionalFiveDescription = ''
 
-    public  AdditionalFiveDescription: string = "";
+  public AdditionalFiveSf: number | null = null
 
-    public  AdditionalFiveSf : number | null = null;
+  public AtticDamaged = 'NA'
 
-    public  AtticDamaged: string = "NA";
+  public AtticDescription = ''
 
-    public  AtticDescription: string = "";
+  public AtticSf: number | null = null
 
-    public AtticSf: number | null = null;
+  public BasementDamaged = 'NA'
 
-    public BasementDamaged: string = "NA";
+  public BasementDescription = ''
 
-    public  BasementDescription: string = "";
+  public BasementSf: number | null = null
 
-    public  BasementSf : number | null = null;
+  public BathroomThreeDamaged = 'NA'
 
-    public BathroomThreeDamaged: string = "NA";
+  public BathroomThreeDescription = ''
 
-    public  BathroomThreeDescription: string = "";
+  public BathroomThreeSf: number | null = null
 
-    public  BathroomThreeSf : number | null = null;
+  public BathroomTwoDamaged = 'NA'
 
-    public BathroomTwoDamaged: string = "NA";
+  public BathroomTwoDescription = ''
 
-    public  BathroomTwoDescription: string = "";
+  public BathroomTwoSf: number | null = null
 
-    public  BathroomTwoSf : number | null = null;
+  public BedroomFourDamaged = 'NA'
 
-    public BedroomFourDamaged: string = "NA";
+  public BedroomFourDescription = ''
 
-    public  BedroomFourDescription: string = "";
+  public BedroomFourSf: number | null = null
 
-    public  BedroomFourSf : number | null = null;
+  public BedroomFourClosetDamaged = 'NA'
 
-    public BedroomFourClosetDamaged: string = "NA";
+  public BedroomFourClosetDescription = ''
 
-    public  BedroomFourClosetDescription: string = "";
+  public BedroomFourClosetSf: number | null = null
 
-    public  BedroomFourClosetSf : number | null = null;
+  public BedroomThreeDamaged = 'NA'
 
-    public BedroomThreeDamaged: string = "NA";
+  public BedroomThreeDescription = ''
 
-    public  BedroomThreeDescription: string = "";
+  public BedroomThreeSf: number | null = null
 
-    public  BedroomThreeSf : number | null = null;
+  public BedroomThreeClosetDamaged = 'NA'
 
-    public BedroomThreeClosetDamaged: string = "NA";
+  public BedroomThreeClosetDescription = ''
 
-    public  BedroomThreeClosetDescription: string = "";
+  public BedroomThreeClosetSf: number | null = null
 
-    public  BedroomThreeClosetSf : number | null = null;
+  public BedroomTwoDamaged = 'NA'
 
-    public BedroomTwoDamaged: string = "NA";
+  public BedroomTwoDescription = ''
 
-    public  BedroomTwoDescription: string = "";
+  public BedroomTwoSf: number | null = null
 
-    public  BedroomTwoSf : number | null = null;
+  public BedroomTwoClosetDamaged = 'NA'
 
-    public BedroomTwoClosetDamaged: string = "NA";
+  public BedroomTwoClosetDescription = ''
 
-    public  BedroomTwoClosetDescription: string = "";
+  public BedroomTwoClosetSf: number | null = null
 
-    public  BedroomTwoClosetSf : number | null = null;
+  public BreakfastAreaDamaged = 'NA'
 
-    public BreakfastAreaDamaged: string = "NA";
+  public BreakfastAreaDescription = ''
 
-    public  BreakfastAreaDescription: string = "";
+  public BreakfastAreaSf: number | null = null
 
-    public  BreakfastAreaSf : number | null = null;
+  public ContentsDamaged = 'NA'
 
-    public ContentsDamaged: string = "NA";
+  public ContentsDescription = ''
 
-    public  ContentsDescription: string = "";
+  public CrawlSpaceDamaged = 'NA'
 
-    public CrawlSpaceDamaged: string = "NA";
+  public CrawlSpaceDescription = ''
 
-    public  CrawlSpaceDescription: string = "";
+  public CrawlSpaceSf: number | null = null
 
-    public  CrawlSpaceSf : number | null = null;
+  public CreatedOn!: Date
 
-    public CreatedOn: Date;
+  public DiningRoomDamaged = 'NA'
 
-    public DiningRoomDamaged: string = "NA";
+  public DiningRoomDescription = ''
 
-    public  DiningRoomDescription: string = "";
+  public DiningRoomSf: number | null = null
 
-    public  DiningRoomSf : number | null = null;
+  public FamilyRoomDamaged = 'NA'
 
-    public FamilyRoomDamaged: string = "NA";
+  public FamilyRoomDescription = ''
 
-    public  FamilyRoomDescription: string = "";
+  public FamilyRoomSf: number | null = null
 
-    public  FamilyRoomSf : number | null = null;
+  public FoyerDamaged = 'NA'
 
-    public FoyerDamaged: string = "NA";
+  public FoyerDescription = ''
 
-    public  FoyerDescription: string = "";
+  public FoyerSf: number | null = null
 
-    public  FoyerSf : number | null = null;
+  public GameRoomDamaged = 'NA'
 
-    public GameRoomDamaged: string = "NA";
+  public GameRoomDescription = ''
 
-    public  GameRoomDescription: string = "";
+  public GameRoomSf: number | null = null
 
-    public  GameRoomSf : number | null = null;
+  public HallDamaged = 'NA'
 
-    public HallDamaged: string = "NA";
+  public HallDescription = ''
 
-    public  HallDescription: string = "";
+  public HallSf: number | null = null
 
-    public  HallSf : number | null = null;
+  public HallClosetDamaged = 'NA'
 
-    public HallClosetDamaged: string = "NA";
+  public HallClosetDescription = ''
 
-    public  HallClosetDescription: string = "";
+  public HallClosetSf: number | null = null
 
-    public HallClosetSf: number | null = null;
+  public HasCovid: boolean | null = null
 
-    public HasCovid: boolean | null = null;
+  public InteriorDamaged: boolean | null = null
 
-    public InteriorDamaged: boolean | null = null;
+  public InteriorInspected: boolean | null = null
 
-    public InteriorInspected: boolean | null = null;
+  public KitchenDamaged = 'NA'
 
-    public KitchenDamaged: string = "NA";
+  public KitchenDescription = ''
 
-    public  KitchenDescription: string = "";
+  public KitchenSf: number | null = null
 
-    public  KitchenSf: number | null = null;
+  public LastModifiedOn!: Date
 
-    public LastModifiedOn: Date;
+  public LivingRoomDamaged = 'NA'
 
-    public LivingRoomDamaged: string = "NA";
+  public LivingRoomDescription = ''
 
-    public  LivingRoomDescription: string = "";
+  public LivingRoomSf: number | null = null
 
-    public  LivingRoomSf : number | null = null;
+  public MasterBathroomDamaged = 'NA'
 
-    public MasterBathroomDamaged: string = "NA";
+  public MasterBathroomDescription = ''
 
-    public  MasterBathroomDescription: string = "";
+  public MasterBathroomSf: number | null = null
 
-    public  MasterBathroomSf : number | null = null;
+  public MasterBedroomDamaged = 'NA'
 
-    public MasterBedroomDamaged: string = "NA";
+  public MasterBedroomDescription = ''
 
-    public  MasterBedroomDescription: string = "";
+  public MasterBedroomSf: number | null = null
 
-    public  MasterBedroomSf : number | null = null;
+  public MasterClosetDamaged = 'NA'
 
-    public MasterClosetDamaged: string = "NA";
+  public MasterClosetDescription = ''
 
-    public  MasterClosetDescription: string = "";
+  public MasterClosetSf: number | null = null
 
-    public  MasterClosetSf : number | null = null;
+  public OfficeDamaged = 'NA'
 
-    public OfficeDamaged: string = "NA";
+  public OfficeDescription = ''
 
-    public  OfficeDescription: string = "";
+  public OfficeSf: number | null = null
 
-    public  OfficeSf : number | null = null;
+  public PantryDamaged = 'NA'
 
-    public PantryDamaged: string = "NA";
+  public PantryDescription = ''
 
-    public  PantryDescription: string = "";
+  public PantrySf: number | null = null
 
-    public  PantrySf : number | null = null;
+  public PropertyInspectionFormId: number | null = null
 
-    public  PropertyInspectionFormId: number | null = null;
+  public UtilityDamaged = 'NA'
 
-    public UtilityDamaged: string = "NA";
+  public UtilityDescription = ''
 
-    public  UtilityDescription: string = "";
-
-    public  UtilitySf : number | null = null;
-
+  public UtilitySf: number | null = null
 }

@@ -1,8 +1,8 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import OutbuildingComponent from './OutbuildingComponent.vue'
+import OutbuildingComponent from './OutbuildingComponent'
 import Panel from '@/components/Panel.vue'
-import type { Outbuilding } from '@/types/Outbuilding'
+import type { Outbuilding } from '@/types'
 
 @Component({
   components: { OutbuildingComponent, Panel },
@@ -19,7 +19,7 @@ export default class OutbuildingListComponent extends Vue {
     <ul class="divide-y space-y-4">
       <OutbuildingComponent
         v-for="outbuilding in outbuildings"
-        :key="outbuilding.id"
+        :key="outbuilding.Id"
         :outbuilding="outbuilding"
       />
     </ul>

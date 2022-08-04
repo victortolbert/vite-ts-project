@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang="ts">
 import { find, replace } from 'lodash'
 import { uuid } from 'uuidv4'
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
@@ -6,10 +6,21 @@ import { BModal, BButton } from 'bootstrap-vue'
 import KendoUpload from '@progress/kendo-upload-vue-wrapper/dist/es/KendoUpload/index'
 import '@progress/kendo-ui'
 
-import AssetUploadComponent from './AssetUploadComponent.vue'
-import { Asset, AssetField, AssetType, AssetUpload, AssetUploadModel, EventBus, ExemplarMessage, FieldAsset, PifEvents, SectionBase } from '@/types'
-import { UploadHelper } from '@/helpers/UploadHelper'
 import { ApiDefaultRoute } from '@/routes'
+import AssetUploadComponent from './AssetUploadComponent.vue'
+import {
+  Asset,
+  AssetField,
+  AssetType,
+  AssetUpload,
+  AssetUploadModel,
+  EventBus,
+  ExemplarMessage,
+  FieldAsset,
+  PifEvents,
+  SectionBase
+} from '@/types'
+import { UploadHelper } from '@/helpers/UploadHelper'
 
 Vue.component('kendo-upload', KendoUpload)
 
@@ -22,30 +33,22 @@ Vue.component('kendo-upload', KendoUpload)
 })
 export default class CameraComponent extends SectionBase<Array<Asset>> {
   @Prop({ required: false, type: String })
-  currentValue!: string | null
+    currentValue!: string | null
 
   @Prop({ required: false, type: String })
-  label!: string | null
+    label!: string | null
 
   @Prop({ required: false, type: Array })
-  fieldAssets!: Array<FieldAsset>
+    fieldAssets!: Array<FieldAsset>
 
   @Prop({ required: false, type: Object })
-  assetUploadModel!: AssetUploadModel
+    assetUploadModel!: AssetUploadModel
 
   @Prop({ required: false, type: Boolean, default: null })
-  dontDisable!: boolean | null
+    dontDisable!: boolean | null
 
   @Prop({ required: false, type: Boolean, default: null })
-  disable!: boolean | null
-
-  // imgToken: string = <string>$('#imgToken').val()
-
-  // imgPath: string = <string>$('#imgPath').val()
-
-  // assetVaultPath: string = <string>$('#assetVaultPath').val()
-
-  // userId: number = <number>$('#userId').val()
+    disable!: boolean | null
 
   openAssetModal: boolean = false
 
@@ -68,11 +71,16 @@ export default class CameraComponent extends SectionBase<Array<Asset>> {
   saveUrl: string = UploadHelper.GetSaveUrl()
 
   UploadValidationModal = {
-    data: [] as Array<string>,
+    data: [],
     open: false,
     noCloseOnBackdrop: true,
     noCloseOnEsc: true
   }
+
+  imgToken = (<HTMLInputElement>document.getElementById('imgToken')).value
+  imgPath = (<HTMLInputElement>document.querySelector('#imgPath')).value
+  assetVaultPath = (<HTMLInputElement>document.querySelector('#assetVaultPath')).value
+  userId = (<HTMLInputElement>document.querySelector('#userId')).value
 
   constructor() {
     super()
@@ -86,6 +94,8 @@ export default class CameraComponent extends SectionBase<Array<Asset>> {
     EventBus.$on(PifEvents.CloseAssetModal, async () => {
       this.showUploader = false
     })
+
+    console.log({ imgToken: this.imgToken })
   }
 
   @Watch('assetUploadModel')

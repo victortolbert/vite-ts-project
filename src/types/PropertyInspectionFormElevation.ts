@@ -1,150 +1,149 @@
 export class PropertyInspectionFormElevation {
+  public Id = 0
 
-    public Id: number = 0;
+  public AllPhotosFront: boolean | null = null
 
-    public AllPhotosFront: boolean | null = null;
+  public AwningDamaged = 'No'
 
-    public AwningDamaged: string = "No";
+  public AwningMaterial = ''
 
-    public AwningMaterial: string = "";
+  public AwningMaterialOther = ''
 
-    public AwningMaterialOther: string = "";
+  public CreatedOn!: Date
 
-    public CreatedOn: Date;
+  public DeckDamaged = 'No'
 
-    public DeckDamaged: string = "No";
+  public DeckPainted: boolean | null = null
 
-    public DeckPainted: boolean | null = null;
+  public DeckStained: boolean | null = null
 
-    public DeckStained: boolean | null = null;
+  public DeckMaterial = ''
 
-    public DeckMaterial: string = "";
+  public DeckSf: number | null = null
 
-    public DeckSf: number | null = null;
+  public DownSpoutsDamaged = 'No'
 
-    public DownSpoutsDamaged: string = "No";
+  public DownSpoutsDamageDescription = ''
 
-    public DownSpoutsDamageDescription: string = "";
+  public DownSpoutsPainted: boolean | null = null
 
-    public DownSpoutsPainted: boolean | null = null;
+  public DownSpoutsMaterial = ''
 
-    public DownSpoutsMaterial: string = "";
+  public DownSpoutsMaterialOther = ''
 
-    public DownSpoutsMaterialOther: string = "";
+  public DownSpoutsSize: number | null = null
 
-    public DownSpoutsSize: number | null = null;
+  public DownSpoutsSizeOther: number | null = null
 
-    public DownSpoutsSizeOther: number | null = null;
+  public DownSpoutsNorthDamaged = ''
 
-    public DownSpoutsNorthDamaged: string = "";
+  public DownSpoutsNorthLf: number | null = null
 
-    public DownSpoutsNorthLf: number | null = null;
+  public DownSpoutsSouthDamaged = ''
 
-    public DownSpoutsSouthDamaged: string = "";
+  public DownSpoutsSouthLf: number | null = null
 
-    public DownSpoutsSouthLf: number | null = null;
+  public DownSpoutsEastDamaged = ''
 
-    public DownSpoutsEastDamaged: string = "";
+  public DownSpoutsEastLf: number | null = null
 
-    public DownSpoutsEastLf: number | null = null;
+  public DownSpoutsWestDamaged = ''
 
-    public DownSpoutsWestDamaged: string = "";
+  public DownSpoutsWestLf: number | null = null
 
-    public DownSpoutsWestLf: number | null = null;
+  public FenceDamaged = 'No'
 
-    public FenceDamaged: string = "No";
+  public FenceDescription = ''
 
-    public FenceDescription: string = "";
+  public FenceMaterial = ''
 
-    public FenceMaterial: string = "";
+  public FenceMaterialOther = ''
 
-    public FenceMaterialOther: string = "";
+  public FencePainted: boolean | null = null
 
-    public FencePainted: boolean | null = null;
+  public FenceStained: boolean | null = null
 
-    public FenceStained: boolean | null = null;
+  public FenceSf: number | null = null
 
-    public FenceSf: number | null = null;
+  public FenceHeightLf: number | null = null
 
-    public FenceHeightLf: number | null = null;
+  public GarageDamaged = 'NA'
 
-    public GarageDamaged: string = "NA";
+  public GarageDescription = ''
 
-    public GarageDescription: string = "";
+  public GarageSf: number | null = null
 
-    public GarageSf: number | null = null;
+  public HandrailDamaged = 'No'
 
-    public HandrailDamaged: string = "No";
+  public HandrailMaterial = ''
 
-    public HandrailMaterial: string = "";
+  public HandrailPainted: boolean | null = null
 
-    public HandrailPainted: boolean | null = null;
+  public HandrailStained: boolean | null = null
 
-    public HandrailStained: boolean | null = null;
+  public HandrailLf: number | null = null
 
-    public HandrailLf: number | null = null;
+  public LandscapeDamaged = 'No'
 
-    public LandscapeDamaged: string = "No";
+  public LastModifiedOn!: Date
 
-    public LastModifiedOn: Date;
+  public NeighborhoodDamaged = 'No'
 
-    public NeighborhoodDamaged: string = "No";
+  public PatioFurnitureDamaged = 'No'
 
-    public PatioFurnitureDamaged: string = "No";
+  public PropertyInspectionFormId: number | null = null
 
-    public PropertyInspectionFormId: number | null = null;
+  public RefrigerationCoilsDamaged = 'No'
 
-    public RefrigerationCoilsDamaged: string = "No";
+  public RefrigerationCoilUnits: number | null = null
 
-    public RefrigerationCoilUnits: number | null = null;
+  public SidingDamage = 'No'
 
-    public SidingDamage: string = "No";
+  public SidingMaterial = ''
 
-    public SidingMaterial: string = "";
+  public SidingMaterialOther = ''
 
-    public SidingMaterialOther: string = "";
+  public SidingNorthQty: number | null = null
 
-    public SidingNorthQty: number | null = null;
+  public SidingEastQty: number | null = null
 
-    public SidingEastQty: number | null = null;
+  public SidingSouthQty: number | null = null
 
-    public SidingSouthQty: number | null = null;
+  public SidingWestQty: number | null = null
 
-    public SidingWestQty: number | null = null;
+  public SidingNotes = ''
 
-    public SidingNotes: string = "";
+  public WindowsDamaged = 'No'
 
-    public WindowsDamaged: string = "No";
+  public WindowSmallSf: number | null = null
 
-    public WindowSmallSf: number | null = null;
+  public WindowMediumSf: number | null = null
 
-    public WindowMediumSf: number | null = null;
+  public WindowLargeSf: number | null = null
 
-    public WindowLargeSf: number | null = null;
+  public WindowXlargeSf: number | null = null
 
-    public WindowXlargeSf: number | null = null;
+  public WindowOtherSf: number | null = null
 
-    public WindowOtherSf: number | null = null;
+  public WindowOtherDescription = ''
 
-    public WindowOtherDescription: string = "";
+  public WindowScreenDamaged = 'No'
 
-    public WindowScreenDamaged: string = "No";
+  public WindowScreenLargeSf: number | null | any = null
 
-    public WindowScreenLargeSf: number | null | any = null;
+  public WindowScreenMediumSf: number | null | any = null
 
-    public WindowScreenMediumSf: number | null | any = null;
+  public WindowScreenSmallSf: number | null | any = null
 
-    public WindowScreenSmallSf: number | null | any = null;
+  public WindowScreenXlargeSf: number | null | any = null
 
-    public WindowScreenXlargeSf: number | null | any = null;
+  public WindowWrapDamaged = 'No'
 
-    public WindowWrapDamaged: string = "No";
+  public WindowWrapMaterial = ''
 
-    public WindowWrapMaterial: string = "";
+  public WindowWrapMaterialOther = ''
 
-    public WindowWrapMaterialOther: string = "";
+  public WindowWrapLf: number | null | any = null
 
-    public WindowWrapLf: number | null | any = null;
-
-    public WindowWrapPainted: boolean | null = null;
+  public WindowWrapPainted: boolean | null = null
 }

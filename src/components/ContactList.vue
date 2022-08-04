@@ -24,3 +24,62 @@ export default {
     </div>
   </div>
 </template>
+
+<style>
+.contact-list {
+  border-top-width: 1px;
+  border-color: #f1f5f8;
+}
+.contact-list-item {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom-width: 1px;
+  border-color: #f1f5f8;
+}
+.contact-list-item.draggable-source--is-dragging {
+  background-color: #f1f5f8;
+}
+.contact-list-item.draggable-source--is-dragging > * {
+  opacity: 0;
+}
+.contact-list-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contact-list-avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  display: block;
+  margin-right: 0.5rem;
+}
+.contact-list-name {
+  font-weight: 700;
+}
+.contact-list-email {
+  color: #8795a1;
+}
+.contact-list-handle {
+  margin-left: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: move;
+  color: #b8c2cc;
+}
+.contact-list-handle:hover {
+  color: #3d4852;
+}
+</style>

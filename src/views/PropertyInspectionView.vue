@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-// import LossLocationComponent from './PropertyInspection/LossLocationComponent.vue'
-// import InspectionDirectionNorth from './PropertyInspection/InspectionDirectionNorth.vue'
-// import InspectionOutsideTemp from './PropertyInspection/InspectionOutsideTemp.vue'
-// import InspectionAllPhotos from './PropertyInspection/InspectionAllPhotos.vue'
-// import InspectionRoofMaterial from './PropertyInspection/InspectionRoofMaterial.vue'
-// import InspectionElevation from './PropertyInspection/InspectionElevation.vue'
-// import InspectionInterior from './PropertyInspection/InspectionInterior.vue'
-// import InspectionRoof from './PropertyInspection/InspectionRoof.vue'
-import Outbuildings from '@/components/Outbuildings/Outbuildings.vue'
-// import InspectionForm from './PropertyInspection/InspectionForm.vue'
+import LossLocationComponent from '@/components/PropertyInspection/LossLocationComponent.vue'
+import InspectionDirectionNorth from '@/components/PropertyInspection/InspectionDirectionNorth.vue'
+// import InspectionOutsideTemp from '@/components/PropertyInspection/InspectionOutsideTemp.vue'
+import InspectionAllPhotos from '@/components/PropertyInspection/InspectionAllPhotos.vue'
+import InspectionRoofMaterial from '@/components/PropertyInspection/InspectionRoofMaterial.vue'
+import InspectionElevation from '@/components/PropertyInspection/InspectionElevation.vue'
+import InspectionInterior from '@/components/PropertyInspection/InspectionInterior.vue'
+import InspectionRoof from '@/components/PropertyInspection/InspectionRoof.vue'
+// import Outbuildings from '@/components/PropertyInspection/Outbuildings/Outbuildings.vue'
+// import InspectionForm from '@/components/PropertyInspection/InspectionForm.vue'
 </script>
 
 <template>
@@ -18,16 +18,16 @@ import Outbuildings from '@/components/Outbuildings/Outbuildings.vue'
     </header>
 
     <div class="grid gap-4">
-      <Outbuildings />
-      <!-- <LossLocationComponent class="p-4 bg-white border-2 rounded-lg shadow" /> -->
-      <!-- <InspectionDirectionNorth class="p-4 bg-white border shadow" /> -->
+      <!-- <Outbuildings /> -->
+      <LossLocationComponent class="p-4 bg-white border-2 rounded-lg shadow" />
+      <InspectionDirectionNorth class="p-4 bg-white border shadow" />
       <!-- <InspectionOutsideTemp class="p-4 bg-white border shadow" /> -->
-      <!-- <InspectionAllPhotos class="p-4 bg-white border shadow" /> -->
-      <!-- <InspectionRoofMaterial class="p-4 bg-white border shadow" /> -->
+      <InspectionAllPhotos class="p-4 bg-white border shadow" />
+      <InspectionRoofMaterial class="p-4 bg-white border shadow" />
     </div>
-    <!-- <InspectionElevation /> -->
-    <!-- <InspectionInterior /> -->
-    <!-- <InspectionRoof /> -->
+    <InspectionElevation />
+    <InspectionInterior />
+    <InspectionRoof />
     <!-- <inspection-form /> -->
     <footer>
       <button class="btn btn-primary">

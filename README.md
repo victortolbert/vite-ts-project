@@ -1,173 +1,11 @@
 # UI Patterns and Component Factory
 
-## Outbuildings
-
-```sql
-USE [ExemplarCore]
-
-SET ANSI_NULLS ON
-
-SET QUOTED_IDENTIFIER ON
-
-CREATE TABLE [dbo].[Outbuilding](
-  [Id] [int] IDENTITY(1,1) NOT NULL,
-  [Damaged] [bit] NULL,
-  [InteriorDamageDescription] [varchar](8000) NULL,
-  [ElevationDamageDescription] [varchar](8000) NULL,
-  [RoofDamageDescription] [varchar](8000) NULL,
-  [PropertyInspectionFormId] [int] NOT NULL,
-  [OutbuildingTypeId] [int] NOT NULL,
-  CONSTRAINT [PK_Outbuilding] PRIMARY KEY CLUSTERED
-(
-  [Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-
-ALTER TABLE [dbo].[Outbuilding]
-WITH CHECK ADD CONSTRAINT [FK_Outbuilding_PropertyInspectionForm_PropertyInspectionFormId] FOREIGN KEY([PropertyInspectionFormId])
-REFERENCES [dbo].[PropertyInspectionForm] ([Id])
-ON DELETE CASCADE
-GO
-
-ALTER TABLE [dbo].[Outbuilding] CHECK CONSTRAINT [FK_Outbuilding_PropertyInspectionForm_PropertyInspectionFormId]
-GO
-
-
-ALTER TABLE [dbo].[Outbuilding] WITH CHECK ADD CONSTRAINT [FK_Outbuilding_OutbuildingType_OutbuildingTypeId] FOREIGN KEY([OutbuildingTypeId])
-REFERENCES [dbo].[OutbuildingType] ([Id])
-ON DELETE CASCADE
-GO
-
-ALTER TABLE [dbo].[Outbuilding] CHECK CONSTRAINT [FK_Outbuilding_OutbuildingType_OutbuildingTypeId]
-GO
-
-INSERT INTO MasterAssetField (AssetFieldName, PifOrder) VALUES ('OutbuildingInterior', 2200)
-INSERT INTO MasterAssetField (AssetFieldName, PifOrder) VALUES ('OutbuildingElevation', 2210)
-INSERT INTO MasterAssetField (AssetFieldName, PifOrder) VALUES ('OutbuildingRoof', 2220)
-
-INSERT INTO OutbuildingType (TypeName) VALUES ('Detached Garage')
-INSERT INTO OutbuildingType (TypeName) VALUES ('Shed')
-INSERT INTO OutbuildingType (TypeName) VALUES ('Barn')
-INSERT INTO OutbuildingType (TypeName) VALUES ('Shop')
-INSERT INTO OutbuildingType (TypeName) VALUES ('Pool House')
-INSERT INTO OutbuildingType (TypeName) VALUES ('Green House')
-INSERT INTO OutbuildingType (TypeName) VALUES ('Other')
-
-
-SELECT * FROM OutbuildingType
-Select * from MasterAssetType
-Select * from MasterAssetField
-
---- Shingle Gauge (8)
---- OutbuildingInterior (231)
---- OutbuildingElevation (232)
---- OutbuildingRoof (233)
-
-select AssetFieldId, AssetTypeId, assetName, CreatedBy, CreatedOn, Description, [Order], ProjectId, PropertyInspectionFormId from Asset
-Where AssetFieldId=231
-```
-
-```html
-<boolean-camera-wrapper-component
-    id="OutBuildingDmg"
-    :disable-camera="fieldAssets.length >= 100"
-    :field-assets="ReturnFieldAssets(assetFieldEnum.OutBuildingInterior)"
-    :asset-upload-model="ReturnAssetModel(assetFieldEnum.OutbuildingInterior)"
-    :validate="validate"
-    :current-value="model.OutBuildingsPresent"
-    v-on:onChanged="model.OutBuildingsPresent = $event"
-    v-bind:choices="['Yes', 'No']"
-    label="Outbuildings Present?"
-></boolean-camera-wrapper-component>
-
-<boolean-camera-wrapper-component
-    id="OutBuildingDmg"
-    :disable-camera="fieldAssets.length >= 100"
-    :field-assets="ReturnFieldAssets(assetFieldEnum.OutBuildingInterior)"
-    :asset-upload-model="ReturnAssetModel(assetFieldEnum.OutbuildingInterior)"
-    :validate="validate"
-    :current-value="model.OutBuildingsPresent"
-    v-on:onChanged="model.OutBuildingsPresent = $event"
-    v-bind:choices="['Yes', 'No']"
-    label="Outbuildings Present?"
-></boolean-camera-wrapper-component>
-```
-
-State Management
-Local
-Provide / Inject Examples
-Global Event Bus
-
-Vue Solutions
-
-- Vuex
-- Pinia - recommended
-
-
-## Outbuildings
-
-- Limit the Display to 6 (Configurable in the `OutbuildingsComponent`)
-- Will have to manually add records to the `MasterAssetField` Table
-
-## Tables
-
-### `MasterOutbuildingType`
-
-|Column                         |                                |
-|-------------------------------|--------------------------------|
-| `Id`                          | int Identity                   |
-| `Name`                        | varchar                        |
-| `OtherName`                   | varchar                        |
-
-### `Outbuildings`
-
-|Column                         |                                |
-|-------------------------------|--------------------------------|
-| `Id`                          | int Identity                   |
-| `MasterOutbuildingTypeId`     | FK (MasterOutbuildingType)     |
-| `Damaged`                     | bit                            |
-| `InteriorDamageDescription`   | varchar(8000) null             |
-| `ElevationDamageDescription`  | varchar(8000) null             |
-| `RoofDamageDescription`       | varchar(8000) null             |
-| `PropertyInspectionFormId`    | Int, FKPropertyInspectionForm) |
-
-### MasterAssetField Entries
-
-- `Outbuilding1Interior`
-- `Outbuilding1Eleveation`
-- `Outbuilding1Roof`
-- `Outbuilding2Interior`
-- `Outbuilding2Eleveation`
-- `Outbuilding2Roof`
-- `Outbuilding3Interior`
-- `Outbuilding3Eleveation`
-- `Outbuilding3Roof`
-- `Outbuilding4Interior`
-- `Outbuilding4Eleveation`
-- `Outbuilding4Roof`
-- `Outbuilding5Interior`
-- `Outbuilding5Eleveation`
-- `Outbuilding5Roof`
-- `Outbuilding6Interior`
-- `Outbuilding6Eleveation`
-- `Outbuilding6Roof`
-
-## Components
-
-- OutbuildingComponent
-- OutbuildingsComponent
-- OutbuildingCreateComponent
-- OutbuildingListComponent
-
 ## Features
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite 3.0](https://vitejs.dev/)
 - [Vue 2.7](https://blog.vuejs.org/posts/vue-2-7-naruto.html)
 - [Class][1] ([Vue Property Decorator][2]), [Options][3], and [Composition][4] ([Script Setup][5]) component APIs
-
 
 [1]: https://class-component.vuejs.org/
 [2]: https://github.com/kaorun343/vue-property-decorator#readme
@@ -306,3 +144,37 @@ Despite Vue 3 now being the default version, we understand that there are still 
 
 - `provide()`
 - `inject()`
+
+### Examples
+
+Scoped slots are easily one of Vue's most powerful features, but can be a bit tricky to wrap your head around.
+
+For most components you'll use templates to construct your HTML, but Vue also supports building a component's HTML using render functions.
+
+implement a drastically different layout, without rewriting any of the component logic.
+
+Scoped slots are ideal for customizing how a component looks, but it still makes sense to use configuration to customize a component's behavior. In this lesson we'll add a configuration prop to our renderless component to change its functionality.
+
+Renderless components create a lot of work for the consumer compared to a traditional component that combines presentation and behavior in one unit. Learn how to create opinionated wrapper components that ease the burden on the consumer while still providing the flexibility of renderless components when needed.
+
+#### AccordionView
+
+There are certain types of components that have multiple related pieces, like tabs and tab panels, or items in an accordion list.
+Learn how to use Vue's `provide` and `inject` features to make it possible for these related components to communicate without forcing
+the consumer to wire everything up manually.
+
+#### Controlled Sortable List
+
+- Patterns: controlled, renderless, external library wrapper
+
+#### Controlled Search Select
+
+- a robust search select component built by applying the principles covered in Advanced Vue Component Design course
+- Integrated [Popper.js]() so that the dropdown position reacts intelligently to the size and scroll position of the viewport
+- Made it possible to close the search select by clicking outside of it
+- Implemented this behavior from scratch as its own renderless component, not using an existing directive-based library
+- Added comprehensive keyboard navigation to the search select, including handling things like scrolling highlighted items into view
+- Made it a controlled component, pushing the state into the parent
+- Made the filtering logic controllable from the outside
+- Made sure that the search is focused when the component is opened and that the trigger is re-focused when the component closes
+- Added filtering support to the search select, working through all of the edge cases to make sure it behaves intuitively
