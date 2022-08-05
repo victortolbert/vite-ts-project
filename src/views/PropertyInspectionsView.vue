@@ -22,21 +22,21 @@ import { EventBus, GlobalEvents, PifEvents, ToastrHelper } from '@/types'
 import { Asset, AssetType, FieldAsset } from '@/types'
 
 // Components
-import MainSectionComponent from '@/components/PropertyInspection/MainSectionComponent.vue'
-import PifaHeaderComponent from '@/components/PropertyInspection/PifaHeaderComponent.vue'
-import ProjectDetailsComponent from '@/components/PropertyInspection/ProjectDetailsComponent.vue'
-import AssetGridMenuComponent from '@/components/PropertyInspection/AssetGridMenuComponent.vue'
-import AssetGridComponent from '@/components/PropertyInspection/AssetGridComponent.vue'
+// import MainSectionComponent from '@/components/PropertyInspection/MainSectionComponent.vue'
+// import PifaHeaderComponent from '@/components/PropertyInspection/PifaHeaderComponent.vue'
+// import ProjectDetailsComponent from '@/components/PropertyInspection/ProjectDetailsComponent.vue'
+// import AssetGridMenuComponent from '@/components/PropertyInspection/AssetGridMenuComponent.vue'
+// import AssetGridComponent from '@/components/PropertyInspection/AssetGridComponent.vue'
 
 
 @Component({
   template: '#property-inspections-form-page-index',
   components: {
-    MainSectionComponent,
-    PifaHeaderComponent,
-    ProjectDetailsComponent,
-    AssetGridComponent,
-    AssetGridMenuComponent,
+    // MainSectionComponent,
+    // PifaHeaderComponent,
+    // ProjectDetailsComponent,
+    // AssetGridComponent,
+    // AssetGridMenuComponent,
     BModal,
     BButton,
   },

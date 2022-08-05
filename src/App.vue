@@ -1,10 +1,13 @@
 <script type="ts" setup>
-import AdminView from '@/views/AdminView.vue'
+import DemoView from '@/views/DemoView.vue'
 </script>
 
 <template>
   <div>
-    <component :is="AdminView" />
+    <component :is="DemoView" data-test="data-test attribute">
+      Slotted
+    </component>
+
     <portal-target name="overlays" />
   </div>
 </template>

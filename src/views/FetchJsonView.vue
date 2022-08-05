@@ -1,4 +1,5 @@
-<script lang="ts" setup>
+<script setup>
+// Data Provider Components
 import ContactList from '@/components/ContactList.vue'
 import FetchJson from '@/components/FetchJson.vue'
 </script>
@@ -40,34 +41,4 @@ import FetchJson from '@/components/FetchJson.vue'
   </div>
 </template>
 
-<style>
-.album-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  margin-bottom: -1rem;
-}
-.album-grid-item {
-  width: 33.33333%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 1rem;
-}
-.album-title {
-  font-size: 0.875rem;
-}
-.album-artist,
-.album-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.album-artist {
-  font-size: 0.75rem;
-  color: #606f7b;
-}
-</style>
+<style src="@/assets/css/app.css" />

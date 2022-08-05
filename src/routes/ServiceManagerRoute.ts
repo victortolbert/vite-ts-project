@@ -1,4 +1,4 @@
-import { ApiDefaultRoute } from '@ExemplarRoutes/ApiDefaultRoute'
+import { ApiDefaultRoute } from '.'
 
 export class ServiceManagerRoute extends ApiDefaultRoute {
   constructor(url: string) {

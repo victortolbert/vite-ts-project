@@ -30,7 +30,7 @@
     <!-- <link rel="stylesheet" href="/assets/css/print.css" media="print" /> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script>
+    <script type="text/javascript">
       (function () {
         const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
@@ -38,8 +38,12 @@
           document.documentElement.classList.toggle('dark', true)
       })()
     </script>
+    <script>
+      // eslint-disable-next-line @typescript-eslint/semi
+      window.Exemplar = window.Exemplar || {};
+    </script>
   </head>
-  <body class="font-sans h-full dark:bg-gray-800 dark:text-white">
+  <body class="font-mockup h-full dark:bg-gray-800 dark:text-white">
     <!--
       // imgToken: string = <string>$('#imgToken').val()
       // imgPath: string = <string>$('#imgPath').val()
@@ -51,6 +55,18 @@
     <input id="assetVaultPath" type="hidden" value="/vault" />
     <input id="userId" type="hidden" value="1" />
     <div id="app"></div>
+    <script>
+    // if (window.Exemplar) {
+    //   window.Exemplar.pageComponentCreated = function () {
+    //     console.log(`pageComponent ${pageComponent}`)
+    //     window.Exemplar.pageComponent.load()
+    //   }
+    //   window.Exemplar.load()
+    // }
+    // else {
+    //   console.log('[Bootstrapper] Unable to find Exemplar application component.')
+    // }
+  </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

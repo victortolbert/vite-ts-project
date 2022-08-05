@@ -7,7 +7,7 @@ export const menu = ref([
   // item
   {
     header: true,
-    title: 'Menu Header',
+    title: 'Views',
     hiddenOnCollapse: true,
     // hidden: false
     // class: ''
@@ -32,6 +32,118 @@ export const menu = ref([
     icon: {
       element: 'i',
       class: 'fa fa-columns',
+      attributes: {},
+      text: '',
+    },
+    // child: []
+    // disabled: true
+    // class: ''
+    // attributes: {}
+    // exactPath: true // match path only (ignore query and hash)
+    // alias: '/path' // or array of paths (for advanced matching patterns see: https://github.com/pillarjs/path-to-regexp/tree/v1.7.0#parameters)
+    // hidden: false
+    // hiddenOnCollapse: true
+  },
+  {
+    href: '/',
+    /* with vue-router you can use :to prop
+    href: { path: '/' }
+    you can mark link as external
+    // external: true
+    */
+
+    title: 'AutoScheduler',
+
+    // icon class
+    // icon: 'fa fa-user',
+    // or custom icon
+    icon: {
+      element: 'i',
+      class: 'fa fa-calendar',
+      attributes: {},
+      text: '',
+    },
+    // child: []
+    // disabled: true
+    // class: ''
+    // attributes: {}
+    // exactPath: true // match path only (ignore query and hash)
+    // alias: '/path' // or array of paths (for advanced matching patterns see: https://github.com/pillarjs/path-to-regexp/tree/v1.7.0#parameters)
+    // hidden: false
+    // hiddenOnCollapse: true
+  },
+  {
+    href: '/',
+    /* with vue-router you can use :to prop
+    href: { path: '/' }
+    you can mark link as external
+    // external: true
+    */
+
+    title: 'External Claims Form',
+
+    // icon class
+    // icon: 'fa fa-user',
+    // or custom icon
+    icon: {
+      element: 'i',
+      class: 'fa fa-calendar',
+      attributes: {},
+      text: '',
+    },
+    // child: []
+    // disabled: true
+    // class: ''
+    // attributes: {}
+    // exactPath: true // match path only (ignore query and hash)
+    // alias: '/path' // or array of paths (for advanced matching patterns see: https://github.com/pillarjs/path-to-regexp/tree/v1.7.0#parameters)
+    // hidden: false
+    // hiddenOnCollapse: true
+  },
+  {
+    href: '/',
+    /* with vue-router you can use :to prop
+    href: { path: '/' }
+    you can mark link as external
+    // external: true
+    */
+
+    title: 'Portal',
+
+    // icon class
+    // icon: 'fa fa-user',
+    // or custom icon
+    icon: {
+      element: 'i',
+      class: 'fa fa-calendar',
+      attributes: {},
+      text: '',
+    },
+    // child: []
+    // disabled: true
+    // class: ''
+    // attributes: {}
+    // exactPath: true // match path only (ignore query and hash)
+    // alias: '/path' // or array of paths (for advanced matching patterns see: https://github.com/pillarjs/path-to-regexp/tree/v1.7.0#parameters)
+    // hidden: false
+    // hiddenOnCollapse: true
+  },
+  {
+    href: '/',
+    /* with vue-router you can use :to prop
+    href: { path: '/' }
+    you can mark link as external
+    // external: true
+    */
+
+    title: 'Property Inspection Form',
+
+    // icon class
+    // icon: 'fa fa-user',
+    // or custom icon
+    icon: {
+      element: 'i',
+      class: 'fa fa-bookmark',
       attributes: {},
       text: '',
     },
@@ -71,5 +183,5 @@ export const menu = ref([
 
 export default {
   menu,
-  title
+  title,
 }

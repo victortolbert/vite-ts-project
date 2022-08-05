@@ -1,12 +1,13 @@
-import { ApiClient, ApiResponse, GlobalEvents, ResponseType, ToastrHelper } from '@/types'
-import { GlobalEventBus } from '@/event-bus'
+import type { ApiResponse } from '.'
+import { ApiClient, EventBus, GlobalEvents, ResponseType, ToastrHelper } from '.'
 // import { success } from 'toastr'
 
 export class DataAccess {
   accessToken: string
   badRequest = 'Record not found.'
-  errorMessage =
-    'An error has occurred and has been sent to our I.T. team. If problem persists, please notifiy us. We are sorry for the inconvenience.'
+  errorMessage
+    = 'An error has occurred and has been sent to our I.T. team. If problem persists, please notifiy us. We are sorry for the inconvenience.'
+
   homeRoute = '/Authorization/Logout'
 
   constructor(_accessToken: string) {
@@ -22,7 +23,7 @@ export class DataAccess {
     route: string,
     model: any,
     successCallback: any = false,
-    errorCallback: any = false
+    errorCallback: any = false,
   ) {
     const apiResult: ApiResponse = await ApiClient.Post(route, model, this.accessToken)
     this.HandleResult(apiResult, successCallback, errorCallback)
@@ -36,62 +37,63 @@ export class DataAccess {
   HandleResult(
     apiResponse: ApiResponse,
     successCallback: any,
-    errorCallback: any = null
+    errorCallback: any = null,
   ) {
     switch (apiResponse.result) {
       case ResponseType.Success:
         if (
-          apiResponse.model &&
-          apiResponse.model.Result != null &&
-          !apiResponse.model.Result
+          apiResponse.model
+          && apiResponse.model.Result != null
+          && !apiResponse.model.Result
         ) {
           ToastrHelper.DisplayToastWarning(
             apiResponse.model.ResultText,
-            'Error Encountered'
+            'Error Encountered',
           )
-        } else {
+        }
+        else {
           successCallback(apiResponse.model)
         }
         break
 
       case ResponseType.Unauthorized:
         window.location.href = this.homeRoute
-        GlobalEventBus.$emit(GlobalEvents.Unauthorized);
+        EventBus.$emit(GlobalEvents.Unauthorized)
         break
 
       case ResponseType.BadRequest:
         ToastrHelper.DisplayToastError(apiResponse.resultText, 'Bad Request')
 
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback(apiResponse)
-        }
+
         break
 
       case ResponseType.NoRecords:
         ToastrHelper.DisplayToastWarning(apiResponse.resultText, 'No Record Found.')
 
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback(apiResponse)
-        }
+
         break
 
       case ResponseType.Error:
         ToastrHelper.DisplayToastError(this.errorMessage, 'System Error')
 
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback(apiResponse.model)
-        }
+
         break
 
       case ResponseType.ConcurencyConflict:
         ToastrHelper.DisplayToastError(
           'The record you are modifying has changed since you began. Please make your changes again.',
-          'Concurrency Conflict'
+          'Concurrency Conflict',
         )
 
-        if (errorCallback) {
+        if (errorCallback)
           errorCallback(apiResponse.model)
-        }
+
         break
     }
   }

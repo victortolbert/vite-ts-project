@@ -1,5 +1,5 @@
 export class ApiDefaultRoute {
-  public uri: string = ''
+  public uri = ''
 
   constructor(url: string, endpoint: string) {
     this.uri = url + endpoint

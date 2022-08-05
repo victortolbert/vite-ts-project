@@ -1,6 +1,5 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
+<script setup>
+import { useSound } from '@vueuse/sound'
 import {
   debounceFilter,
   throttleFilter,
@@ -10,44 +9,30 @@ import {
   usePreferredDark,
 } from '@vueuse/core'
 
-import { useSound } from '@vueuse/sound'
 import Button from '@/assets/sound/fanfare.mp3'
 
-export default defineComponent({
-  name: 'HeroComponent',
-  setup() {
-    const location = useBrowserLocation()
-    // tracks mouse position
-    const { x, y } = useMouse({ eventFilter: debounceFilter(100) })
-    const { play, stop } = useSound(Button)
-    // is user prefers dark theme
-    const isDark = usePreferredDark()
+const location = useBrowserLocation()
 
-    // persist state in localStorage
-    const store = useLocalStorage('my-storage', {
-      name: 'Apple',
-      color: 'red',
-    })
+// tracks mouse position
+const { x, y } = useMouse({ eventFilter: debounceFilter(100) })
 
-    // changes will write to localStorage with a throttled 1s
-    const storage = useLocalStorage(
-      'my-key',
-      { foo: 'bar' },
-      { eventFilter: throttleFilter(1000) },
-    )
+const { play, stop } = useSound(Button)
 
-    return {
-      x,
-      y,
-      isDark,
-      store,
-      storage,
-      play,
-      stop,
-      location,
-    }
-  },
+// is user prefers dark theme
+const isDark = usePreferredDark()
+
+// persist state in localStorage
+const store = useLocalStorage('my-storage', {
+  name: 'Apple',
+  color: 'red',
 })
+
+// changes will write to localStorage with a throttled 1s
+const storage = useLocalStorage(
+  'my-key',
+  { foo: 'bar' },
+  { eventFilter: throttleFilter(1000) },
+)
 </script>
 
 <template>

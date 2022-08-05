@@ -1,5 +1,5 @@
 <template>
-  <header class="py-4 text-white bg-primary-800">
+  <header class="py-4 text-white bg-primary-600">
     <div
       class="px-8 mx-auto sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between"
     >
