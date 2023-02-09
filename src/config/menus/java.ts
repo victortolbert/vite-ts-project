@@ -4,5 +4,5 @@ export const javaMenu = [
     class: 'text-vue-three',
     hidden: false,
     hiddenOnCollapse: false,
-  }
-]
+  },
+];

@@ -4,4 +4,4 @@ export const abstractComponentsMenu = [
     hidden: false,
     hiddenOnCollapse: false,
   },
-]
+];

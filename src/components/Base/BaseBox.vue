@@ -1,11 +1,5 @@
-<script lang="ts">
-import { Vue } from 'vue-property-decorator'
-
-export default class BaseBox extends Vue {}
-</script>
-
 <template>
-  <section class="p-6 bg-white rounded shadow">
+  <div class="p-6 bg-white border rounded-lg shadow-lg dark:border-primary-600 dark:bg-primary-700">
     <slot />
-  </section>
+  </div>
 </template>

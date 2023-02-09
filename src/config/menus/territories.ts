@@ -18,6 +18,6 @@ export const territoriesMenu = [
         external: false,
         hidden: true,
       },
-    ]
-  }
-]
+    ],
+  },
+];

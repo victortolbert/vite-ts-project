@@ -1,15 +1,22 @@
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+<script>
+import victor from '/assets/img/users/victor.jpg'
 
-export default class BaseAvatar extends Vue {
-  @Prop(String) readonly src: string | undefined
-
-  get imageSrc() {
-    return this.src ? `${this.src}` : '/images/users/michael.jpg'
+export default {
+  name: 'BaseAvatar',
+  props: {
+    src: {
+      type: String,
+      default: ''
+    },
+  },
+  computed: {
+    imageSrc() {
+      return this.src ? `${this.src}` : victor
+    }
   }
 }
 </script>
 
 <template>
-  <img class="w-8 h-8 rounded-full h-avatar" :src="imageSrc" alt="">
+  <img class="flex-shrink-0 w-10 h-10 rounded-full" :src="imageSrc" alt="avatar" />
 </template>

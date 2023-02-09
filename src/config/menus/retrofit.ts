@@ -6,25 +6,25 @@ export const retrofitMenu = [
     title: 'Card',
     hidden: false,
     href: '/card',
-    hiddenOnCollapse: true
+    hiddenOnCollapse: true,
   },
   {
     title: 'Form',
     hidden: false,
     href: '/form',
-    hiddenOnCollapse: true
+    hiddenOnCollapse: true,
   },
   {
     title: 'Form Elements',
     hidden: false,
     href: '/form-elements',
-    hiddenOnCollapse: true
+    hiddenOnCollapse: true,
   },
   {
     title: 'Input',
     hidden: false,
     href: '/input',
-    hiddenOnCollapse: true
+    hiddenOnCollapse: true,
   },
   {
     title: 'Table',
@@ -33,15 +33,15 @@ export const retrofitMenu = [
     hiddenOnCollapse: true,
     child: [
       {
-        title: 'Kendo UI Grid'
+        title: 'Kendo UI Grid',
       },
-    ]
+    ],
   },
   {
     title: 'Multiselect',
     hidden: false,
     href: '/multiselect',
-    hiddenOnCollapse: true
+    hiddenOnCollapse: true,
   },
   {
     title: 'App',
@@ -65,7 +65,7 @@ export const retrofitMenu = [
             href: '/hancock/pifa-layouts',
             hidden: false,
           },
-        ]
+        ],
       },
       {
         title: 'Headers',
@@ -75,9 +75,9 @@ export const retrofitMenu = [
             href: '/hancock/app-header',
             hidden: false,
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Common',
@@ -87,9 +87,7 @@ export const retrofitMenu = [
       {
         title: 'Form Elements',
         hidden: false,
-        child: [
-
-        ]
+        child: [],
       },
       {
         title: 'BooleanTemplate',
@@ -115,7 +113,7 @@ export const retrofitMenu = [
         title: 'KeyPad',
         href: '',
       },
-    ]
+    ],
   },
   {
     title: 'Areas',
@@ -288,8 +286,7 @@ export const retrofitMenu = [
             title: 'Unauthorized',
             href: '',
           },
-
-        ]
+        ],
       },
       {
         title: 'Reports',
@@ -313,7 +310,7 @@ export const retrofitMenu = [
             title: 'Edit Service Type',
             href: '/hancock/service-types/create',
           },
-        ]
+        ],
       },
       {
         title: 'Settings',
@@ -328,14 +325,14 @@ export const retrofitMenu = [
             title: 'ServiceTechListTemplate',
             href: '',
           },
-        ]
+        ],
       },
       {
         title: 'Users',
         href: '/hancock/users',
         hidden: true,
       },
-    ]
+    ],
   },
   {
     title: 'Static Pages',
@@ -363,10 +360,10 @@ export const retrofitMenu = [
           {
             title: 'AccessDenied',
             href: '/hancock/access-denied',
-          }
-        ]
+          },
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Grids',
@@ -419,32 +416,28 @@ export const retrofitMenu = [
         href: '',
         hidden: false,
       },
-
-    ]
+    ],
   },
   {
     title: 'Emails',
     hidden: true,
     child: [
       {
-
         title: 'LibtyAssetEmail',
         href: '/hancock/emails/liberty-asset',
         hidden: false,
       },
       {
-
         title: 'PdfCompression',
         href: '/hancock/emails/pdf-compression',
         hidden: false,
       },
       {
-
         title: 'SendAsset',
         href: '/hancock/emails/send-asset',
         hidden: false,
       },
-    ]
+    ],
   },
   {
     title: 'Forms',
@@ -470,7 +463,7 @@ export const retrofitMenu = [
         href: '/hancock/payments',
         hidden: false,
       },
-    ]
+    ],
   },
   {
     title: 'Help',
@@ -501,7 +494,7 @@ export const retrofitMenu = [
         title: 'Toc',
         hidden: true,
       },
-    ]
+    ],
   },
   {
     title: 'Modals',
@@ -557,6 +550,6 @@ export const retrofitMenu = [
         href: '/hancock/modals/upload-validation',
         hidden: false,
       },
-    ]
+    ],
   },
-]
+];

@@ -25,14 +25,12 @@ export const designSystemMenu = [
           { title: 'Checkbox' },
           { title: 'Radio' },
           { title: 'Radio Group' },
-        ]
+        ],
       },
       {
         title: 'UI Patterns',
-        child: [
-          { title: 'Component' },
-        ]
+        child: [{ title: 'Component' }],
       },
-    ]
+    ],
   },
-]
+];

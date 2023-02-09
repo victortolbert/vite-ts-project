@@ -26,7 +26,7 @@ export const workMenu = [
             external: false,
             hidden: false,
           },
-        ]
+        ],
       },
       {
         title: 'Promise 686',
@@ -39,7 +39,7 @@ export const workMenu = [
             external: false,
             hidden: false,
           },
-        ]
+        ],
       },
       {
         title: 'Prospectus Group',
@@ -52,7 +52,7 @@ export const workMenu = [
             external: false,
             hidden: true,
           },
-        ]
+        ],
       },
       {
         title: 'Booster',
@@ -95,7 +95,7 @@ export const workMenu = [
             external: false,
             hidden: true,
           },
-        ]
+        ],
       },
       {
         title: 'Turner Sports',
@@ -114,7 +114,7 @@ export const workMenu = [
             external: false,
             hidden: false,
           },
-        ]
+        ],
       },
       {
         title: 'Cox Media Group (Videa, LLC)',
@@ -139,8 +139,8 @@ export const workMenu = [
             external: false,
             hidden: false,
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
-]
+];

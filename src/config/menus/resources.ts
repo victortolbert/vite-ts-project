@@ -17,6 +17,6 @@ export const resourcesMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

@@ -8,7 +8,7 @@ export const learningMenu = [
         href: '/regex',
         external: false,
         hidden: true,
-      }
-    ]
+      },
+    ],
   },
-]
+];

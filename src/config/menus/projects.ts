@@ -17,6 +17,6 @@ export const projectsMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

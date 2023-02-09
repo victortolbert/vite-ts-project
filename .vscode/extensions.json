@@ -1,17 +1,10 @@
 {
   "recommendations": [
-    "antfu.goto-alias",
-    "antfu.iconify",
     "antfu.vite",
-    "csstools.postcss",
+    "johnsoncodehk.volar",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
     "lokalise.i18n-ally",
-    "streetsidesoftware.code-spell-checker",
-    "stylelint.vscode-stylelint",
-    "vue.volar"
-  ],
-  "unwantedRecommendations": [
-    "octref.vetur"
+    "antfu.iconify",
+    "csstools.postcss"
   ]
 }

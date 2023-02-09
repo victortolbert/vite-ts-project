@@ -47,7 +47,6 @@ export const timelineMenu = [
         hidden: false,
         hiddenOnCollapse: false,
       },
-    ]
+    ],
   },
-
-]
+];

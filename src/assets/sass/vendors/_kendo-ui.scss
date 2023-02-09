@@ -1,0 +1,131 @@
+@import "../variables";
+@import "../utilities";
+@import "../shared/mixins";
+@import "../shared/utilities";
+
+// Kendo Theme Core
+@import "~@progress/kendo-theme-default/scss/core/_index.scss";
+
+// Grid Dependencies
+@import "~@progress/kendo-theme-default/scss/common/_index.scss";
+@import "~@progress/kendo-theme-default/scss/adaptive/_index.scss";
+@import "~@progress/kendo-theme-default/scss/progressbar/_index.scss";
+@import "~@progress/kendo-theme-default/scss/button/_index.scss";
+@import "~@progress/kendo-theme-default/scss/action-buttons/_index.scss";
+@import "~@progress/kendo-theme-default/scss/toolbar/_index.scss";
+@import "~@progress/kendo-theme-default/scss/icons/_index.scss";
+@import "~@progress/kendo-theme-default/scss/input/_index.scss";
+@import "~@progress/kendo-theme-default/scss/textbox/_index.scss";
+@import "~@progress/kendo-theme-default/scss/checkbox/_index.scss";
+@import "~@progress/kendo-theme-default/scss/radio/_index.scss";
+@import "~@progress/kendo-theme-default/scss/validator/_index.scss";
+@import "~@progress/kendo-theme-default/scss/autocomplete/_index.scss";
+// @import "~@progress/kendo-theme-default/scss/datetime/_index.scss";
+@import "~@progress/kendo-theme-default/scss/dropdownlist/_index.scss";
+@import "~@progress/kendo-theme-default/scss/numerictextbox/_index.scss";
+@import "~@progress/kendo-theme-default/scss/menu/_index.scss";
+@import "~@progress/kendo-theme-default/scss/dialog/_index.scss";
+@import "~@progress/kendo-theme-default/scss/pager/_index.scss";
+@import "~@progress/kendo-theme-default/scss/skeleton/_index.scss";
+@import "~@progress/kendo-theme-default/scss/typography/_index.scss";
+@import "~@progress/kendo-theme-default/scss/utils/_float.scss";
+@import "~@progress/kendo-theme-default/scss/utils/_spacer.scss";
+
+
+// Data Management
+@import "~@progress/kendo-theme-default/scss/grid/_variables.scss";
+@import "~@progress/kendo-theme-default/scss/grid/_layout.scss";
+@import "~@progress/kendo-theme-default/scss/grid/_theme.scss";
+
+// Native forms
+@import "~@progress/kendo-theme-default/scss/button/_variables.scss";
+@import "~@progress/kendo-theme-default/scss/button/_layout.scss";
+@import "~@progress/kendo-theme-default/scss/button/_theme.scss";
+
+@import "~@progress/kendo-theme-default/scss/input/_variables.scss";
+@import "~@progress/kendo-theme-default/scss/input/_layout.scss";
+@import "~@progress/kendo-theme-default/scss/input/_theme.scss";
+
+@import "~@progress/kendo-theme-default/scss/textbox/_index.scss";
+@import "~@progress/kendo-theme-default/scss/textarea/_index.scss";
+@import "~@progress/kendo-theme-default/scss/checkbox/_index.scss";
+@import "~@progress/kendo-theme-default/scss/listbox/_index.scss";
+@import "~@progress/kendo-theme-default/scss/progressbar/_index.scss";
+@import "~@progress/kendo-theme-default/scss/radio/_index.scss";
+@import "~@progress/kendo-theme-default/scss/slider/_index.scss";
+
+
+[type='checkbox']:checked:hover,
+[type='checkbox']:checked:focus,
+[type='radio']:checked:hover,
+[type='radio']:checked:focus {
+  border-color: transparent;
+  border-color: $color-primary-500;
+  background-color: $color-primary-500
+}
+
+
+.k-checkbox {
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.k-grid td {
+  border-width: 1px 0 0 1px;
+  vertical-align: middle;
+}
+
+.k-grid-content tr:last-child>td,
+.k-grid-content-locked tr:last-child>td {
+  border-bottom-width: 1px;
+}
+
+.k-grid-header th.k-grid-header-sticky {
+  background-color: white;
+}
+
+.dark {
+  .k-icon,
+  .k-grid,
+  .k-grid th,
+  .k-grid td,
+  .k-textbox,
+  .k-select {
+    background-color: theme('colors.black');
+    color: white;
+  }
+
+    .k-grid td:hover {
+      background-color: theme('colors.gray.900');
+      color: white;
+    }
+
+  .k-grid-header .k-i-sort-asc-sm,
+  .k-grid-header .k-i-sort-desc-sm,
+  .k-grid-header .k-sort-order {
+    color: red;
+  }
+
+  .k-grid,
+  .k-grid-header,
+  .k-header,
+  th.k-header,
+  .k-grid-header-wrap,
+  .k-grouping-header,
+  .k-grouping-header .k-group-indicator,
+  .k-grid td,
+  .k-grid-footer,
+  .k-grid-footer-wrap,
+  .k-grid-content-locked,
+  .k-grid-footer-locked,
+  .k-grid-header-locked,
+  .k-filter-row>td,
+  .k-filter-row>th,
+  .k-grid-toolbar {
+    border-color: theme('colors.gray.800');
+  }
+
+  .k-dropdown .k-dropdown-wrap {
+    border-color: theme('colors.gray.800');
+  }
+
+}

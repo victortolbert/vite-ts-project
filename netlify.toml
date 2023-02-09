@@ -1,18 +1,33 @@
 [build.environment]
-  # bypass npm auto install
   NPM_FLAGS = "--version"
   NODE_VERSION = "16"
+  NODE_OPTIONS = "--max-old-space-size=8192"
 
 [build]
-  publish = "dist"
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
+  functions = "functions"
+  publish = "dist"
+
+[functions]
+  directory = "functions"
+  node_bundler = "esbuild"
+
+[dev]
+  port = 8889
+  functions="functions"
+  publish="public"
+  command="pnpm run dev"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-[[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
+  ## (optional) Settings for Netlify Dev
+  ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
+  #[dev]
+  #  command = "yarn start" # Command to start your dev server
+  #  port = 3000 # Port that the dev server will be listening on
+  #  publish = "dist" # Folder with the static content for _redirect file
+
+  ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/

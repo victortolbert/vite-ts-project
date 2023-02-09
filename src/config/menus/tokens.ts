@@ -23,4 +23,4 @@ export const tokensMenu = [
     external: false,
     hidden: true,
   },
-]
+];

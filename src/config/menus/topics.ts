@@ -23,6 +23,6 @@ export const topicsMenu = [
         external: false,
         hidden: true,
       },
-    ]
+    ],
   },
-]
+];

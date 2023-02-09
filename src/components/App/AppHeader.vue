@@ -1,23 +1,27 @@
-<script lang="ts">
-import { Vue } from 'vue-property-decorator'
-
-export default class AppHeader extends Vue {}
+<script setup lang="ts">
+defineProps<{ showTitle?: boolean }>()
 </script>
 
 <template>
-  <header class="text-white bg-primary-500">
-    <div class="flex items-center justify-between px-4 py-1">
-      <a
-        class="flex items-center pr-4 mr-4 text-white no-underline"
-        href="/Technician/AutoScheduler"
-      >
-        <app-logo />
-        <app-title />
-      </a>
+  <header class="bg-white border-b h-16 px-4">
+    <nav class="flex h-full items-center justify-between">
+      <div>
+        <h1 v-if="showTitle" class="-ml-4">
+          <slot />
+        </h1>
+      </div>
 
-      <form class="flex items-center space-x-2">
-        <app-settings-button />
-      </form>
-    </div>
+      <div v-if="false" class="flex ml-6 items-center">
+        <button>
+          <base-icon-outlined class="h-6 w-6" name="question-mark-circle" />
+        </button>
+        <button>
+          <base-icon-outlined class="h-6 w-6" name="cog" />
+        </button>
+        <button>
+          <base-icon-outlined class="h-6 w-6" name="bell" />
+        </button>
+      </div>
+    </nav>
   </header>
 </template>

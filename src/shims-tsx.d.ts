@@ -1,4 +1,6 @@
-import type Vue from 'vue'
+/* eslint-disable no-unused-vars */
+
+import Vue, { VNode } from 'vue';
 
 declare global {
   namespace JSX {
@@ -6,10 +8,8 @@ declare global {
     interface Element extends VNode {}
     // tslint:disable no-empty-interface
     interface ElementClass extends Vue {}
-    type IntrinsicElements = Record<string, any>
-  }
-
-  interface ImportMeta {
-    env: Record<any, string>
+    interface IntrinsicElements {
+      [elem: string]: any;
+    }
   }
 }

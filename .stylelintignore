@@ -1,6 +1,3 @@
-.husky/
-.vscode/
-.yarn/
-dist/
-coverage/
-public/assets/
+**/*.min.css
+**/dist/
+node_modules

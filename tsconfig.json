@@ -1,64 +1,36 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "strict": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "@intlify/vite-plugin-vue-i18n/client",
+      "vite-plugin-pages/client",
+      "vite-plugin-vue-layouts/client",
+      "vite/client",
+      "vitest/global"
+    ],
     "paths": {
-      "@/*": ["./src/*"],
-      "preact/*": ["./stub/empty.d.ts"]
+      "~/*": ["src/*"]
     },
     "allowJs": true,
-    "declaration": true,
-    "declarationMap": true,
-    "declarationDir": "types",
-    "esModuleInterop": true,
-    "emitDeclarationOnly": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom",
-      "DOM.iterable"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "newLine": "lf",
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "target": "esnext",
-    "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
-    // For `<script setup>`
-    // See <https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#preserve-value-imports>
-    "preserveValueImports": true,
-    "importsNotUsedAsValues": "error",
-    "types": [
-      "vitest/globals",
-      "@vueuse/core",
-      "vite/client",
-      "unplugin-icons/types/vue",
-      "node",
-      "vue",
-      "vitest"
-    ]
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
-  "exclude": ["dist", "node_modules", "cypress"],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "vueCompilerOptions": {
-    "target": 2.7
-  }
+  "exclude": ["dist", "node_modules", "cypress"]
 }

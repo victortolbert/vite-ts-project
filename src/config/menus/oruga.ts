@@ -47,6 +47,6 @@ export const orugaMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

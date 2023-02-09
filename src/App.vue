@@ -1,92 +1,215 @@
-<script lang="ts" setup>
-import OptionsApiView from '@/views/OptionsApiView.vue'
-import CoreAvatar from '@/components/Core/CoreAvatar'
-import ToggleComponent from '@/components/Controls/ToggleComponent'
+<script setup>
+import { title, description } from '~/app.config'
 
-const selected = ref(false)
+useHead({
+  title,
+  meta: [
+    { name: 'description', content: description },
+  ],
+})
 
-function updateSelected(newValue: boolean) {
-  selected.value = newValue
-}
+const dummyUser = reactive({
+  FirstName: 'Victor',
+  LastName: 'Tolbert',
+})
 </script>
 
 <template>
-  <div>
-    <CoreAvatar  />
-
-    <ToggleComponent
-      v-model="selected"
-    />
-
-    <ToggleComponent
-      :value="selected"
-      @input="updateSelected($event)"
-    />
-
-    {{selected}}
-    <component
-      :is="OptionsApiView"
-      data-test="testing"
-      data-component="app"
-    />
-
-    <portal-target name="overlays" />
-  </div>
+  <router-view :user="dummyUser" v-slot="{ Component, route }">
+    <component :is="Component" :key="route.path" />
+  </router-view>
 </template>
 
-<style>
-.toggle {
-  position: relative;
-  display: inline-block;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 9999px;
-  cursor: pointer;
-  height: 1.5rem;
-  width: 3rem;
+<style lang="scss">
+@import "~/assets/sass/components/debug-grid";
+:root {
+  --color-blue-500: #00f;
 }
-.toggle:focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 4px rgba(52, 144, 220, 0.5);
-  box-shadow: 0 0 0 4px rgba(52, 144, 220, 0.5);
+.k-grid th {
+  font-weight: bold;
 }
-.toggle:before {
-  display: inline-block;
-  border-radius: 9999px;
-  height: 100%;
-  width: 100%;
-  background-color: #dae1e7;
-  content: "";
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+
+html {
+  scroll-behavior: smooth;
 }
-.toggle[aria-checked="true"]:before {
-  background-color: #3490dc;
+
+// focus  shadow outline
+// active background
+// hover
+
+// .h-button {
+//   display: inline-flex;
+//   appearance: none;
+//   align-items: center;
+//   justify-content: center;
+//   transition: all 250ms ease 0s;
+//   user-select: none;
+//   position: relative;
+//   white-space: nowrap;
+//   vertical-align: middle;
+//   outline: none;
+//   width: auto;
+//   line-height: 1.2;
+//   border-radius: var(--radii-md);
+//   font-weight: var(--fontWeights-semibold);
+//   height: var(--sizes-10);
+//   min-width: var(--sizes-10);
+//   font-size: var(--fontSizes-md);
+//   padding-inline-start: var(--space-4);
+//   padding-inline-end: var(--space-4);
+//   background: var(--colors-blue-500);
+//   color: var(--colors-white);
+//   margin-right: var(--space-3);
+// }
+
+/* Query based dark mode */
+@media (prefers-color-scheme: dark) {
+  .shiki-light {
+    display: none;
+  }
 }
-.toggle:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 9999px;
-  height: 1.5rem;
-  width: 1.5rem;
-  background-color: #fff;
-  border-width: 1px;
-  border-color: #dae1e7;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  content: "";
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+
+@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+  .shiki-dark {
+    display: none;
+  }
 }
-.toggle[aria-checked="true"]:after {
-  -webkit-transform: translateX(1.5rem);
-  transform: translateX(1.5rem);
+
+/* Class based dark mode */
+html.dark .shiki-light {
+  display: none;
+}
+
+html:not(.dark) .shiki-dark {
+  display: none;
+}
+
+/*** TRANSITIONS ***/
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.slide-up-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+.slide-up-enter-active {
+  transition: all 0.2s ease;
+}
+.slide-up-move {
+  transition: transform 0.8s ease-in;
+}
+
+.rotate-slow {
+  animation: rotate 10s linear infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateOpen {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes unmask {
+  from {
+    width: 110%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+@keyframes highlighter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@counter-style fisheye {
+  system: cyclic;
+  symbols: ◉;
+  suffix: " ";
+}
+@counter-style space-counter {
+  symbols: "\1F680""\1F6F8""\1F6F0""\1F52D";
+  suffix: " ";
+}
+
+@counter-style thumbs-up {
+  symbols: "\1F44D";
+  suffix: " ";
+}
+@counter-style globe {
+  symbols: "\1F30E";
+  suffix: " ";
+}
+@counter-style check {
+  symbols: "\1F5F9";
+  suffix: " ";
+}
+@counter-style heart {
+  symbols: "\2714";
+  suffix: " ";
+}
+@counter-style lemon {
+  symbols: "\1F34B";
+  suffix: " ";
 }
 </style>

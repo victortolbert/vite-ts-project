@@ -29,6 +29,6 @@ export const dataTablesMenu = [
         external: true,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

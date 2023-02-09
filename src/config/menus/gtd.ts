@@ -17,4 +17,4 @@ export const gtdMenu = [
   {
     title: '52 Weeks',
   },
-]
+];

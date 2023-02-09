@@ -111,8 +111,8 @@ export const mainMenu = [
                 icon: 'fad fa-list',
                 external: false,
                 hidden: true,
-              }
-            ]
+              },
+            ],
           },
           {
             title: 'Users',
@@ -142,7 +142,7 @@ export const mainMenu = [
             external: false,
             hidden: true,
           },
-        ]
+        ],
       },
       {
         title: 'Books',
@@ -209,4 +209,4 @@ export const mainMenu = [
     external: false,
     hidden: true,
   },
-]
+];

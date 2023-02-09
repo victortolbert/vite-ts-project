@@ -1,11 +1,5 @@
-<script lang="ts">
-import { Vue } from 'vue-property-decorator'
-
-export default class AppLogo extends Vue {}
-</script>
-
 <template>
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M25.1074 6C20.9532 7.42373 12.5157 10.3119 12 10.4746V18L25.1074 14.339L38 18V10.4746L25.1074 6Z"
       fill="currentColor"

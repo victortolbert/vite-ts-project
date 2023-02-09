@@ -1,13 +1,13 @@
-import axios from 'axios'
+import axios from 'axios';
 
 test('mocked axios', async () => {
-  const { default: ax } = await vi.importMock('axios')
+  const { default: ax } = await vi.importMock('axios');
 
-  await ax.get('string')
+  await ax.get('string');
 
-  expect(ax.get).toHaveBeenCalledWith('string')
-})
+  expect(ax.get).toHaveBeenCalledWith('string');
+});
 
 test('actual axios is not mocked', async () => {
-  expect(vi.isMockFunction(axios.get)).toBe(false)
-})
+  expect(vi.isMockFunction(axios.get)).toBe(false);
+});

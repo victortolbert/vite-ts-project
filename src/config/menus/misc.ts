@@ -2,7 +2,7 @@ export const miscMenu = [
   {
     header: 'Main Navigation',
     hidden: true,
-    hiddenOnCollapse: true
+    hiddenOnCollapse: true,
   },
   {
     title: 'Guide',
@@ -11,14 +11,14 @@ export const miscMenu = [
       {
         title: 'Style',
         href: '/style',
-        icon: 'fad fa-swatchbook'
+        icon: 'fad fa-swatchbook',
       },
       {
         title: 'Graphics',
         href: '/svgs',
-        icon: 'fad fa-icons'
+        icon: 'fad fa-icons',
       },
-    ]
+    ],
   },
   {
     title: 'Patterns',
@@ -39,10 +39,10 @@ export const miscMenu = [
         href: '/data-grids',
         badge: {
           text: 'new',
-          class: 'vsm--badge_default'
+          class: 'vsm--badge_default',
           // attributes: {}
           // element: 'span'
-        }
+        },
       },
       {
         title: 'Motion',
@@ -221,8 +221,8 @@ export const miscMenu = [
                 title: 'Projects List',
                 href: '/projects',
                 icon: 'fad fa-list',
-              }
-            ]
+              },
+            ],
           },
           {
             title: 'Users',
@@ -244,50 +244,50 @@ export const miscMenu = [
             href: '/properties/1/inspection',
             icon: 'fad fa-laptop-house',
           },
-        ]
-      }
+        ],
+      },
     ],
   },
   {
     title: 'Inbox',
     href: '/inbox',
     icon: 'fad fa-inbox',
-    hidden: true
+    hidden: true,
   },
   {
     title: 'Scratchpad',
     href: '/scratch',
     icon: 'fad fa-lightbulb-on',
-    hidden: true
+    hidden: true,
   },
   {
     title: 'Archive',
     href: '/archive',
     icon: 'fad fa-archive',
-    hidden: true
+    hidden: true,
   },
   {
     title: 'Composables',
     href: '/composables',
     icon: 'fad fa-function',
-    hidden: true
+    hidden: true,
   },
   {
     title: 'Resources',
     href: '/resources',
     icon: 'fad fa-books',
-    hidden: true
+    hidden: true,
   },
   {
     title: 'Reports',
     href: '/reports',
     icon: 'fad fa-file-contract',
-    hidden: true
+    hidden: true,
   },
   {
     title: 'Collections',
     href: '/collections',
     icon: 'fad fa-album-collection',
-    hidden: true
+    hidden: true,
   },
-]
+];

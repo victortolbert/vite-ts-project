@@ -1,0 +1,21 @@
+{
+  "baseUrl": "http://localhost:8888",
+  "baseUrl2": "https://legacyqa.hancockclaims.com",
+  "env": {
+    "apiUrl": "https://api.victortolbert.com/"
+  },
+  "testFiles": "**/*spec.{js,jsx,ts,tsx}",
+  "ignoreTestFiles": "**/examples/**/*",
+  "pluginsFile": false,
+  "viewportWidth": 1920,
+  "viewportHeight": 1000,
+  "chromeWebSecurity": false,
+  "waitForAnimations": false,
+  "animationDistanceThreshold": 50,
+  "component": {
+    "componentFolder": "src/components",
+    "testFiles": "**/*spec.{js,jsx,ts,tsx}",
+    "viewportHeight": 600,
+    "viewportWidth": 1200
+  }
+}

@@ -1,14 +1,11 @@
-import { rest } from 'msw';
-import { setupServer } from 'msw/node';
-
-export const mockServer = setupServer();
-
-export const mockEndpoint = (endpoint, {
-  body,
-  httpVerb = `get`,
-  status = 200,
-}) => {
-  mockServer.use(
-    rest[httpVerb](endpoint, (req, res, ctx) => res(ctx.status(status), ctx.json(body))),
-  );
-};
+function groupBy<T extends Record<string, any>, K extends keyof T>(
+  array: T[],
+  key: K | { (obj: T): string },
+): Record<string, T[]> {
+  const keyFn = key instanceof Function ? key : (obj: T) => obj[key];
+  return array.reduce((objectsByKeyValue, obj) => {
+    const value = keyFn(obj);
+    objectsByKeyValue[value] = (objectsByKeyValue[value] || []).concat(obj);
+    return objectsByKeyValue;
+  }, {} as Record<string, T[]>);
+}

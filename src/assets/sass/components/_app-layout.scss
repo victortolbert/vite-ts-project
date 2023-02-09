@@ -1,0 +1,107 @@
+@import "../variables";
+@import '../utilities/mixins.scss';
+
+$app-sidebar-width: 20rem; // 320px
+$app-sidebar-width-collapsed: 4rem; // 64px
+
+#app-layout {
+  padding-left: $app-sidebar-width;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app-layout.collapsed {
+  padding-left: $app-sidebar-width-collapsed;
+}
+
+
+.appLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: $app-sidebar-width;
+}
+
+.appLayout.collapsed {
+  padding-left: $app-sidebar-width-collapsed;
+}
+
+.appHeader {
+  height: $app-header-height;
+  border-bottom: 1px solid $color-gray-50;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  & .title {
+    font-size: $font-size-lg;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+}
+
+.appHeaderMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.appMain {
+  flex: 1 1 0%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.appFooter {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+
+.pageHeader {
+  font-size: large;
+  padding-right: 25px;
+}
+
+.flexRowStartWrap {
+  @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:wrap);
+}
+
+.flexRowStartNoWrap {
+  @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:nowrap);
+}
+
+.flexRowEndNoWrap {
+  @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:nowrap);
+}
+
+.flexRowSpaceBetweenWrap {
+  @include flex($justify: space-between, $align:flex-start, $direction:row, $wrap:wrap);
+}
+
+.flexRowSpaceBetweenNoWrap {
+  @include flex($justify: space-between, $align:flex-start, $direction:row, $wrap:nowrap);
+}
+
+.flexRowSpaceAroundWrap {
+  @include flex($justify: space-around, $align:flex-start, $direction:row, $wrap:wrap);
+}
+
+.flexColumnStartNoWrap {
+  @include flex($justify: flex-start, $align:flex-start, $direction:column, $wrap:nowrap);
+}
+
+.flexColumnStartWrap {
+  @include flex($justify: flex-start, $align:flex-start, $direction:column, $wrap:wrap);
+}
+
+
+.flexColumnCenter {
+  @include flex($justify: center, $align:center, $direction:column, $wrap:wrap);
+}

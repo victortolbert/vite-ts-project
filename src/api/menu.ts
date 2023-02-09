@@ -150,7 +150,8 @@ export default [
         hidden: true,
         badge: {
           text: 'new',
-          class: ' bg-accent-600 rounded-sm p-1 px-2 uppercase font-semibold tracking-wider shadow text-2xs text-white',
+          class:
+            ' bg-accent-600 rounded-sm p-1 px-2 uppercase font-semibold tracking-wider shadow text-2xs text-white',
           attributes: {},
           element: 'span',
         },
@@ -274,9 +275,7 @@ export default [
         title: 'Table',
         hidden: false,
         href: '/table',
-        child: [
-
-        ],
+        child: [],
       },
       {
         title: 'Textarea',
@@ -529,7 +528,6 @@ export default [
         external: false,
         hidden: true,
       },
-
     ],
   },
   {
@@ -595,4 +593,4 @@ export default [
     hidden: true,
     external: false,
   },
-]
+];

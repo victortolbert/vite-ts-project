@@ -17,6 +17,6 @@ export const javascriptMenu = [
         hidden: false,
         hiddenOnCollapse: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

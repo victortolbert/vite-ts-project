@@ -18,6 +18,6 @@ export const usersMenu = [
         external: false,
         hidden: true,
       },
-    ]
-  }
-]
+    ],
+  },
+];

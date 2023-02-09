@@ -4,5 +4,5 @@ export const billingMenu = [
     class: 'text-vue-three',
     hidden: false,
     hiddenOnCollapse: false,
-  }
-]
+  },
+];

@@ -1,0 +1,113 @@
+@import '../variables';
+@import '../utilities/mixins';
+@import './fonts';
+@import './markdown';
+
+.numericContainer {
+  @include flex($justify: flex-end, $align:flex-end, $direction:column, $wrap:nowrap);
+}
+
+.choiceContainer {
+  // @include flex($justify:flex-start, $align:middle, $direction:row, $wrap:nowrap);
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  // width: 130px;
+}
+
+.cbContainer {
+  // @include flex($justify: flex-start, $align: middle, $direction: row, $wrap: nowrap);
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.eCheckbox {
+  flex-shrink: 0;
+  height: 36px !important;
+  width: 36px !important;
+  background-color: theme('colors.primary.200');
+  padding-right: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+  margin: 5px;
+  border-radius: .5rem;
+  border: 1px solid theme('colors.primary.500')
+  // @include border-radius(2px, 2px, 2px, 2px);
+  // @include border(.5px, .5px, .5px, .5px, #0D9BFF);
+}
+
+.answered {
+  background-color: theme('colors.accent.300');
+}
+
+
+.baseContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 72px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem 1rem;
+
+  // .bg-white
+  // background-color: rgb(255 255 255);
+  background-color: $color-white;
+
+  // .border
+  // border-width: 1px;
+
+  // .rounded
+  // border-radius: 0.25rem;
+  border-radius: 0.5rem;
+
+  // .shadow-lg
+  --tw-shadow-color: 0, 0, 0;
+  --tw-shadow: 0 10px 15px -3px rgba(var(--tw-shadow-color), 0.1), 0 4px 6px -2px rgba(var(--tw-shadow-color), 0.05);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.labelContainer {
+  // @include font-props($fontSize:18px, $color:navy, $weight:600);
+  padding-right: theme('spacing[4]');
+  padding-top: theme('spacing[2.5]');
+  padding-left: theme('spacing[2.5]');
+  // padding-right: 15px;
+  // padding-top: 10px;
+  // padding-left: 10px;
+}
+
+.componentLabel {
+  padding-right: 10px;
+
+}
+.slotContainer {
+  @include flex($justify: flex-end, $align: flex-end, $direction: column, $wrap: wrap);
+  max-width: 70%;
+ // height: 58px;
+}
+
+.slotRow {
+  @apply flex items-start justify-start;
+  flex-wrap: nowrap;
+ // height: 58px;
+}
+
+
+.bottomSlots {
+   @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:wrap);
+  margin-bottom: 10px
+}
+
+
+
+
+.dark .baseContainer {
+  background-color: theme('colors.primary.700');
+}

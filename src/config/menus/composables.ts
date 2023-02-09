@@ -9,7 +9,7 @@ export const composablesMenu = [
         href: '/regex',
         external: false,
         hidden: true,
-      }
-    ]
+      },
+    ],
   },
-]
+];

@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 export const useJwt = vi.fn(() => ({
   payload: ref({
@@ -8,4 +8,4 @@ export const useJwt = vi.fn(() => ({
     name: 'completeName',
     email: 'email',
   }),
-}))
+}));

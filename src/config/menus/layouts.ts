@@ -8,7 +8,7 @@ export const layoutsMenu = [
         href: '/regex',
         external: false,
         hidden: true,
-      }
-    ]
+      },
+    ],
   },
-]
+];

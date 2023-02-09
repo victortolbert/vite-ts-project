@@ -45,8 +45,8 @@ export const vendorMenu = [
         external: false,
         hidden: true,
       },
-    ]
+    ],
   },
-]
+];
 
 // Announce Kit

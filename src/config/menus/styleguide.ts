@@ -31,7 +31,7 @@ export const styleguideMenu = [
       element: 'span',
       class: 'fad fa-book',
       attributes: {},
-      text: ''
+      text: '',
     },
   },
-]
+];

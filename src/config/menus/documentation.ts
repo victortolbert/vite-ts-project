@@ -17,6 +17,6 @@ export const documentationMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

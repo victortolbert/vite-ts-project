@@ -1,8 +1,8 @@
-// import { markRaw } from 'vue'
+import { markRaw } from 'vue';
 
-// const separator = {
-//   template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">',
-// }
+const separator = {
+  template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">',
+};
 
 export const hancockMenu = [
   {
@@ -204,9 +204,9 @@ export const hancockMenu = [
         href: '/ServiceType/CreateServiceType',
         hidden: false,
       },
-      // {
-      //   component: markRaw(separator),
-      // },
+      {
+        component: markRaw(separator),
+      },
       {
         title: 'Announcement List',
         href: '/Announcement',
@@ -254,4 +254,4 @@ export const hancockMenu = [
       },
     ],
   },
-]
+];

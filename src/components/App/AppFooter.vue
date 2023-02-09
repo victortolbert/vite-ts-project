@@ -1,11 +1,23 @@
-<script lang="ts">
-import { Vue } from 'vue-property-decorator'
-
-export default class AppFooter extends Vue {}
+<script setup lang="ts">
+import { MoonIcon, SunIcon } from '@heroicons/vue/solid'
+import { isDark, toggleDark } from '~/composables'
 </script>
 
 <template>
-  <footer class="px-6 py-2 mt-8 text-sm bg-primary-900 text-primary-50">
-    <slot />
-  </footer>
+  <nav class="flex items-center justify-between p-6">
+    <VueIcon class="w-auto h-6 grayscale"/>
+
+    <div class="text-2xl">
+      <i-mdi-microsoft-azure-devops class="text-[#0078D7]"/>
+    </div>
+
+    <button class="icon-btn" @click="toggleDark()">
+      <div v-if="isDark">
+        <moon-icon class="w-5 h-5" />
+      </div>
+      <div v-else>
+        <sun-icon class="w-5 h-5" />
+      </div>
+    </button>
+  </nav>
 </template>

@@ -23,6 +23,6 @@ export const demosMenu = [
         hidden: false,
         hiddenOnCollapse: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

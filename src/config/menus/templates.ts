@@ -13,7 +13,7 @@ export const templatesMenu = [
         href: '/hancock/components/pif-layout',
         external: false,
       },
-    ]
+    ],
   },
   {
     title: 'Common',
@@ -110,7 +110,7 @@ export const templatesMenu = [
         href: '/hancock/components/textbox-wrapper-template',
         hidden: true,
       },
-    ]
+    ],
   },
   {
     title: 'Pages',
@@ -132,8 +132,8 @@ export const templatesMenu = [
             title: 'Access Denied',
             href: '/hancock/components/access-denied',
             hidden: true,
-          }
-        ]
+          },
+        ],
       },
       {
         title: 'Error',
@@ -147,7 +147,7 @@ export const templatesMenu = [
         hidden: true,
         external: false,
       },
-    ]
+    ],
   },
   {
     title: 'Sections',
@@ -177,7 +177,7 @@ export const templatesMenu = [
         title: 'Roof Damage Items',
         href: 'roof-damage-items-section-template',
       },
-    ]
+    ],
   },
   {
     title: 'Modals',
@@ -255,7 +255,7 @@ export const templatesMenu = [
         href: '/hancock/components/upload-validation-modal',
         hidden: true,
       },
-    ]
+    ],
   },
   {
     title: 'Other Patterns',
@@ -308,7 +308,7 @@ export const templatesMenu = [
         href: '/hancock/components/create-pdf-header',
         hidden: true,
       },
-    ]
+    ],
   },
   {
     title: 'Emails',
@@ -333,7 +333,7 @@ export const templatesMenu = [
         href: '/hancock/components/send-asset',
         hidden: true,
       },
-    ]
+    ],
   },
   {
     title: 'Help',
@@ -376,6 +376,6 @@ export const templatesMenu = [
         hidden: true,
         external: false,
       },
-    ]
+    ],
   },
-]
+];

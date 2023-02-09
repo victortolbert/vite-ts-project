@@ -7,10 +7,10 @@ export const kendoUiMenu = [
     child: [
       {
         title: 'Forms',
-        href: '/examples/kendo-ui/forms'
+        href: '/examples/kendo-ui/forms',
       },
       {
-        title: 'Dropdown'
+        title: 'Dropdown',
       },
       {
         title: 'Grid',
@@ -51,8 +51,8 @@ export const kendoUiMenu = [
             href: '/examples/kendo-ui/grids/select',
             hidden: false,
           },
-        ]
+        ],
       },
     ],
-  }
-]
+  },
+];

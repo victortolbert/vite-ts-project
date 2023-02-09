@@ -41,4 +41,4 @@ export const fundamentalsMenu = [
     external: false,
     hidden: true,
   },
-]
+];

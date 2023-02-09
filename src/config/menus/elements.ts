@@ -28,7 +28,7 @@ export const elementsMenu = [
       class: 'vsm--badge_default',
       attributes: {},
       element: 'span',
-    }
+    },
   },
   {
     title: 'Motion',
@@ -48,4 +48,4 @@ export const elementsMenu = [
     external: false,
     hidden: false,
   },
-]
+];

@@ -21,7 +21,7 @@ export const htmlMenu = [
             external: false,
             hidden: false,
           },
-        ]
+        ],
       },
       {
         title: 'Sections',
@@ -47,8 +47,8 @@ export const htmlMenu = [
         external: false,
         hidden: true,
       },
-    ]
+    ],
   },
-]
+];
 
 // Announce Kit

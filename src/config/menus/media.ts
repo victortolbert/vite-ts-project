@@ -63,8 +63,8 @@ export const mediaMenu = [
         external: false,
         hidden: true,
       },
-    ]
+    ],
   },
-]
+];
 
 // Announce Kit

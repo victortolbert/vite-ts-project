@@ -17,6 +17,6 @@ export const customersMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

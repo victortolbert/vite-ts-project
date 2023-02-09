@@ -4,5 +4,5 @@ export const nextActionsMenu = [
     class: 'text-vue-three',
     hidden: false,
     hiddenOnCollapse: false,
-  }
-]
+  },
+];

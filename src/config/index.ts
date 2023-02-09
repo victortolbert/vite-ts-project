@@ -1,21 +1,21 @@
-export const name = 'UI Prototyping Toolkit'
+export const name = 'UI Prototyping Toolkit';
 
 export const description = [
   'Lightweight user interface design patterns',
   'Reusable components',
   'User interface engineering and digital product management',
-]
-export const title = 'Build Better Vue Apps Faster'
+];
+export const title = 'Build Better Vue Apps Faster';
 export const subtitle =
-  'Kendo UI for Vue: The Complete UI Component Library for Responsive Web Apps'
-export const callToAction = 'Start Free Trial'
-export const shortName = 'Frontier'
-export const brandColor = '#002894'
-export const primaryColor = '#314b6f'
-export const accentColor = '#ee7d1e'
-export const secondaryColor = '#f00'
+  'Kendo UI for Vue: The Complete UI Component Library for Responsive Web Apps';
+export const callToAction = 'Start Free Trial';
+export const shortName = 'Frontier';
+export const brandColor = '#002894';
+export const primaryColor = '#314b6f';
+export const accentColor = '#ee7d1e';
+export const secondaryColor = '#f00';
 export const keywords =
-  'Vite, HTML, CSS, DOM Scripting, JavaScript, TypeScript, Vue, React, Svelte, Angular, JQuery, APIs'
+  'Vite, HTML, CSS, DOM Scripting, JavaScript, TypeScript, Vue, React, Svelte, Angular, JQuery, APIs';
 // export const features = 'Vite-powered, TypeScript, Examples for Vue, React and Svelte, Unit Testing, Integration Testing'
 export const paths = [
   '~/Dropbox/_assets/audio',
@@ -26,7 +26,7 @@ export const paths = [
   '~/Dropbox/_assets/_sql/promise_serves',
   '~/Dropbox/@hancock/',
   '~/Code/promise686/promiseserves.org/application/views/demo/',
-]
+];
 
 export const features = [
   '⚡️ Vue 3, Vite 2, pnpm, ESBuild - born with fastness',
@@ -43,7 +43,7 @@ export const features = [
   '🖨 Server - side generation(SSG) via vite - ssg',
   '🦔 Critical CSS via critters',
   '🦾 TypeScript, of course',
-]
+];
 
 export const menu = [
   {
@@ -317,7 +317,7 @@ export const menu = [
     href: '/collections',
     icon: 'fad fa-album-collection',
   },
-]
+];
 
 export default {
   name,
@@ -328,7 +328,7 @@ export default {
   primaryColor,
   features,
   menu,
-}
+};
 
 // Upgrade your design system.
 // With our Design System Diagnostic, you get a roadmap and expert recommendations on how to launch more consistent product faster, streamline the creation process for teams, and address higher order business problems.

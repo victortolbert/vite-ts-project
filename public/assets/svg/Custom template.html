@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:9000/ -->
+<html lang="en" class="h-full overflow-y-scroll font-sans subpixel-antialiased text-primary-900 dark:text-primary-50 bg-primary-100 dark:bg-primary-900 selection:bg-primary-800 selection:text-primary-50 theme-startup dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom template</title>
+    <meta name="description" content="Description">
+    <meta name="keywords" content="Keywords">
+    <meta property="og:description" content="OG Description">
+    <meta name="twitter:description" content="Twitter Description">
+    <meta property="og:title" content="UI Design Patterns">
+    <meta name="twitter:title" content="UI Design Patterns">
+    <meta property="og:url" content="https://happy-carson-a8ab15.netlify.app">
+    <meta name="twitter:url" content="https://happy-carson-a8ab15.netlify.app">
+    <meta property="og:image" content="https://www.rd.com/wp-content/uploads/2020/01/GettyImages-454238885-scaled.jpg">
+    <meta name="twitter:image" content="https://www.rd.com/wp-content/uploads/2020/01/GettyImages-454238885-scaled.jpg">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#314b6f">
+
+    <link rel="icon" href="http://localhost:9000/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="http://localhost:9000/pwa-192x192.png">
+    <link rel="mask-icon" href="http://localhost:9000/safari-pinned-tab.svg" color="#00aba9">
+    <link rel="canonical" href="https://happy-carson-a8ab15.netlify.app/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Custom template_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Custom template_files/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Custom template_files/select2.min.css">
+  <link href="./Custom template_files/main.css" rel="stylesheet"></head>
+  <body class="h-full">
+    <div id="app"></div>
+
+    <script>
+      (function () {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const setting = localStorage.getItem("color-schema") || "auto";
+        if (setting === "dark" || (prefersDark && setting !== "light"))
+          document.documentElement.classList.toggle("dark", true);
+      })();
+    </script>
+
+    <!-- Teleport (Portal) Target -->
+    <div id="dialog-root"></div>
+    <script src="./Custom template_files/jquery.js"></script>
+    <script src="./Custom template_files/select2.js"></script>
+    <!-- <script type="module" src="/src/main.ts"></script> -->
+  <script src="./Custom template_files/vendors.js"></script><script src="./Custom template_files/main.js"></script>
+
+</body></html>

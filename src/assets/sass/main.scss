@@ -1,72 +1,49 @@
-@import "UI/style";
+@import "variables";
+@import "utilities";
+@import "shared/mixins";
+@import "shared/utilities";
 
-// @import "variables";
-// @import "Shared/mixins";
-// @import "Shared/utilities";
+@import "vendors/bootstrap-custom";
+@import "vendors/kendo-custom";
+@import "vendors/vue-sidebar-menu";
 
-// Customized vendor styles
-// @import "UI/vendors/bootstrap-custom";
-// @import "UI/vendors/kendo-custom";
-// @import "UI/vendors/vue-sidebar-menu";
+@import "areas/property-inspection-form/reports/report-container";
+@import "areas/property-inspection-form/reports/all-stata-vi";
+@import "areas/property-inspection-form/reports/all-state-ladder-assist";
+@import "areas/property-inspection-form/reports/report-modal";
 
-// Add new UI compatible components to `UI/components/index.scss`
-// @import "UI/components";
-// @import "UI/work-in-progress";
+@import "shared/controls/base-layout";
+@import "shared/controls/camera-template";
+@import "shared/controls/check-box";
+@import "shared/controls/text-box";
+@import "shared/controls/number-pad";
+@import "shared/layout/vue-layout";
+@import "shared/layout/menus";
 
-// @import "Shared/Controls/BaseLayout.scss";
-// @import "Shared/Controls/CameraTemplate.scss";
-// @import "Shared/Controls/CheckBox.scss";
-// @import "Shared/Controls/NumberPad.scss";
-// @import "Shared/Controls/TextBox.scss";
+@import "shared/validation";
+@import "shared/edit-modal";
+@import "shared/grid";
 
-// @import "Shared/EditModal.scss";
-// @import "Shared/Grid.scss";
-// @import "Shared/InspectionCounts.scss";
-
-// @import "Shared/Layout/EditLayout.scss";
-// @import "Shared/Layout/VueLayout.scss";
-
-// @import "Shared/SearchField.scss";
-
-// @import "Shared/validation.scss";
-
-// @import "./Areas/Portal/Dashboard.scss";
-
-// @import "./Areas/PropertyInspectionForm/AdminHeaderTemplate/AdminHeaderTemplate.scss";
-// @import "./Areas/PropertyInspectionForm/AdminTemplate/AdminTemplate.scss";
-// @import "./Areas/PropertyInspectionForm/AdminTemplate/AssetTemplate.scss";
-// @import "./Areas/PropertyInspectionForm/AdminTemplate/FormAssets.scss";
-// @import "./Areas/PropertyInspectionForm/AdminTemplate/FormMenuTemplate.scss";
-// @import "./Areas/PropertyInspectionForm/AdminTemplate/PifCard.scss";
-// @import "./Areas/PropertyInspectionForm/AdminTemplate/UploadTemplate.scss";
-
-// @import "./Areas/PropertyInspectionForm/Form/AssetViewer.scss";
-// @import "./Areas/PropertyInspectionForm/Form/camera.scss";
-
-// @import "./Areas/PropertyInspectionForm/Grids.scss";
-
-// @import "./Areas/PropertyInspectionForm/header.scss";
-
-// @import "./Areas/PropertyInspectionForm/Help/Help.scss";
-// @import "./Areas/PropertyInspectionForm/Help/HelpToc.scss";
-
-// @import "./Areas/PropertyInspectionForm/PropertyInspectionFormLabels.scss";
-// @import "./Areas/PropertyInspectionForm/PropertyInspectionForms.scss";
-
-// @import "./Areas/PropertyInspectionForm/Reports/AllStataVi.scss";
-// @import "./Areas/PropertyInspectionForm/Reports/AllStateLadderAssist.scss";
-// @import "./Areas/PropertyInspectionForm/Reports/ReportContainer.scss";
-// @import "./Areas/PropertyInspectionForm/Reports/ReportModal.scss";
-
-// @import "./Areas/PropertyInspectionForm/Shared/PifShared.scss";
-// @import "./Areas/PropertyInspectionForm/Shared/ProjectDetails.scss";
-
-// @import "./Areas/Technician/AutoScheduler/availability.scss";
-// @import "./Areas/Technician/AutoScheduler/scheduler.scss";
-
-// @import "./Areas/Utilities/DeleteAssets/DeleteAssets.scss";
-
-
+@import "areas/property-inspection-form/grids";
+@import "areas/property-inspection-form/property-inspection-form-labels";
+@import "areas/property-inspection-form/property-inspection-forms";
+@import "areas/property-inspection-form/header";
+@import "areas/property-inspection-form/admin-template/admin-template";
+@import "areas/property-inspection-form/admin-template/form-assets";
+@import "areas/property-inspection-form/admin-template/form-menu-template";
+@import "areas/property-inspection-form/admin-template/pif-card";
+@import "areas/property-inspection-form/shared/pif-shared";
+@import "areas/property-inspection-form/shared/project-details";
+@import "areas/property-inspection-form/help/help";
+@import "areas/property-inspection-form/help/help-toc";
+@import "areas/property-inspection-form/form/asset-viewer";
+@import "areas/property-inspection-form/form/camera";
+@import "areas/property-inspection-form/admin-header-template/admin-header-template";
+@import "areas/property-inspection-form/admin-template/asset-template";
+@import "areas/property-inspection-form/admin-template/upload-template";
+@import "areas/technician/auto-scheduler/scheduler";
+@import "areas/technician/auto-scheduler/availability";
+@import "ui/components";
 
 html { overflow-y: scroll !important; }
 

@@ -9,7 +9,7 @@ export const checklistsMenu = [
         href: 'https://cominex.net/docs/guide/deployment.html',
         external: true,
         hidden: true,
-      }
-    ]
+      },
+    ],
   },
-]
+];

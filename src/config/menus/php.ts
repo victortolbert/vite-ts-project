@@ -17,6 +17,6 @@ export const phpMenu = [
         hidden: false,
         hiddenOnCollapse: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

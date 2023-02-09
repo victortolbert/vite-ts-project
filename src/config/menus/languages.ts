@@ -37,5 +37,5 @@ export const languagesMenu = [
         hidden: false,
       },
     ],
-  }
-]
+  },
+];

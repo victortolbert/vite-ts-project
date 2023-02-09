@@ -17,6 +17,6 @@ export const laravelMenu = [
         hidden: false,
         hiddenOnCollapse: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

@@ -1,0 +1,40 @@
+@import "../variables";
+@import '../utilities/mixins.scss';
+
+
+$spacing-unit: 0.25rem; // 4px
+$font-weight-medium: 600;
+$text-sm: 0.875rem;
+$text-gray-700: rgba(55, 65, 81, var(--h-text-opacity));
+$rounded-medium: 0.375rem; // 6px
+
+.h-label {
+  font-weight: $font-weight-medium;
+  font-size: $text-sm;
+  color: $text-gray-700;
+}
+
+.h-form-control {
+  border-width: 1px;
+  border-radius: $rounded-medium;
+  width: 100%;
+}
+
+.controlLabel {
+  @include font-props($fontSize:18px, $color:Black, $weight:600);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}

@@ -46,6 +46,6 @@ export const trendingMenu = [
         external: false,
         hidden: true,
       },
-    ]
+    ],
   },
-]
+];

@@ -77,7 +77,7 @@ export const examplesMenu = [
             hidden: false,
             hiddenOnCollapse: false,
           },
-        ]
+        ],
       },
       {
         title: 'Data Tables',
@@ -109,7 +109,7 @@ export const examplesMenu = [
             external: false,
             hidden: false,
           },
-        ]
+        ],
       },
       {
         title: 'Headless UI',
@@ -212,7 +212,7 @@ export const examplesMenu = [
             href: '/examples/kendo-ui/grids/select',
             hidden: false,
           },
-        ]
+        ],
       },
       {
         title: 'Oruga',
@@ -268,8 +268,8 @@ export const examplesMenu = [
             external: false,
             hidden: false,
           },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
-]
+];

@@ -17,6 +17,6 @@ export const serviceTypesMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

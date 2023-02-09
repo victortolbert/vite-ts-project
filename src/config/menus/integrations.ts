@@ -65,8 +65,8 @@ export const integrationsMenu = [
         external: false,
         hidden: true,
       },
-    ]
+    ],
   },
-]
+];
 
 // Announce Kit

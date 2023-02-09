@@ -9,7 +9,7 @@ export const cheatsheetsMenu = [
         href: '/regex',
         external: false,
         hidden: false,
-      }
-    ]
+      },
+    ],
   },
-]
+];

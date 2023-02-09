@@ -5,5 +5,5 @@ export const terminologyMenu = [
     href: '/terminology',
     hidden: false,
     hiddenOnCollapse: false,
-  }
-]
+  },
+];

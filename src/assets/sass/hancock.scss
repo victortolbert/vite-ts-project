@@ -1,0 +1,160 @@
+@import "tailwindcss/base";
+@import "./base";
+
+@import "tailwindcss/components";
+// @import "./vendors";
+@import "./components";
+
+@import "tailwindcss/utilities";
+@import "./utilities";
+
+
+.k-upload,
+.k-upload-button input[type="file"] {
+  display: none;
+}
+
+
+
+.themed {
+  --fa-secondary-opacity: 0.5;
+  --fa-primary-color: var(--color-primary);
+  --fa-secondary-color: var(--color-secondary);
+}
+
+.theme-startup {
+  --color-primary: 49 75 111;
+  --color-primary-50: 245 246 248;
+  --color-primary-100: 234 237 241;
+  --color-primary-200: 204 210 219;
+  --color-primary-300: 173 183 197;
+  --color-primary-400: 111 129 154;
+  --color-primary-500: 49 75 111;
+  --color-primary-600: 44 68 100;
+  --color-primary-700: 37 56 83;
+  --color-primary-800: 29 45 67;
+  --color-primary-900: 24 37 54;
+
+  --color-secondary: 111 114 185;
+}
+
+.theme-boring {
+  --color-primary: 2 82 204;
+  --color-secondary: 255 196 2;
+}
+
+.theme-elegant {
+  --color-primary: 192 178 131;
+  --color-secondary: 220 208 192;
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background-image: linear-gradient(#3490dc, #6574cd) !important;
+  }
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html.dark {
+  color: theme('colors.primary.50');
+  background: theme('colors.primary.900');
+  /* @apply text-light-900; */
+}
+
+/* .btn {
+  @apply px-4 py-1 rounded inline-block
+    bg-primary-600 text-white cursor-pointer
+    hover:bg-primary-700
+    disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50;
+} */
+
+.icon-btn {
+  @apply inline-block cursor-pointer select-none
+    opacity-75 transition duration-200 ease-in-out
+    hover:opacity-100 hover:text-primary-600;
+  font-size: 0.9em;
+}
+
+
+html {
+  @apply text-dark-100;
+}
+
+.dark .mtk1 {
+  color: white !important;
+}
+
+::-webkit-scrollbar {
+  @apply bg-light-300;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-light-800;
+}
+
+.dark ::-webkit-scrollbar {
+  @apply bg-dark-900;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-dark-800;
+}
+
+::-webkit-resizer {
+  padding: 1rem;
+}
+
+.editor-windicss-color-block {
+  width: 0.8em;
+  height: 0.8em;
+  content: '';
+  display: inline-block;
+  margin: 0.1em 0.2em 0;
+  border-radius: 0.125em;
+}
+
+.editor-windicss-color-block-light {
+  border: 1px solid #000000;
+}
+
+.editor-windicss-color-block-dark {
+  border: 1px solid #eeeeee;
+}
+
+.editors-height {
+  height: calc(100% - 2rem);
+}
+
+.splitpanes.default-theme .splitpanes__pane {
+  @apply bg-transparent;
+}
+.splitpanes.default-theme .splitpanes__splitter {
+  @apply bg-transparent border-transparent min-w-4 min-h-4;
+}
+
+.splitpanes.default-theme .splitpanes__splitter::before,
+.splitpanes.default-theme .splitpanes__splitter::after {
+  @apply bg-dark-100 bg-opacity-50;
+}
+
+.splitpanes.default-theme .splitpanes__splitter:hover::before,
+.splitpanes.default-theme .splitpanes__splitter:hover::after {
+  @apply bg-light-100 bg-opacity-50;
+}
+
+.dark .splitpanes.default-theme .splitpanes__splitter::before,
+.dark .splitpanes.default-theme .splitpanes__splitter::after {
+  @apply bg-dark-100;
+}
+
+.dark .splitpanes.default-theme .splitpanes__splitter:hover::before,
+.dark .splitpanes.default-theme .splitpanes__splitter:hover::after {
+  @apply bg-dark-100;
+}

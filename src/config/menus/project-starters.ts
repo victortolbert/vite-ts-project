@@ -5,5 +5,5 @@ export const projectStartersMenu = [
     href: '/terminology',
     hidden: false,
     hiddenOnCollapse: false,
-  }
-]
+  },
+];

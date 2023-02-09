@@ -77,6 +77,6 @@ export const rubyMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

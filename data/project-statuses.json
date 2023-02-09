@@ -1,0 +1,54 @@
+[
+  {
+    "Id": 1,
+    "Name": "Triage"
+  },
+  {
+    "Id": 2,
+    "Name": "Call Queue"
+  },
+  {
+    "Id": 3,
+    "Name": "Schedule"
+  },
+  {
+    "Id": 4,
+    "Name": "Assigned"
+  },
+  {
+    "Id": 5,
+    "Name": "Confirmed"
+  },
+  {
+    "Id": 6,
+    "Name": "Working"
+  },
+  {
+    "Id": 7,
+    "Name": "Review"
+  },
+  {
+    "Id": 8,
+    "Name": "Complete"
+  },
+  {
+    "Id": 9,
+    "Name": "Billed"
+  },
+  {
+    "Id": 10,
+    "Name": "Closed"
+  },
+  {
+    "Id": 11,
+    "Name": "Hold"
+  },
+  {
+    "Id": 12,
+    "Name": "Archived"
+  },
+  {
+    "Id": 13,
+    "Name": "Pending"
+  }
+]

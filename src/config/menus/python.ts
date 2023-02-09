@@ -11,6 +11,6 @@ export const pythonMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];

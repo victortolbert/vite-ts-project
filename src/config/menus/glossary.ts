@@ -5,5 +5,5 @@ export const glossaryMenu = [
     href: '/glossary',
     hidden: false,
     hiddenOnCollapse: false,
-  }
-]
+  },
+];

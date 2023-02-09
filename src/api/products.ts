@@ -52,7 +52,7 @@ export const products = [
   },
   {
     ProductID: 4,
-    ProductName: 'Chef Anton\'s Cajun Seasoning',
+    ProductName: "Chef Anton's Cajun Seasoning",
     SupplierID: 2,
     CategoryID: 2,
     QuantityPerUnit: '48 - 6 oz jars',
@@ -69,7 +69,7 @@ export const products = [
   },
   {
     ProductID: 5,
-    ProductName: 'Chef Anton\'s Gumbo Mix',
+    ProductName: "Chef Anton's Gumbo Mix",
     SupplierID: 2,
     CategoryID: 2,
     QuantityPerUnit: '36 boxes',
@@ -86,7 +86,7 @@ export const products = [
   },
   {
     ProductID: 6,
-    ProductName: 'Grandma\'s Boysenberry Spread',
+    ProductName: "Grandma's Boysenberry Spread",
     SupplierID: 3,
     CategoryID: 2,
     QuantityPerUnit: '12 - 8 oz jars',
@@ -103,7 +103,7 @@ export const products = [
   },
   {
     ProductID: 7,
-    ProductName: 'Uncle Bob\'s Organic Dried Pears',
+    ProductName: "Uncle Bob's Organic Dried Pears",
     SupplierID: 3,
     CategoryID: 7,
     QuantityPerUnit: '12 - 1 lb pkgs.',
@@ -135,4 +135,4 @@ export const products = [
       Description: 'Sweet and savory sauces, relishes, spreads, and seasonings',
     },
   },
-]
+];

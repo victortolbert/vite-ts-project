@@ -31,4 +31,4 @@ export const tasksMenu = [
     external: false,
     hidden: true,
   },
-]
+];

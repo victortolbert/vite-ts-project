@@ -1,0 +1,17 @@
+// ul > li > a
+.pagination {
+  display: flex;
+}
+
+.page-item {
+  border: 1px solid red;
+}
+
+.page-item.disabled {}
+
+.page-item.active {}
+
+a.page-link {}
+
+span.page-link {}
+

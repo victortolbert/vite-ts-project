@@ -61,5 +61,5 @@ export const pageExamplesMenu = [
         hidden: false,
       },
     ],
-  }
-]
+  },
+];

@@ -125,8 +125,8 @@ export const designSystemsMenu = [
             external: true,
             hidden: false,
           },
-        ]
+        ],
       },
-    ]
-  }
-]
+    ],
+  },
+];

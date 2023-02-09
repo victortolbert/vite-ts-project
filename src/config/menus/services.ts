@@ -17,9 +17,9 @@ export const servicesMenu = [
         external: false,
         hidden: false,
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 /*
 
