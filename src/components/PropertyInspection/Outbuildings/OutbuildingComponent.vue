@@ -18,6 +18,22 @@ export default class OutbuildingComponent extends Vue {
     },
   }) readonly outbuilding: any
 
+  // - `data`
+  // - `beforeCreate`
+  // - `created`
+  // - `beforeMount`
+  // - `mounted`
+  // - `beforeDestroy`
+  // - `destroyed`
+  // - `beforeUpdate`
+  // - `updated`
+  // - `activated`
+  // - `deactivated`
+  // - `render`
+  // - `errorCaptured`
+  // - `serverPrefetch`
+
+
   get isAnotherType() {
     return this.outbuilding.name === 'Other'
   }

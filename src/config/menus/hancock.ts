@@ -1,9 +1,8 @@
-import { markRaw } from 'vue'
+// import { markRaw } from 'vue'
 
-const separator = {
-  template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">'
-}
-
+// const separator = {
+//   template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">',
+// }
 
 export const hancockMenu = [
   {
@@ -36,7 +35,7 @@ export const hancockMenu = [
         href: '/PropertyInspection/PropertyInspections/1/admin',
         hidden: false,
       },
-    ]
+    ],
   },
   {
     title: 'Projects',
@@ -88,7 +87,7 @@ export const hancockMenu = [
         href: '/Project/EVProjects',
         hidden: false,
       },
-    ]
+    ],
   },
   {
     title: 'Auto Scheduler',
@@ -128,7 +127,7 @@ export const hancockMenu = [
         href: '/Customer/CreateBusinessUnit',
         hidden: false,
       },
-    ]
+    ],
   },
   {
     title: 'Billing',
@@ -166,7 +165,7 @@ export const hancockMenu = [
         href: '/User/Create?userType=InsAdjuster',
         hidden: false,
       },
-    ]
+    ],
   },
   {
     title: 'Reports',
@@ -188,7 +187,7 @@ export const hancockMenu = [
         href: '/Report/UserReports',
         hidden: false,
       },
-    ]
+    ],
   },
   {
     title: 'Settings',
@@ -205,9 +204,9 @@ export const hancockMenu = [
         href: '/ServiceType/CreateServiceType',
         hidden: false,
       },
-      {
-        component: markRaw(separator)
-      },
+      // {
+      //   component: markRaw(separator),
+      // },
       {
         title: 'Announcement List',
         href: '/Announcement',
@@ -253,6 +252,6 @@ export const hancockMenu = [
         href: '/Tokens',
         hidden: false,
       },
-    ]
+    ],
   },
 ]

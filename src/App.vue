@@ -1,10 +1,10 @@
 <script type="ts" setup>
-import DemoView from '@/views/DemoView.vue'
+import App from '@/views/PropertyInspectionView.vue'
 </script>
 
 <template>
   <div>
-    <component :is="DemoView" data-test="data-test attribute">
+    <component :is="App" data-test="data-test attribute">
       Slotted
     </component>
 
