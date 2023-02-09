@@ -1,0 +1,21 @@
+﻿@import "../../../shared/mixins";
+
+.viewContainer {
+  width: 100%;
+  @include flex($justify: flex-start, $align:flex-start, $direction:column, $wrap:wrap);
+  margin-top: 20px;
+}
+
+.pifContainer {
+  width: 100%;
+  @include flex($justify: flex-start, $align:center, $direction:column, $wrap:nowrap);
+}
+
+.pifCardHeader {
+  background-color: #5D5C61;
+}
+
+.assetViewer {
+  width: 100%;
+  @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:wrap);
+}

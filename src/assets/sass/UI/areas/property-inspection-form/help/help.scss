@@ -1,0 +1,128 @@
+﻿@import "../../../shared/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+.helpContainer {
+  background-color: white;
+  width: 100%;
+  font-family: "Segoe UI";
+  color: red;
+  @include font-props($fontSize:18px, $color:black, $weight:500);
+}
+
+.helpHeader {
+  @include font-props($fontSize:31px, $color:#c5cbe3, $weight:800);
+  background-color: #154A94;
+  padding-left: 310px;
+  height: 75px;
+  width: 100%;
+}
+
+.toc {
+  @include font-props($fontSize:15px, $color:Black, $weight:800);
+  background-color: white;
+  padding: 10px;
+  min-width: 200px;
+  width: 300px;
+  height: 100%;
+  z-index: 2;
+  position: fixed;
+}
+
+.helpContent {
+  background-color: #D9D9D9;
+  padding: 10px;
+  margin-left: 300px;
+}
+
+.toc {
+  @include font-props($fontSize:24px, $color:black, $weight:800);
+}
+
+#myUL a {
+  @include font-props($fontSize:16px, $color:#007bff, $weight:800);
+  line-height: 1.6;
+}
+
+#Glossary ul {
+  margin-left: 15px;
+}
+
+.assetIconContainer {
+  width: 400px;
+  max-height: 450px;
+  background-color: white;
+  @include font-props($fontSize:12px, $color:Black, $weight:800);
+  @include flex($justify: space-around, $align:flex-start, $direction:row, $wrap:wrap);
+}
+
+.assetIcon {
+  width: 25%;
+  padding: 10px;
+}
+
+
+.howToStep {
+  margin-top: 15px;
+  @include font-props($fontSize:18px, $color:Black, $weight:800);
+}
+
+.topic {
+  @include border(1px, 1px, 1px, 1px, white);
+  padding: 3px;
+  @include font-props($fontSize:24px, $color:Black, $weight:800);
+}
+
+
+.howToTopic {
+  margin-top: 20px;
+  padding: 5px;
+  color: white;
+  background-color: cornflowerblue;
+
+}
+
+.howToImage {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+
+.helpRow {
+  @include flex($justify:space-between, $align:top, $direction:row, $wrap:wrap);
+}
+
+/*.helpTwoColumn div:nth-child(1), .helpTwoColumn div:nth-child(2) {
+    padding-top: 10px;
+}*/
+
+
+.helpRow>div:first-child {
+  width: 50%;
+}
+
+.helpRow div:first-child span:first-child {
+  font-weight: 600;
+}
+
+/*.helpTwoColumn span, .helpTwoColumn p {
+    line-height: 0.5cm;
+    display: inline-block;
+    padding-top: 20px;
+}*/
+
+.hlpLink {
+  @include font-props($fontSize:15px, $color:#007BFF, $weight:800);
+  padding-left: 20px;
+}
+
+.xborder {
+  @include border(14px, 14px, 14px, 14px, white);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}

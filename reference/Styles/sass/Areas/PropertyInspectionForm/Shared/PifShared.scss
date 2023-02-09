@@ -1,0 +1,23 @@
+﻿@import "../../../Shared/_mixins";
+
+.topMargin {
+    margin-top: 80px;
+}
+
+.formsDropdown {
+    padding-right: 10px;
+    @include font-props($fontSize: 18px, $color:black, $weight:600);
+}
+
+.saveForm {
+    @include flex($justify: center, $align:center, $direction:row, $wrap:nowrap);
+}
+
+.screen {
+    opacity: 0.2;
+}
+
+.angle {
+    color: white;
+}
+

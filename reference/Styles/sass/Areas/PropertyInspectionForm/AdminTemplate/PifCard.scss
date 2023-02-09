@@ -1,0 +1,30 @@
+﻿@import "../../../Shared/_mixins.scss";
+
+.pifRowContainer {
+    @include flex($justify: space-between, $align:flex-start, $direction:row, $wrap:nowrap);
+    padding: 5px 5px 5px 8px;
+    width: 100%;
+}
+
+.gridContainer {
+    @include flex($justify: center, $align:center, $direction:row, $wrap:wrap);
+    padding: 10px;
+    width: 100%;
+}
+
+.spread {
+    flex-basis: 0;
+}
+
+.pifCardBody {
+    background-color: white;
+    width: 100%;
+}
+
+.pifCardFooter {
+    @include flex($justify: space-around, $align:center, $direction:row, $wrap:wrap);
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 10px 8px #808080;
+    padding: 10px;
+}

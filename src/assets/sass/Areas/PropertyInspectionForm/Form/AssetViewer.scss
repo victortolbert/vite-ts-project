@@ -1,0 +1,42 @@
+﻿@import "../../../Shared/_mixins";
+
+.viewerContainer {
+    @include flex($justify: flex-start, $align:flex-start, $direction:column, $wrap:wrap);
+    padding: 0px 0px 5px 10px;
+    width: 100%;
+}
+
+.viewerRow {
+    @include flex($justify: flex-start, $align:center, $direction:row, $wrap:nowrap);
+    width: 100%;
+}
+
+
+.viewerItem {
+   padding:5px;
+}
+
+
+/********** Photo form ***************/
+
+
+.okCancel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.pfViewerRow {
+    @include flex($justify: space-between, $align:flex-center, $direction:row, $wrap:nowrap);
+    width: 100%;
+}
+
+.pfViewerColumn {
+    @include flex($justify: space-between, $align:flex-center, $direction:column, $wrap:nowrap);
+    width: 100%;
+}
+
+.pfAssetImage {
+    width: 70% !important;
+    height:70% !important;
+}

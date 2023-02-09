@@ -1,0 +1,55 @@
+@import "variables";
+@import "utilities";
+@import "shared/mixins";
+@import "shared/utilities";
+
+@import "vendors/bootstrap-custom";
+@import "vendors/kendo-custom";
+@import "vendors/vue-sidebar-menu";
+
+@import "areas/property-inspection-form/reports/report-container";
+@import "areas/property-inspection-form/reports/all-stata-vi";
+@import "areas/property-inspection-form/reports/all-state-ladder-assist";
+@import "areas/property-inspection-form/reports/report-modal";
+
+@import "shared/controls/base-layout";
+@import "shared/controls/camera-template";
+@import "shared/controls/check-box";
+@import "shared/controls/text-box";
+@import "shared/controls/number-pad";
+@import "shared/layout/vue-layout";
+@import "shared/layout/menus";
+
+@import "shared/validation";
+@import "shared/edit-modal";
+@import "shared/grid";
+
+@import "areas/property-inspection-form/grids";
+@import "areas/property-inspection-form/property-inspection-form-labels";
+@import "areas/property-inspection-form/property-inspection-forms";
+@import "areas/property-inspection-form/header";
+@import "areas/property-inspection-form/admin-template/admin-template";
+@import "areas/property-inspection-form/admin-template/form-assets";
+@import "areas/property-inspection-form/admin-template/form-menu-template";
+@import "areas/property-inspection-form/admin-template/pif-card";
+@import "areas/property-inspection-form/shared/pif-shared";
+@import "areas/property-inspection-form/shared/project-details";
+@import "areas/property-inspection-form/help/help";
+@import "areas/property-inspection-form/help/help-toc";
+@import "areas/property-inspection-form/form/asset-viewer";
+@import "areas/property-inspection-form/form/camera";
+@import "areas/property-inspection-form/admin-header-template/admin-header-template";
+@import "areas/property-inspection-form/admin-template/asset-template";
+@import "areas/property-inspection-form/admin-template/upload-template";
+@import "areas/technician/auto-scheduler/scheduler";
+@import "areas/technician/auto-scheduler/availability";
+@import "ui/components";
+
+html { overflow-y: scroll !important; }
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+.cursor { cursor: pointer; }
+.centerText { text-align: center; }

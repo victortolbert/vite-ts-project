@@ -1,0 +1,61 @@
+﻿@import "../mixins";
+
+.iconEnabled {
+    padding-right: 10px;
+    padding-top: 9px;
+    color: #3366FF;
+    cursor: pointer;
+}
+.iconDisabled {
+    padding-right: 10px;
+    padding-top: 9px;
+    color: #d3d3d3 !important;
+    cursor: auto !important;
+}
+.keyPadContainer {
+    @include flex($justify: flex-end, $align:flex-end, $direction:column, $wrap:nowrap);
+    width: 150px;
+}
+
+.keyPadRow {
+    @include flex($justify: flex-end, $align:flex-end, $direction:row, $wrap:nowrap);
+    padding-left: 10px;
+    padding-right: 10px;
+    @include font-props($fontSize:x-large, $color:white, $weight:600);
+}
+
+.keyPad {
+    width: 40px;
+    text-align: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    @include font-props($fontSize:x-large, $color:white, $weight:600);
+    @include border-radius(2px, 2px, 2px, 2px);
+    @include border(.5px, .5px, .5px, .5px, dimgray);
+}
+
+.keyEnabled {
+    cursor: pointer;
+    background-color: #3366FF;
+}
+
+.keyDisabled {
+    background-color: lightsteelblue !important;
+    cursor:none;
+}
+
+.numericContainer {
+    @include flex($justify: flex-end, $align:flex-end, $direction:column, $wrap:nowrap);
+}
+
+.numericLabel {
+    position: relative;
+    bottom: 6px;
+    @include font-props($fontSize:17px, $color:black, $weight:600);
+    padding-top: 10px;
+    width:20px;
+}
+.numericValue {
+    padding-right: 4px;
+}
+

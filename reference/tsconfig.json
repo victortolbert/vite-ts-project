@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmitOnError": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "removeComments": false,
+        "sourceMap": true,
+        "target": "es5",
+        "typeRoots": [
+            "node_modules/@types",
+            "Scripts/Common/@types"
+        ],
+        "lib": [ "es6", "dom" ],
+        "baseUrl": ".",
+      "paths": {
+        "@ExemplarCommon/*": [ "./Scripts/Common/*" ],
+        "@ExemplarComponents/*": [ "./Scripts/Components/*" ],
+        "@ExemplarDataAccess/*": [ "./Scripts/DataAccess/*" ],
+        "@ExemplarEnums/*": [ "./Scripts/Enums/*" ],
+        "@ExemplarInterfaces/*": [ "./Scripts/Interfaces/*" ],
+        "@ExemplarRoutes/*": [ "./Scripts/Routes/*" ],
+        "@ExemplarServices/*": [ "./Scripts/Services/*" ],
+        "@ExemplarScripts/*": [ "./Scripts/*" ],
+        "@ExemplarViewModels/*": [ "./Scripts/ViewModels/*" ]
+
+      },
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+        "wwwroot"
+    ],
+    "compileOnSave": true,
+    "buildOnSave": false
+
+}

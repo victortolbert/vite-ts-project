@@ -1,0 +1,28 @@
+﻿@import "../../shared/mixins";
+
+.vueLayoutContainer {
+  width: 100%;
+  @include flex($justify:flex-start, $align:right, $direction:row, $wrap:nowrap);
+  background-color: red;
+}
+
+.vueComponentContainer {
+  width: 70%;
+  background-color: white;
+  width: 100%;
+}
+
+.vueHeaderContainer {
+  width: 100%;
+  background-color: green;
+  padding-left: 5px;
+  height: 75px;
+  @include font-props($fontSize: 44px, $color:pink, $weight:100);
+}
+
+.menuContainer {
+  width: 50%;
+  background-color: darkgray;
+  @include font-props($fontSize: 14px, $color:white, $weight:600);
+  padding-left: 5px
+}

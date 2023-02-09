@@ -1,0 +1,47 @@
+﻿@import "../mixins";
+
+.baseContainer {
+    width: 100%;
+    background-color: white;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    min-height: 70px;
+    @include border(0px, 0px, 2px, 0px);
+    @include flex($justify: space-between, $align:flex-start, $direction:row, $wrap:nowrap);
+}
+
+.labelContainer {
+    @include font-props($fontSize:18px, $color:navy, $weight:600);
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.componentLabel {
+    padding-right: 10px;
+
+}
+.slotContainer {
+    @include flex($justify: flex-end, $align:flex-end, $direction:column, $wrap:wrap);
+    max-width: 70%;
+   // height: 58px;
+}
+
+.slotRow {
+    @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:nowrap);
+   // height: 58px;
+}
+
+
+.bottomSlots {
+     @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:wrap);
+    margin-bottom: 10px
+}
+
+.choiceContainer {
+    @include flex($justify:flex-start, $align:middle, $direction:row, $wrap:nowrap);
+    padding-right: 15px;
+}
+

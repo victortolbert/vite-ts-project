@@ -1,0 +1,40 @@
+﻿@import "../../../shared/mixins";
+
+.pifHeader {
+  @include border(0px, 0px, 4px, 0px, #8590AA);
+  padding: 10px;
+  align-items: center;
+}
+
+.AdminTitle {
+  flex-grow: 1;
+  color: white;
+  padding-left: 10px;
+  @include font-props($fontSize: 22px, $color:#c5cbe3, $weight:600);
+}
+
+.AdminTitleLarge {
+  flex-grow: 1;
+  color: white;
+  padding-left: 10px;
+  @include font-props($fontSize: 28px, $color:#c5cbe3, $weight:600);
+}
+
+.AdminSearch {
+  color: black;
+}
+
+.borderBottom {
+  background-color: red;
+}
+
+.headerContainer {
+  height: 70px;
+  background-color: #154A94;
+  width: 100%;
+  padding: 0px;
+  @include flex($justify:space-between, $align:center, $direction:row, $wrap:wrap);
+  z-index: 20;
+  position: fixed;
+  @include border(0px, 0px, 4px, 0px, white);
+}

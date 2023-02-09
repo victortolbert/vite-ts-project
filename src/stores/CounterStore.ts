@@ -25,3 +25,15 @@ export const useCounterStore = defineStore('counter', {
     },
   },
 })
+
+// export const useCounterStore = defineStore('counter', () => {
+//   // state
+//   const count = ref(0)
+//
+//   // actions
+//   function increment() {
+//     count.value++
+//   }
+
+//   return { count, increment }
+// })

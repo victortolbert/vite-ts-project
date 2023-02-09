@@ -1,0 +1,210 @@
+﻿@import "../../../shared/mixins";
+
+.asfilterRow {
+  width: 100%;
+  @include flex($justify:flex-start, $align:center, $direction:row, $wrap:nowrap);
+  margin-bottom: 35px;
+}
+
+.milesDiv {
+  left: 1198px;
+  padding-top: 10px;
+  @include font-props($fontSize:1.6em, $color:Black, $weight:400);
+}
+
+.labelWidth {
+  vertical-align: sub;
+  @include font-props($fontSize:1.2em, $color:Black, $weight:400);
+}
+
+.select {
+  width: 300px;
+  height: 70px;
+  @include font-props($fontSize:1.2em, $color:Black, $weight:400);
+}
+
+.saveButton {
+  margin-left: 15px;
+}
+
+.divSpacer {
+  width: 400px;
+}
+
+.asInvalidTime {
+  background-color: white;
+  @include font-props($fontSize:12px, $color:red, $weight:600);
+  padding: 2px;
+  margin-top: 1px
+}
+
+.box-text {
+  @include font-props($fontSize:12px, $color:white, $weight:400);
+  z-index: 99;
+}
+
+.label {
+  @include font-props($fontSize:1.5em, $color:black, $weight:400);
+}
+
+.textColumn {
+  height: 55px;
+  vertical-align: middle;
+  padding: 0px;
+  width: 65px;
+  text-align: left;
+  color: red;
+
+}
+
+.routeColumn {
+  width: 180px;
+}
+
+.mileDetails {
+  text-align: left;
+  font-size: small;
+  color: black;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+
+.asFormContainer {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.schedulerContainer {
+  width: 100%;
+  @include flex($justify:center, $align:center, $direction:row, $wrap:wrap);
+}
+
+.leftRadius {
+  @include border-radius(8px, 0px, 0px, 0px);
+}
+
+.rightRadius {
+  @include border-radius(0px, 8px, 0px, 0px);
+}
+
+.box {
+  width: 160px;
+  position: absolute;
+  border: .5px solid white;
+  background-color: #ECECEC;
+  text-align: center;
+  height: 75px;
+}
+
+.timeBox {
+  vertical-align: bottom;
+  padding-top: 3px;
+  background-color: white;
+  color: white;
+  height: 60px !important;
+  @include font-props($fontSize:1em, $color:navy, $weight:400);
+}
+
+.assignedShade {
+  background-color: #3399ff !important;
+}
+
+.unAssignedShade {
+  background-color: teal !important;
+}
+
+.key {
+  width: 600px;
+  height: 30px;
+  @include font-props($fontSize:1em, $color:white, $weight:400);
+  padding-left: 3px;
+}
+
+.exceptionRoute {
+  background-color: red !important;
+}
+
+.removedRoute {
+  background-color: navy;
+}
+
+.inspectionBox {
+  width: 160px !important;
+  z-index: 10;
+  text-align: left;
+  padding: 0px 2px;
+  height: 75px;
+}
+
+.thirtyWidth {
+  width: 160px !important;
+}
+
+.sixtyWidth {
+  width: 320px !important;
+}
+
+.ninetyWidth {
+  width: 240px !important;
+}
+
+.exceptionBox {
+  width: 98px;
+  background-color: Red !important;
+  z-index: 10;
+  text-align: left;
+  padding: 0px 2px;
+  // @include font-props($fontSize:.9em, $color:white, $weight:600);
+}
+
+.borderLeft {
+  border-left-color: silver;
+}
+
+.borderTop {
+  border-top-color: black;
+}
+
+.borderRight {
+  border-right-color: black;
+}
+
+.selected {
+  border-width: 3px;
+  z-index: 10;
+}
+
+.showOutline {
+  width: 80px;
+  // border: 1px solid white;
+  // background-color: #ADADAD;
+  z-index: 20;
+  // padding-top: 16px;
+  // color: white;
+}
+
+.datePicker {
+  display: inline !important;
+  width: 130px;
+}
+
+.modalTime {
+  background-color: steelblue;
+
+
+  @include font-props($fontSize:1.6em, $color:white, $weight:400);
+}
+
+.modalDetails {
+  background-color: #ECECEC;
+  margin-bottom: 5px;
+
+  padding: 8px;
+  @include font-props($fontSize:1.0em, $color:black, $weight:400);
+}
+
+.modalMiles {
+  padding-right: 12px;
+  @include font-props($fontSize:1em, $color:black, $weight:400);
+}

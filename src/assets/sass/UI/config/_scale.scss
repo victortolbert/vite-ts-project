@@ -1,0 +1,115 @@
+@use '~accoutrement/sass/tools';
+@use '~sassdoc-theme-herman/scss/utilities'as herman;
+@use 'sass:map';
+
+/// # Spacing & Size Config
+/// Accoutrement maps for storing global spacing and size tokens.
+/// @link https://www.oddbird.net/accoutrement/docs/scale.html
+///   Accoutrement Scale
+/// @group config-scale
+
+// Line Height
+// -----------
+/// Going for a readable line-height
+/// that adapts to context
+/// @ratios
+/// @group config-scale
+$ratios: ('line-height': 1.4,
+);
+
+@include tools.add-ratios($ratios);
+@include herman.add('ratios', 'ratios', $ratios);
+
+// Font Sizes
+// ----------
+/// @sizes {text}
+/// @group config-scale
+$font-sizes: ('small': 0.8rem,
+  'xsmall': 0.7rem,
+  'xxsmall': 0.6rem,
+  'rem': calc(1.25em + 0.5vw),
+  'medium': 1.25rem,
+  'large': calc(1.25rem + 0.5vw),
+  'xlarge': calc(1.75rem + 1vw),
+  'h1': '#xlarge',
+  'h2': '#large',
+  'h3': '#medium',
+  'h4': '#small',
+  'code': 0.8em,
+);
+
+@include tools.add-sizes($font-sizes);
+@include herman.add('sizes',
+  'font-sizes',
+  $font-sizes,
+  get-function('size', $module: 'tools'));
+
+// Spacing Sizes
+// -------------
+/// @sizes {ruler-large}
+/// @group config-scale
+$spacing-sizes: ('gutter': 0.75rem,
+  'newline--default': '#gutter',
+  'newline': '#newline--default',
+  'gutter-plus': calc(var(--gutter) * 1.5),
+  'double-gutter': calc(var(--gutter) * 2),
+  'triple-gutter': calc(var(--gutter) * 3),
+  'shim': calc(var(--gutter) / 2),
+  'shim-plus': calc(var(--gutter) * 0.75),
+  'half-shim': calc(var(--gutter) / 4),
+  'quarter-shim': calc(var(--gutter) / 8),
+  'spacer': calc(var(--double-gutter) + 3vw),
+);
+
+@include tools.add-sizes($spacing-sizes);
+@include herman.add('sizes',
+  'spacing-sizes',
+  $spacing-sizes,
+  get-function('size', $module: 'tools'));
+
+// Theme Sizes
+// -----------
+// Mostly used as breakpoints when content is asking for css edits
+/// @sizes {ruler-large}
+/// @group config-scale
+$theme-sizes: ('page-margin': calc(var(--quarter-shim) + 4vw),
+  'border-width': medium,
+  'radius': var(--half-shim),
+  'grid-hero': calc(var(--gutter) * 8),
+);
+
+@include tools.add-sizes($theme-sizes);
+@include herman.add('sizes',
+  'theme-sizes',
+  $theme-sizes,
+  get-function('size', $module: 'tools'));
+
+// Page Sizes
+// ----------
+// Mostly used as breakpoints when content is asking for css edits
+/// @sizes {output-only}
+/// @group config-scale
+$page-sizes: ('logo-item': 10rem,
+  'grid-item': 16rem,
+  'min-page': 22rem,
+  'page': 30rem,
+  'wide-page': 38rem,
+  'wide-break': 56em,
+);
+
+@include tools.add-sizes($page-sizes);
+@include herman.add('sizes',
+  'page-sizes',
+  $page-sizes,
+  get-function('size', $module: 'tools'));
+
+// Breakpoints
+// -----------
+
+@each $name,
+$size in $page-sizes {
+  $size: tools.convert-units($size, 'em');
+  tools.$breakpoints: map.merge(tools.$breakpoints,
+      ($name: $size,
+      ));
+}

@@ -1,0 +1,78 @@
+@import "UI/style";
+
+// @import "variables";
+// @import "Shared/mixins";
+// @import "Shared/utilities";
+
+// Customized vendor styles
+// @import "UI/vendors/bootstrap-custom";
+// @import "UI/vendors/kendo-custom";
+// @import "UI/vendors/vue-sidebar-menu";
+
+// Add new UI compatible components to `UI/components/index.scss`
+// @import "UI/components";
+// @import "UI/work-in-progress";
+
+// @import "Shared/Controls/BaseLayout.scss";
+// @import "Shared/Controls/CameraTemplate.scss";
+// @import "Shared/Controls/CheckBox.scss";
+// @import "Shared/Controls/NumberPad.scss";
+// @import "Shared/Controls/TextBox.scss";
+
+// @import "Shared/EditModal.scss";
+// @import "Shared/Grid.scss";
+// @import "Shared/InspectionCounts.scss";
+
+// @import "Shared/Layout/EditLayout.scss";
+// @import "Shared/Layout/VueLayout.scss";
+
+// @import "Shared/SearchField.scss";
+
+// @import "Shared/validation.scss";
+
+// @import "./Areas/Portal/Dashboard.scss";
+
+// @import "./Areas/PropertyInspectionForm/AdminHeaderTemplate/AdminHeaderTemplate.scss";
+// @import "./Areas/PropertyInspectionForm/AdminTemplate/AdminTemplate.scss";
+// @import "./Areas/PropertyInspectionForm/AdminTemplate/AssetTemplate.scss";
+// @import "./Areas/PropertyInspectionForm/AdminTemplate/FormAssets.scss";
+// @import "./Areas/PropertyInspectionForm/AdminTemplate/FormMenuTemplate.scss";
+// @import "./Areas/PropertyInspectionForm/AdminTemplate/PifCard.scss";
+// @import "./Areas/PropertyInspectionForm/AdminTemplate/UploadTemplate.scss";
+
+// @import "./Areas/PropertyInspectionForm/Form/AssetViewer.scss";
+// @import "./Areas/PropertyInspectionForm/Form/camera.scss";
+
+// @import "./Areas/PropertyInspectionForm/Grids.scss";
+
+// @import "./Areas/PropertyInspectionForm/header.scss";
+
+// @import "./Areas/PropertyInspectionForm/Help/Help.scss";
+// @import "./Areas/PropertyInspectionForm/Help/HelpToc.scss";
+
+// @import "./Areas/PropertyInspectionForm/PropertyInspectionFormLabels.scss";
+// @import "./Areas/PropertyInspectionForm/PropertyInspectionForms.scss";
+
+// @import "./Areas/PropertyInspectionForm/Reports/AllStataVi.scss";
+// @import "./Areas/PropertyInspectionForm/Reports/AllStateLadderAssist.scss";
+// @import "./Areas/PropertyInspectionForm/Reports/ReportContainer.scss";
+// @import "./Areas/PropertyInspectionForm/Reports/ReportModal.scss";
+
+// @import "./Areas/PropertyInspectionForm/Shared/PifShared.scss";
+// @import "./Areas/PropertyInspectionForm/Shared/ProjectDetails.scss";
+
+// @import "./Areas/Technician/AutoScheduler/availability.scss";
+// @import "./Areas/Technician/AutoScheduler/scheduler.scss";
+
+// @import "./Areas/Utilities/DeleteAssets/DeleteAssets.scss";
+
+
+
+html { overflow-y: scroll !important; }
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+.cursor { cursor: pointer; }
+.centerText { text-align: center; }

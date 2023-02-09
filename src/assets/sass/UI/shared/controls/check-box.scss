@@ -1,0 +1,46 @@
+﻿@import "../mixins";
+
+.cbContainer {
+    @include flex($justify:flex-start, $align:middle, $direction:row, $wrap:nowrap);
+    padding-right: 20px;
+}
+
+.cbMultiple {
+    @include flex($justify:flex-start, $align:middle, $direction:row, $wrap:wrap);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.eCheckbox {
+    height: 35px !important;
+    width: 35px !important;
+    background-color: #cccccc;
+    padding-right: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin: 5px;
+    @include border-radius(2px, 2px, 2px, 2px);
+    @include border(.5px, .5px, .5px, .5px, #0D9BFF);
+}
+
+.answered {
+    background-color: #F9CF00 !important;
+}
+
+.flexStart {
+    @include flex($justify:flex-start, $align:top, $direction:row, $wrap:wrap);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.boxLabel {
+    @include flex($justify:flex-start, $align:top, $direction:row, $wrap:nowrap);
+}
+
+.choiceText {
+    @include font-props($fontSize:14px, $color:black, $weight:600);
+    padding-top:10px;
+}
+
+

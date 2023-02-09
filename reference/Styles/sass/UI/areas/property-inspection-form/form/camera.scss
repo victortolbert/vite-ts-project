@@ -1,0 +1,45 @@
+﻿@import "../../../shared/mixins";
+
+.icon-container .k-upload-status {
+  display: none !important;
+}
+
+.icon-container .k-button.k-upload-button {
+
+  border: none !important;
+  height: 44px !important;
+
+}
+
+.icon-container .k-widget {
+  border: none !important;
+  padding: 0px !important;
+  width: 45px !important;
+}
+
+/*this is the button are that is clicked */
+.icon-container .k-dropzone .k-upload-button {
+  background: url('/Assetsimg/camera.png') no-repeat !important;
+  border: none;
+  min-width: 54px !important;
+  min-height: 48px !important;
+  padding: 0px !important;
+}
+
+.icon-container .k-upload .k-dropzone {
+  border: none !important;
+  width: 55px !important;
+  padding: 0px;
+}
+
+.k-dropzone {
+  border: none !important;
+  width: 51px !important;
+  padding: 0px;
+}
+
+.icon-container {
+  @include flex($justify: space-between, $align:center, $direction:row, $wrap:nowrap);
+  margin-right: 20px !important;
+  padding: 0px !important;
+}

@@ -1,0 +1,47 @@
+﻿.emailBody {
+  width: 100%;
+  height: 100% !important;
+  background-color: #808080;
+  text-align: center;
+}
+
+.emailHeader {
+  text-align: center;
+  background-color: #716f6f;
+}
+
+.emailContainer {
+  width: 60% !important;
+  height: 70% !important;
+  font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+  margin: 20px;
+  padding-left: 20px;
+}
+
+.emailChild {
+  background-color: #ffffff !important;
+  font-size: 12px;
+}
+
+.emailChildHeader {
+  color: #716f6f;
+  font-size: 15px !important;
+  font-weight: bold;
+}
+
+.emailChildBody {
+  color: #000000;
+}
+
+.emailFooter {
+  font-size: 12px;
+  background-color: #716f6f;
+  color: #ffffff;
+  height: 25%;
+}
+
+.emailFooter a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}

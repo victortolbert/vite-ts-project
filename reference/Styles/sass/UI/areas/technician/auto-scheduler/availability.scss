@@ -1,0 +1,52 @@
+﻿@import "../../../shared/mixins";
+
+.availabilityContainer {
+  width: 100%;
+}
+
+.availabilityHeader {
+  width: 100%;
+  padding-right: 10px;
+  @include font-props($fontSize:28px, $color:Black, $weight:400);
+  @include flex($justify:space-between, $align:center, $direction:row, $wrap:wrap);
+}
+
+.availabilityRowHeader {
+  width: 50%;
+  background-color: white;
+  @include flex($justify:space-between, $align:center, $direction:row, $wrap:wrap);
+  @include font-props($fontSize:18px, $color:Black, $weight:600);
+  padding: 10px;
+  @include border(1px, 1px, 3px, 1px, orange);
+  @include border-radius(6px, 6px, 6px, 6px);
+}
+
+.availabilitySearchContainer {
+  width: 100%;
+  padding: 10px;
+  @include flex($justify:flex-end, $align:right, $direction:row, $wrap:wrap);
+}
+
+.blueLink {
+  @include font-props($fontSize:14px, $color:navy, $weight:400);
+}
+
+.availabilityRow {
+  padding: 10px;
+  width: 50%;
+  @include flex($justify:space-between, $align:center, $direction:row, $wrap:nowrap);
+  @include font-props($fontSize:16px, $color:Black, $weight:600);
+}
+
+.hoverLocation {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 500px;
+  right: 0;
+  z-index: 100;
+  margin: 10px;
+  padding: 4px;
+  @include border(2px, 2px, 2px, 2px, navy);
+  @include border-radius(6px, 6px, 6px, 6px);
+}

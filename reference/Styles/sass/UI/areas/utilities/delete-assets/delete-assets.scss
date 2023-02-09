@@ -1,0 +1,7 @@
+@import "../../../shared/mixins";
+
+.da-button-row {
+    width: 100%;
+    @include flex($justify:flex-start, $align:center, $direction:row, $wrap:nowrap);
+    margin-bottom:35px;
+}

@@ -1,0 +1,165 @@
+﻿@import "../../../Shared/_mixins";
+
+#ReportContainer {
+    @include flex($justify: flex-start, $align:flex-start, $direction:column, $wrap:nowrap);
+    padding: 25px;
+    font-family:'Times New Roman', 'Times, serif';
+}
+
+#RoofSections {
+    @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:nowrap);
+}
+
+.Section {
+    padding-top: 10px;
+    width: 100%;
+    @include font-props($fontSize: 12px, $color:black, $weight:400);
+    font-family: 'Times New Roman', 'Times, serif';
+}
+
+
+.TableLabel {
+    @include font-props($fontSize: 14px, $color:Navy, $weight:600);
+}
+
+.SectionLabel {
+    @include font-props($fontSize: 14px, $color:Black, $weight:600);
+}
+.ReportHeader {
+    @include flex($justify: space-between, $align:flex-start, $direction:row, $wrap:nowrap);
+    @include font-props($fontSize: 14px, $color:black, $weight:600);
+    width: 100%;
+    @include border(0px, 0px, 2px, 0px, Navy);
+}
+
+.ReportLabel {
+    flex-grow: 1;
+    padding-left: 20px;
+    @include font-props($fontSize: 30px, $color:Navy, $weight:600);
+}
+
+.ReportClaimLabel > div {
+  padding-bottom:2px;
+  text-align:right;
+}
+
+
+.ReportClaimLabel {
+    @include font-props($fontSize: 12px, $color:gray, $weight:600);
+}
+
+.ReportClaimValues {
+    @include font-props($fontSize: 12px, $color:black, $weight:600);
+}
+
+.ReportSubLabel {
+    @include font-props($fontSize: 15px, $color:black, $weight:600);
+    padding-top: -10px;
+}
+
+table#Interior tr td:first-child {
+    text-align: left;
+    padding-left: 5px;
+    width: 25%;
+}
+table#Interior tr td:nth-child(2) {
+    width: 15%;
+}
+table#Interior tr td:nth-child(3) {
+    width: 60%;
+}
+
+table#Interior tr td:nth-child(3) {
+    width: 60%;
+}
+
+
+ 
+
+/*table#Collateral tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 5px;
+    width: 30%;
+}
+table#Collateral tr td:nth-child(2) {
+    width: 5%;
+}
+table#Collateral tr td:nth-child(3) {
+    width: 5%;
+}
+table#Collateral tr td:nth-child(4) {
+    width:20%;
+}
+table#Collateral tr td:nth-child(5) {
+    text-align: left;
+    padding-left: 5px;
+    width: 10%;
+}
+table#Collateral tr td:nth-child(6) {
+    text-align: left;
+    padding-left: 5px;
+    width: 30%;
+}*/
+
+table#Handrail tr td:first-child {
+    text-align: left;
+    padding-left: 5px;
+    width: 50%;
+}
+
+table#Fences tr td:first-child {
+    text-align: left;
+    padding-left: 5px;
+    width: 50%;
+}
+table#RoofSummary tr td:first-child {
+    text-align: left;
+    padding-left: 5px;
+}
+table#RoofSummary th:first-child {
+    width: 50%;
+}
+table#RoofSummary th:nth-child(2) {
+    width: 50%;
+}
+
+table#RoofComponent tr td:first-child {
+    text-align: left;
+    padding-left: 5px;
+}
+
+#RoofComponentHeader {
+    text-align: center;
+}
+#RoofComponentHeader th:first-child {
+    width: 40%;
+}
+#RoofComponentHeader th:nth-child(n+2):nth-child(-n+5) {
+    width: 15%;
+}
+
+/*.TableData td {
+    text-align: center;
+    border: 1px solid #001C94;
+}
+
+.TableData tr td:nth-child(2) {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.TableData th {
+    background-color: #001C94;
+    @include font-props($fontSize: 12px, $color:white, $weight:500);
+    width: 100px;
+    text-align: center;
+    padding: 4px;
+}
+*/
+.TableData {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #001C94;
+    width: 100%;
+    @include font-props($fontSize: 12px, $color:black, $weight:500);
+}

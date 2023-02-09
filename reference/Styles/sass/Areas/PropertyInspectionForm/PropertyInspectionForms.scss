@@ -1,0 +1,91 @@
+﻿@import "../../Shared/_mixins";
+
+.reportContainer {
+    width: 100%;
+    @include flex($justify: flex-start, $align:flex-start, $direction:row, $wrap:nowrap);
+    margin-top: 10px;
+}
+
+.btnFix {
+    display: inline-flex !important;
+}
+
+.indent {
+    padding-left: 26px;
+}
+
+.pifGrid {
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: white;
+    width: 300px;
+    margin: 25px;
+    @include border-radius(0px, 0px, 12px, 12px);
+    @include border(2px, 2px, 2px, 2px);
+    box-shadow: 5px 10px 8px #808080;
+}
+
+.pifGrid > div {
+    padding: 10px;
+}
+
+
+/*details*/
+
+/*Asset Icon Cell*/
+
+.pifGrid > div:nth-child(2) {
+    grid-area: 1/4/1/5;
+    display: inline-grid;
+    place-items: end;
+    color: white;
+}
+
+
+/*Structure Name*/
+
+.pifGrid > div:nth-child(1) {
+    grid-area: 1/1/1/4;
+    @include font-props($fontSize: 28px, $color:white, $weight:600);
+}
+
+
+/*Icon Row*/
+
+.pifGrid > div:nth-child(8),
+.pifGrid > div:nth-child(9),
+.pifGrid > div:nth-child(10),
+.pifGrid > div:nth-child(11) {
+    color: #4484CE;
+    place-self: center;
+    font-weight: 500;
+}
+
+.completed {
+    color: green;
+    font-weight: 500;
+}
+
+.inProgress {
+    color: red;
+    font-weight: 500;
+}
+
+.pifProjectRow {
+    @include flex($justify: space-between, $align:center, $direction:row, $wrap:nowrap);
+}
+
+.pifProjectColumn {
+    @include flex($justify: space-between, $align:center, $direction:column, $wrap:nowrap);
+}
+
+.pifCard {
+    background-color: white
+}
+
+#pifColumn2 > div {
+    margin: 5px;
+}

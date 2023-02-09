@@ -1,6 +1,6 @@
 type TaskType = 'personal' | 'work' | 'miscellaneous'
 
-export interface Todo {
+export interface TodoItem {
   label: string
   type: TaskType
   isComplete: boolean

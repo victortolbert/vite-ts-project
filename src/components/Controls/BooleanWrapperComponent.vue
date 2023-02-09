@@ -1,6 +1,6 @@
 <script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import BooleanComponent from './BooleanComponent.vue'
+import BooleanComponent from './Boolean.vue'
 import BaseLayoutComponent from './BaseLayoutComponent.vue'
 
 @Component({
