@@ -1,20 +1,34 @@
-<script type="ts" setup>
-// import OptionsApiView from '@/views/OptionsApiView.vue'
+<script lang="ts" setup>
+import OptionsApiView from '@/views/OptionsApiView.vue'
 import CoreAvatar from '@/components/Core/CoreAvatar'
 import ToggleComponent from '@/components/Controls/ToggleComponent'
 
 const selected = ref(false)
+
+function updateSelected(newValue: boolean) {
+  selected.value = newValue
+}
 </script>
 
 <template>
   <div>
-    <ToggleComponent v-model="selected" />
+    <CoreAvatar  />
+
+    <ToggleComponent
+      v-model="selected"
+    />
+
     <ToggleComponent
       :value="selected"
-      @input="(newValue) => { selected = newValue }"
+      @input="updateSelected($event)"
     />
-    <!-- <component :is="OptionsApiView" data-test="testing" data-component="app">
-    </component> -->
+
+    {{selected}}
+    <component
+      :is="OptionsApiView"
+      data-test="testing"
+      data-component="app"
+    />
 
     <portal-target name="overlays" />
   </div>

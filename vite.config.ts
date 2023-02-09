@@ -8,6 +8,8 @@ import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
+// import Pages from 'vite-plugin-pages'
+// import Layouts from 'vite-plugin-vue-layouts'
 
 export default defineConfig({
   base: './',
@@ -26,6 +28,8 @@ export default defineConfig({
   plugins: [
     Vue(),
     // WindiCSS(),
+    // Pages(),
+    // Layouts(),
     Components({
       resolvers: [
         IconsResolver({

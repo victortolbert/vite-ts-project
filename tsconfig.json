@@ -19,7 +19,8 @@
     "jsx": "preserve",
     "lib": [
       "esnext",
-      "dom"
+      "dom",
+      "DOM.iterable"
     ],
     "module": "esnext",
     "moduleResolution": "node",
@@ -35,6 +36,10 @@
     "target": "esnext",
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
+    // For `<script setup>`
+    // See <https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#preserve-value-imports>
+    "preserveValueImports": true,
+    "importsNotUsedAsValues": "error",
     "types": [
       "vitest/globals",
       "@vueuse/core",

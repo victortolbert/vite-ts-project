@@ -12,8 +12,8 @@ export default {
 <template>
   <article>
     <ul>
-      <li>{{ $slots }}</li>
-      <li>{{ $attrs }}</li>
+      <li><pre>{{ $slots }}</pre></li>
+      <li><pre>{{ $attrs }}</pre></li>
     </ul>
   </article>
 </template>

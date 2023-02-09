@@ -341,7 +341,7 @@ $btn-padding-x: 2rem;
 
 // ######################################################################################################
 $primary-color: #4285f4;
-$base-bg: $color-brand-600;
+$base-bg: $color-primary-600;
 // $base-bg: #1d2d43;
 
 $item-color: #fff;
